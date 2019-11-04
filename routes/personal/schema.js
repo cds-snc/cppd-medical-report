@@ -3,54 +3,55 @@
 const isValidDate = require('../../utils/').isValidDate
 
 const Schema = {
-  fullname: {
+  social: {
     isLength: {
-      errorMessage: 'errors.fullname.length',
-      options: { min: 3, max: 200 },
+      errorMessage: 'Social seems to be incorrect format',
+      options: { min: 11, max: 11 },
     },
   },
-  email: {
+  first_name: {
     isLength: {
-      errorMessage: 'errors.email.length',
-      options: { min: 3, max: 200 },
+      errorMessage: 'First name is required',
+      options: { min: 3, max: 40 },
     },
   },
-  expiry: {
+  last_name: {
+    isLength: {
+      errorMessage: 'Last name is required',
+      options: { min: 3, max: 40 },
+    },
+  },
+  birthdate: {
     customSanitizer: {
       options: value => {
         // We want to remove any spaces, dash or underscores
         return value ? value.replace(/[_]*/g, '') : value
       },
-      errorMessage: 'errors.expiry.date.format',
+      errorMessage: 'Date format is incorrect',
     },
     custom: {
       options: (value, { req }) => {
         return isValidDate(value)
       },
-      errorMessage: 'errors.expiry.date',
+      errorMessage: 'Birthdate is required',
     },
   },
-  send_notifications: {
+  address: {
+    isLength: {
+      errorMessage: 'Mailing address is required',
+      options: { min: 1 },
+    },
+  },
+  telephone: {
+    isLength: {
+      errorMessage: 'Telephone is required',
+      options: { min: 1 },
+    },
+  },
+  contact_time: {
     isIn: {
-      errorMessage: 'errors.send_notifications.valid',
-      options: [['Yes', 'No']],
-    },
-  },
-  notify_type: {
-    custom: {
-      options: (value, { req }) => {
-        const sendNotifications = req.body.send_notifications
-        if (sendNotifications && sendNotifications === 'Yes') {
-          if (typeof value === 'undefined') {
-            return false
-          }
-        } else {
-          req.body.notify_type = undefined
-        }
-
-        return true
-      },
-      errorMessage: 'errors.notify_type',
+      errorMessage: 'Best time to contact you is required',
+      options: [['morning', 'afternoon', 'letters_only']],
     },
   },
 }
