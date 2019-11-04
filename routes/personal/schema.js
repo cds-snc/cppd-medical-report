@@ -1,6 +1,7 @@
 /* istanbul ignore file */
 
-const isValidDate = require('../../utils/').isValidDate
+const isValidDate = require('../../utils/custom/validate.helpers.js').isValidDate
+const validateStringFormat = require('../../utils/custom/validate.helpers.js').validateStringFormat
 
 const Schema = {
   social: {
@@ -31,10 +32,19 @@ const Schema = {
     },
     custom: {
       options: (value, { req }) => {
-        return isValidDate(value)
+        if (!validateStringFormat(/(\d{4})-(\d{2})-(\d{2})/, value)) {
+          this.message = 'Birthdate is incorrectly formatted'
+          return false
+        } else if (!isValidDate(value)) {
+          this.message = 'Birthdate is not a valid date'
+          return false
+        }
+        return true;
       },
-      errorMessage: 'Birthdate is required',
-    },
+      errorMessage: () => {
+        return this.message
+      }
+    }
   },
   address: {
     isLength: {
