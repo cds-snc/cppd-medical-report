@@ -23,16 +23,7 @@ const errorArray2ErrorObject = (errors = []) => {
 }
 
 const isValidDate = dateString => {
-  const regEx = /^\d{4}-\d{2}$/ // YYYY-MM
-  if (!dateString.match(regEx)) {
-    return false // Invalid format
-  }
-
-  var d = new Date(`${dateString}-01`)
-  var dNum = d.getTime()
-
-  if (!dNum && dNum !== 0) return false // NaN value, Invalid date
-  return d.toISOString().slice(0, 7) === dateString
+  return !isNaN(Date.parse(dateString));
 }
 
 /**
