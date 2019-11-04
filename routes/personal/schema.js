@@ -2,7 +2,7 @@
 
 const isValidDate = require('../../utils/custom/validate.helpers.js').isValidDate
 const validateStringFormat = require('../../utils/custom/validate.helpers.js').validateStringFormat
-const isValidTelephone = require('../../utils/custom/validate.helpers.js').isValidTelephone
+const validateTelephoneFormat = require('../../utils/custom/validate.helpers.js').validateTelephoneFormat
 const validateDateFormat = require('../../utils/custom/validate.helpers.js').validateDateFormat
 
 const Schema = {
@@ -61,7 +61,7 @@ const Schema = {
     },
     custom: {
       options: (value, { req }) => {
-        return isValidTelephone(value)
+        return validateTelephoneFormat(value)
       },
       errorMessage: 'Telephone is incorrectly formatted'
     }

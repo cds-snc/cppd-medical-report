@@ -9,7 +9,7 @@ const validateStringFormat = (pattern, string) => {
   return res;
 }
 
-const isValidTelephone = string => {
+const validateTelephoneFormat = string => {
     // validates format: XXX-XXX-XXXX
     const format = /^(\+0?1\s)?\(?\d{3}\)?[-]\d{3}[-]\d{4}$/
     return validateStringFormat(format, string)
@@ -24,6 +24,6 @@ const validateDateFormat = string => {
 module.exports = {
   isValidDate,
   validateStringFormat,
-  isValidTelephone,
+  validateTelephoneFormat,
   validateDateFormat
 }
