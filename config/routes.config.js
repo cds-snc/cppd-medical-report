@@ -2,6 +2,7 @@
 const routes = [
   { name: 'start', path: { en: '/start', fr: '/debut' } },
   { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
+  { name: 'section2', path: {en:'/section2', fr: '/frsection2'}},
   { name: 'confirmation', path: '/confirmation' },
 ]
 
