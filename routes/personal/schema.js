@@ -2,6 +2,8 @@
 
 const isValidDate = require('../../utils/custom/validate.helpers.js').isValidDate
 const validateStringFormat = require('../../utils/custom/validate.helpers.js').validateStringFormat
+const isValidTelephone = require('../../utils/custom/validate.helpers.js').isValidTelephone
+const validateDateFormat = require('../../utils/custom/validate.helpers.js').validateDateFormat
 
 const Schema = {
   social: {
@@ -32,7 +34,7 @@ const Schema = {
     },
     custom: {
       options: (value, { req }) => {
-        if (!validateStringFormat(/(\d{4})-(\d{2})-(\d{2})/, value)) {
+        if (!validateDateFormat(value)) {
           this.message = 'Birthdate is incorrectly formatted'
           return false
         } else if (!isValidDate(value)) {
@@ -59,7 +61,7 @@ const Schema = {
     },
     custom: {
       options: (value, { req }) => {
-        return validateStringFormat(/^(\+0?1\s)?\(?\d{3}\)?[-]\d{3}[-]\d{4}$/, value)
+        return isValidTelephone(value)
       },
       errorMessage: 'Telephone is incorrectly formatted'
     }
