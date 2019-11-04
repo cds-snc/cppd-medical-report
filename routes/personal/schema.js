@@ -57,6 +57,12 @@ const Schema = {
       errorMessage: 'Telephone is required',
       options: { min: 1 },
     },
+    custom: {
+      options: (value, { req }) => {
+        return validateStringFormat(/^(\+0?1\s)?\(?\d{3}\)?[-]\d{3}[-]\d{4}$/, value)
+      },
+      errorMessage: 'Telephone is incorrectly formatted'
+    }
   },
   contact_time: {
     isIn: {
