@@ -25,5 +25,5 @@ module.exports = {
   isValidDate,
   validateStringFormat,
   validateTelephoneFormat,
-  validateDateFormat
+  validateDateFormat,
 }

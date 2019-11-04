@@ -1,7 +1,6 @@
 /* istanbul ignore file */
 
 const isValidDate = require('../../utils/custom/validate.helpers.js').isValidDate
-const validateStringFormat = require('../../utils/custom/validate.helpers.js').validateStringFormat
 const validateTelephoneFormat = require('../../utils/custom/validate.helpers.js').validateTelephoneFormat
 const validateDateFormat = require('../../utils/custom/validate.helpers.js').validateDateFormat
 
@@ -45,8 +44,8 @@ const Schema = {
       },
       errorMessage: () => {
         return this.message
-      }
-    }
+      },
+    },
   },
   address: {
     isLength: {
@@ -63,8 +62,8 @@ const Schema = {
       options: (value, { req }) => {
         return validateTelephoneFormat(value)
       },
-      errorMessage: 'Telephone is incorrectly formatted'
-    }
+      errorMessage: 'Telephone is incorrectly formatted',
+    },
   },
   contact_time: {
     isIn: {
