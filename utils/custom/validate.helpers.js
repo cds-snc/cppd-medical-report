@@ -21,9 +21,16 @@ const validateDateFormat = string => {
     return validateStringFormat(format, string)
 }
 
+const validateSINFormat = string => {
+    // validates format: ### ### ###
+    const format = /^(\d{3} \d{3} \d{3})$/
+    return validateStringFormat(format, string);
+}
+
 module.exports = {
   isValidDate,
   validateStringFormat,
   validateTelephoneFormat,
   validateDateFormat,
+  validateSINFormat,
 }

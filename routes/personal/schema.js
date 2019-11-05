@@ -3,12 +3,19 @@
 const isValidDate = require('../../utils/custom/validate.helpers.js').isValidDate
 const validateTelephoneFormat = require('../../utils/custom/validate.helpers.js').validateTelephoneFormat
 const validateDateFormat = require('../../utils/custom/validate.helpers.js').validateDateFormat
+const validateSINFormat = require('../../utils/custom/validate.helpers.js').validateSINFormat
 
 const Schema = {
   social: {
     isLength: {
-      errorMessage: 'Social seems to be incorrect format',
-      options: { min: 11, max: 11 },
+      errorMessage: 'Social is required',
+      options: { min: 1 },
+    },
+    custom: {
+      options: (value, { req }) => {
+        return validateSINFormat(value);
+      },
+      errorMessage: 'SIN is incorrectly formatted',
     },
   },
   first_name: {
