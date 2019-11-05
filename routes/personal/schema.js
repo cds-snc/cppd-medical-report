@@ -3,6 +3,7 @@
 const isValidDate = require('../../utils/custom/validate.helpers.js').isValidDate
 const validateTelephoneFormat = require('../../utils/custom/validate.helpers.js').validateTelephoneFormat
 const validateDateFormat = require('../../utils/custom/validate.helpers.js').validateDateFormat
+const validateSIN = require('../../utils/custom/validate.helpers.js').validateSIN
 const validateSINFormat = require('../../utils/custom/validate.helpers.js').validateSINFormat
 
 const Schema = {
@@ -13,9 +14,19 @@ const Schema = {
     },
     custom: {
       options: (value, { req }) => {
-        return validateSINFormat(value);
+        if (!validateSINFormat(value)) {
+          this.message = 'SIN is formatted incorrectly'
+          return false
+        }
+        if (!validateSIN(value)) {
+          this.message = 'SIN is invalid'
+          return false
+        }
+        return true
       },
-      errorMessage: 'SIN is incorrectly formatted',
+      errorMessage: () => {
+        return this.message
+      },
     },
   },
   first_name: {
