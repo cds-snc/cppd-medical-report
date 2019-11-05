@@ -22,8 +22,8 @@ const validateDateFormat = string => {
 }
 
 const validateSINFormat = string => {
-    // validates format: ### ### ###
-    const format = /^(\d{3} \d{3} \d{3})$/
+    // validates format: ### ### ### or #########
+    const format = /^(\d{3} ?\d{3} ?\d{3})$/
     return validateStringFormat(format, string)
 }
 

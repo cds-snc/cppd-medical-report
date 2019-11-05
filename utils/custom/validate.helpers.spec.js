@@ -46,6 +46,7 @@ test('fails invalid date', () => {
 
 test('valid sin format', () => {
     expect(validateSINFormat('999 999 999')).toBe(true)
+    expect(validateSINFormat('999999999')).toBe(true)
 })
 
 test('invalid sin format', () => {
