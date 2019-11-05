@@ -3,6 +3,7 @@ const validateDateFormat = require('./validate.helpers.js').validateDateFormat
 const validateSINFormat = require('./validate.helpers.js').validateSINFormat
 const validateSIN = require('./validate.helpers.js').validateSIN
 const isValidDate = require('./validate.helpers.js').isValidDate
+const daysInMonth = require('./validate.helpers.js').daysInMonth
 
 test('passes valid phone number', () => {
     expect(validateTelephoneFormat('555-555-5555')).toBe(true)
@@ -14,13 +15,19 @@ test('validateTelephoneFormat validates a phone number with an international cal
 
 test('fails invalid phone number', () => {
     expect(validateTelephoneFormat('555 555 5555')).toBe(false)
-      expect(validateTelephoneFormat('foo')).toBe(false)
-      expect(validateTelephoneFormat('+1 5555-555-5555')).toBe(false)
-      expect(validateTelephoneFormat('+1 555-5555-5555')).toBe(false)
-      expect(validateTelephoneFormat('+1 555-555-55555')).toBe(false)
-      expect(validateTelephoneFormat('+1 55-555-5555')).toBe(false)
-      expect(validateTelephoneFormat('+1 555-55-5555')).toBe(false)
-      expect(validateTelephoneFormat('+1 555-555-555')).toBe(false)
+    expect(validateTelephoneFormat('foo')).toBe(false)
+    expect(validateTelephoneFormat('+1 5555-555-5555')).toBe(false)
+    expect(validateTelephoneFormat('+1 555-5555-5555')).toBe(false)
+    expect(validateTelephoneFormat('+1 555-555-55555')).toBe(false)
+    expect(validateTelephoneFormat('+1 55-555-5555')).toBe(false)
+    expect(validateTelephoneFormat('+1 555-55-5555')).toBe(false)
+    expect(validateTelephoneFormat('+1 555-555-555')).toBe(false)
+})
+
+test('returns correct days in month', () => {
+    expect(daysInMonth(1, 1973)).toBe(28)
+    expect(daysInMonth(0, 1999)).toBe(31)
+    expect(daysInMonth(1, 2000)).toBe(29)
 })
 
 test('passes valid date format', () => {
@@ -29,8 +36,8 @@ test('passes valid date format', () => {
 
 test('fails invalid date format', () => {
     expect(validateDateFormat('11-03-2019')).toBe(false)
-      expect(validateDateFormat('0001-101-01')).toBe(false)
-      expect(validateDateFormat('0001-01-101')).toBe(false)
+    expect(validateDateFormat('0001-101-01')).toBe(false)
+    expect(validateDateFormat('0001-01-101')).toBe(false)
 })
 
 test('passes valid date', () => {
@@ -39,9 +46,9 @@ test('passes valid date', () => {
 
 test('fails invalid date', () => {
     expect(isValidDate('2019-11-99')).toBe(false)
-      expect(isValidDate('foo')).toBe(false);
-      expect(isValidDate('0001-101-01')).toBe(false)
-     // expect(isValidDate('0001-01-101')).toEqual(false)
+    expect(isValidDate('foo')).toBe(false);
+    expect(isValidDate('0001-101-01')).toBe(false)
+    expect(isValidDate('0001-01-101')).toEqual(false)
 })
 
 test('valid sin format', () => {
