@@ -10,5 +10,37 @@
 
     <p>{{ __('Does your patient have a medical condition that is:') }}</p>
 
-    
+    <form method="post">
+        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+        
+        <div class="multiple-choice multiple-choice--radios">
+            <div class="multiple-choice__item">
+                <input id="condition_type_terminal" type="radio" name="condition_type" value="terminal"> <label for="condition_type_terminal">{{ __('<strong>Terminal</strong> - for the purpose of CPP, terminal is defined as a disease state that cannot be cured or adequately treated and is reasonably expected to result in death within 6 months. If yes, provide details below:') | safe }}</label>
+            </div>
+        </div>
+
+        <div class="indent-block">
+            {{ textArea('diagnosis', 'Diagnosis') }}
+
+            {{ textInput('icd_code', 'ICD-9-CM code', { hint: 'XXX.X' }) }}
+
+            {{ textInput('onset_date', 'Date of symptom onset', { hint: 'YYYY-MM' }) }}
+
+            <p>{{ __('If the patient has other non-terminal medical conditions that prevent them from regularly working at any job, please provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>. Otherwise, please skip to Section 6 - Patient\'s employment situation.') | safe }}
+        </div>
+
+        <div class="multiple-choice multiple-choice--radios">
+            <div class="multiple-choice__item">
+                <input id="condition_type_grave" type="radio" name="condition_type" value="grave"> <label for="condition_type_grave">{{ __('<strong>Grave</strong> - for the purpose of CPP, grave is defined as a condition that is included in the list of 32 severe and rapidly progressive medical conditions in Annex A. If yes, provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment.</strong>') | safe }}</label>
+            </div>
+        </div>
+
+        <div class="multiple-choice multiple-choice--radios">
+            <div class="multiple-choice__item">
+                <input id="condition_type_none" type="radio" name="condition_type" value="none"> <label for="condition_type_none">{{ __('Neither') }}</label>
+            </div>
+        </div>
+
+        {{ formButtons() }}
+    </form>
 {% endblock %}
