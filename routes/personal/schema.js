@@ -21,13 +21,13 @@ const Schema = {
   first_name: {
     isLength: {
       errorMessage: 'First name is required',
-      options: { min: 3, max: 40 },
+      options: { min: 1 },
     },
   },
   last_name: {
     isLength: {
       errorMessage: 'Last name is required',
-      options: { min: 3, max: 40 },
+      options: { min: 1 },
     },
   },
   birthdate: {
