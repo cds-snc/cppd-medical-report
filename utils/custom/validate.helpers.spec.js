@@ -1,62 +1,45 @@
-const {
-    isValidDate,
-    validateTelephoneFormat,
-    validateDateFormat,
-    validateSINFormat,
-    validateSIN,
-  } = require('./validate.helpers');
+const validateTelephoneFormat = require('./validate.helpers.js').validateTelephoneFormat
+const validateDateFormat = require('./validate.helpers.js').validateDateFormat
+const validateSINFormat = require('./validate.helpers.js').validateSINFormat
+const validateSIN = require('./validate.helpers.js').validateSIN
+const isValidDate = require('./validate.helpers.js').isValidDate
 
-  test('isValidDate validates an unformated date', () => { 
-      expect(isValidDate('0001-01-01')).toEqual(true)
-  })
- 
-  test('isValidDate rejects an unformated date', () => { 
-      expect(isValidDate('foo')).toEqual(false);
-      expect(isValidDate('0001-101-01')).toEqual(false)
-     // expect(isValidDate('0001-01-101')).toEqual(false)
-  })
+test('passes valid phone number', () => {
+    expect(validateTelephoneFormat('555-555-5555')).toBe(true)
+})
 
-  test('validateTelephoneFormat validates a telephone', () => { 
-      expect(validateTelephoneFormat('555-555-5555')).toEqual(true)
-  })
+test('fails invalid phone number', () => {
+    expect(validateTelephoneFormat('555 555 5555')).toBe(false)
+})
 
-  test('validateTelephoneFormat validates a phone number with an international calling number', () => { 
-    expect(validateTelephoneFormat('+1 555-555-5555')).toEqual(true)
-  })
+test('passes valid date format', () => {
+    expect(validateDateFormat('2019-11-03')).toBe(true)
+})
 
-  test('validateTelephoneFormat rejects an invalid telephone number', () => { 
-      expect(validateTelephoneFormat('foo')).toEqual(false)
-      expect(validateTelephoneFormat('+1 5555-555-5555')).toEqual(false)
-      expect(validateTelephoneFormat('+1 555-5555-5555')).toEqual(false)
-      expect(validateTelephoneFormat('+1 555-555-55555')).toEqual(false)
-      expect(validateTelephoneFormat('+1 55-555-5555')).toEqual(false)
-      expect(validateTelephoneFormat('+1 555-55-5555')).toEqual(false)
-      expect(validateTelephoneFormat('+1 555-555-555')).toEqual(false)
-  })
+test('fails invalid date format', () => {
+    expect(validateDateFormat('11-03-2019')).toBe(false)
+})
 
-  test('validateDateFormat validates ISO 8601 date', () => { 
-      expect(validateDateFormat('0001-01-01')).toEqual(true)
-  })
+test('passes valid date', () => {
+    expect(isValidDate('2019-11-11')).toBe(true)
+})
 
-  test('validateDateFormat fails a non ISO 8601 date', () => { 
-      expect(validateDateFormat('01-01-0001')).toEqual(false)
-      expect(validateDateFormat('0001-101-01')).toEqual(false)
-      expect(validateDateFormat('0001-01-101')).toEqual(false)
-  })
+test('fails invalid date', () => {
+    expect(isValidDate('2019-11-99')).toBe(false)
+})
 
-  test('validateSIN passes a valid fake SIN', () => { 
-      expect(validateSIN('111 111 118')).toEqual(true)
-  })
+test('valid sin format', () => {
+    expect(validateSINFormat('999 999 999')).toBe(true)
+})
 
+test('invalid sin format', () => {
+    expect(validateSINFormat('999-999-999')).toBe(false)
+})
 
-  test('validateSIN fails an invalid SIN', () => { 
-      expect(validateSIN('123 456 789')).toEqual(false)
-  })
+test('valid sin', () => {
+    expect(validateSIN('913 093 282')).toBe(true)
+})
 
-  test('validateSINFormat validates a 9 digit number', () => { 
-      expect(validateSINFormat('123 456 789')).toEqual(true)
-  })
-
-  test('validateSINFormat rejects a non 9 digit number', () => { 
-      expect(validateSINFormat('123 456 78')).toEqual(false)
-  })
+test('invalid sin', () => {
+    expect(validateSIN('913 093 000')).toBe(false)
+})
