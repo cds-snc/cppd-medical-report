@@ -93,7 +93,6 @@
   "Last name(s)": "Last name(s)",
   "Last name at birth (if different from above)": "Last name at birth (if different from above)",
   "Date of birth": "Date of birth",
-  "YYYY-MM-DD": "YYYY-MM-DD",
   "Mailing address": "Mailing address",
   "(No., Street, Apt., PO Box, RR), City/Town, Province/Territory, Country (if not Canada), Postal code": "(No., Street, Apt., PO Box, RR), City/Town, Province/Territory, Country (if not Canada), Postal code",
   "Telephone number": "Telephone number",
@@ -115,5 +114,16 @@
   "YYYY-MM": "YYYY-MM",
   "If the patient has other non-terminal medical conditions that prevent them from regularly working at any job, please provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>. Otherwise, please skip to Section 6 - Patient's employment situation.": "If the patient has other non-terminal medical conditions that prevent them from regularly working at any job, please provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>. Otherwise, please skip to Section 6 - Patient's employment situation.",
   "<strong>Grave</strong> - for the purpose of CPP, grave is defined as a condition that is included in the list of 32 severe and rapidly progressive medical conditions in Annex A. If yes, provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment.</strong>": "<strong>Grave</strong> - for the purpose of CPP, grave is defined as a condition that is included in the list of 32 severe and rapidly progressive medical conditions in Annex A. If yes, provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment.</strong>",
-  "Neither": "Neither"
+  "Neither": "Neither",
+  "section3.title": "Section 3 - Duration of relationship with the patient",
+  "section3.intro": "This information will help Service Canada confirm that we have the patient's complete medical history.",
+  "How many years has this patient been in your care?": "How many years has this patient been in your care?",
+  "1 year or less": "1 year or less",
+  "1 to 2 years": "1 to 2 years",
+  "3 to 4 years": "3 to 4 years",
+  "5 years or more": "5 years or more",
+  "YYYY-MM-DD": "YYYY-MM-DD",
+  "Number of times this patient has visited your office in the past 12 months": "Number of times this patient has visited your office in the past 12 months",
+  "Date of last office visit": "Date of last office visit",
+  "Date you first started treating this patient's primary medical condition": "Date you first started treating this patient's primary medical condition"
 }
