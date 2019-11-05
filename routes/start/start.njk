@@ -2,11 +2,27 @@
 {% from 'banner.njk' import banner as banner %}
 
 {% block content %}
-    <h1>{{ __('start.title') }}</h1>
+    <h1>{{ __('Medical Report for a Canada Pension Plan Disability Benefit') }}</h1>
+    
+    <h2>{{ __('Instructions for the applicant/patient - please read carefully') }}</h2>
 
-    {{ banner('blue', '<p>' + __('start.intro.banner') + '</p>') }}
+    <p>{{ __('An application and a medical report are needed by Service Canada to determine if you qualify for a Canada Pension Plan (CPP) disability benefit.') }}</p>
+    
+    <p>{{ __('You (the applicant) must:') }}</p>
 
-    <div>{{ __('start.intro') | safe }}</div>
+    <ul>
+        <li>{{ __('complete the Application for a Canada Pension Plan Disability Benefit (ISP1151). The application
+can be found at www.canada.ca/esdc-forms.') }}</li>
+        <li>{{ __('fill out Section 1 and Section 2 of this Medical Report.') }}</li>
+        <li>{{ __('write your Social Insurance Number at the top of each page of this Medical Report.') }}</li>
+    </ul>
+
+    <p>{{ __('Your doctor or nurse practitioner must complete Sections 3 to 9 of the Medical Report, sign it, and send it to Service Canada.') }}</p>
+
+    <p>{{ __('DO NOT WAIT for your doctor or nurse practitioner to complete the Medical Report before sending your completed application to Service Canada. The date Service Canada receives your application could affect when your benefit starts.') }}</p>
+    
+    <p>{{ __('Service Canada will help you pay for the cost of the Medical Report by paying up to $85.00 directly to your doctor or nurse practitioner. Any money owing over this amount is your responsibility.') }}</p>
+    
     <div>
         <a class="button-link" href="{{ routePath(route.next) }}" role="button" draggable="false">
             {{ __('start.submit') }}
