@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('Section 4 - Expedited processing for terminal and grave conditions') }}</h1>
+
+    <p>{{ __('This section should be completed <strong>ONLY</strong> if your patient has been diagnosed with a terminal illness or one of the 32 grave conditions listed in <strong>Annex A</strong>. If your patient does not have a terminal illness or a grave condition, skip to <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>.') | safe }}</p>
+
+    <p>{{ __('Applications from patients with a terminal illness or a grave condition receive priority handling. In these cases, once we receive a complete application, including the <strong>Medical Report</strong>, our goal is to determine the applicant\'s eligibility for CPP disability benefits within 5 business days for applicants with a terminal illness and 30 calendar days for those with a grave condition.') | safe }}
+
+    <p>{{ __('Does your patient have a medical condition that is:') }}</p>
+
+    
+{% endblock %}
