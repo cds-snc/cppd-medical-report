@@ -7,7 +7,7 @@
     <form method="post">
         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-        {{ textInput('social', 'Social Insurance Number', { hint: 'XXX XXX XXX', class: "w-3-4", required: true }) }}
+        {{ textInput('social', 'Social Insurance Number', { hint: '443 856 299', class: "w-3-4", required: true }) }}
 
         {{ radioButtons('preferred_title', { '1':'Mr.','2':'Mrs.','3':'Miss','4':'Ms.'}, data.preferred_title, 'Title', errors) }}
         
