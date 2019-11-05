@@ -17,7 +17,7 @@ const validateTelephoneFormat = string => {
 
 const validateDateFormat = string => {
     // validates format: YYYY-MM-DD
-    const format = /(\d{4})-(\d{2})-(\d{2})/
+    const format = /^(\d{4})-(\d{2})-(\d{2})$/
     return validateStringFormat(format, string)
 }
 
