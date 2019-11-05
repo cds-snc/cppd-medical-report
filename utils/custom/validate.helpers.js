@@ -24,19 +24,20 @@ const validateDateFormat = string => {
 const validateSINFormat = string => {
     // validates format: ### ### ###
     const format = /^(\d{3} \d{3} \d{3})$/
-    return validateStringFormat(format, string);
+    return validateStringFormat(format, string)
 }
 
 const validateSIN = string => {
     // Validates using Luhn Algorithm
 	if (/[^0-9\s]+/.test(string)) return false;
 
-	let nCheck = 0, bEven = false;
-	string = string.replace(/\D/g, "");
+	let nCheck = 0
+    let bEven = false
+	string = string.replace(/\D/g, "")
 
 	for (var n = string.length - 1; n >= 0; n--) {
-		var cDigit = string.charAt(n),
-			  nDigit = parseInt(cDigit, 10);
+        var cDigit = string.charAt(n)
+        var nDigit = parseInt(cDigit, 10)
 
 		if (bEven && (nDigit *= 2) > 9) nDigit -= 9;
 
@@ -44,7 +45,7 @@ const validateSIN = string => {
 		bEven = !bEven;
 	}
 
-	return (nCheck % 10) == 0;
+	return (nCheck % 10) === 0;
 }
 
 module.exports = {
