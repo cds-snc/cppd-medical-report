@@ -65,6 +65,15 @@ const Schema = {
       errorMessage: 'Telephone is incorrectly formatted',
     },
   },
+  alternate_telephone: {
+    custom: {
+      options: (value, { req }) => {
+        if (!value) { return true }
+        return validateTelephoneFormat(value)
+      },
+      errorMessage: 'Alternate Telephone is incorrectly formatted',
+    },
+  },
   contact_time: {
     isIn: {
       errorMessage: 'Best time to contact you is required',
