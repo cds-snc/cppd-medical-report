@@ -12,7 +12,7 @@ resource "azurerm_resource_group" "resource_group" {
 }
 
 resource "azurerm_storage_account" "remote_state_sa" {
-  name                     = "${lower(var.name)}tfstorage"
+  name                     = "ccpdmedicaltfstorage"
   resource_group_name      = "${azurerm_resource_group.resource_group.name}"
   location                 = "${var.location}"
   account_tier             = "${var.storage_account_tier}"

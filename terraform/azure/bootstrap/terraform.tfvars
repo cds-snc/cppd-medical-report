@@ -1,0 +1,2 @@
+name    = "CPPDMedicalReport"
+location = "canadacentral"
