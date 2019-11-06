@@ -1,8 +1,8 @@
 const Schema = {
-  firstname: {
-    isLength: {
-      errorMessage: 'errors.firstname.length',
-      options: { min: 3, max: 200 },
+  condition_type: {
+    isIn: {
+      errorMessage: 'You must select an option',
+      options: [['terminal', 'grave', 'none']],
     },
   },
 }
