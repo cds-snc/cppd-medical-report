@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 const isValidDate = require('../../utils/custom/validate.helpers.js').isValidDate
 const validateDateFormat = require('../../utils/custom/validate.helpers.js').validateDateFormat
 
