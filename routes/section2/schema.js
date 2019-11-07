@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 const validateTelephoneFormat = require('../../utils/custom/validate.helpers.js').validateTelephoneFormat
 
 const Schema = {
