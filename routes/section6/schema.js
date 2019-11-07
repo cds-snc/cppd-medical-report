@@ -51,8 +51,8 @@ const Schema = {
         }
         return true
       },
-      errorMessage: 'Return to work timeframe is required if return to work is yes'
-    }
+      errorMessage: 'Return to work timeframe is required if return to work is yes',
+    },
   },
 
   type_of_work: {
@@ -65,8 +65,8 @@ const Schema = {
         }
         return true
       },
-      errorMessage: 'Type of work is required if return to work is yes'
-    }
+      errorMessage: 'Type of work is required if return to work is yes',
+    },
   },
 
   type_of_work_other: {
@@ -79,9 +79,9 @@ const Schema = {
         }
         return true
       },
-      errorMessage: 'Other type of work is required if Other selected'
-    }
-  }
+      errorMessage: 'Other type of work is required if Other selected',
+    },
+  },
 }
 
 module.exports = {
