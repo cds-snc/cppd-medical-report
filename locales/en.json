@@ -174,5 +174,7 @@
   "Date is incorrectly formatted": "Date is incorrectly formatted",
   "Address is required": "Address is required",
   "Date is required": "Date is required",
-  "I am a is required": "I am a is required"
+  "I am a is required": "I am a is required",
+  "Other": "Other",
+  "Other is required if Other is selected": "Other is required if Other is selected"
 }

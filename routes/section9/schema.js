@@ -10,6 +10,22 @@ const Schema = {
       options: [['1', '2', '3', 'other']],
     },
   },
+  other_specify: {
+    custom: {
+      options: (value, { req }) => {
+        if (req.body.i_am_a && req.body.i_am_a === 'other') { 
+          if (!value) {
+            this.message = 'Other is required if Other is selected'
+            return false
+          }
+        }
+        return true
+      },
+      errorMessage: () => {
+        return this.message
+      },
+    }
+  },
   name: {
     isLength: {
       errorMessage: 'Name is required',

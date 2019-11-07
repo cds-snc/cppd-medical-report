@@ -13,6 +13,8 @@
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
             {{ radioButtons('i_am_a', { '1':'general practice physician or physician certified in family medicine (CCFP)','other':'other physician specialist (please specify below)', '3':'nurse practicioner', '4':'registered nurse in a geographically isolated community (not urban or rural)'}, data.i_am_a, 'I am a:', errors, { required: true }) }}
 
+            {{ textInput('other_specify', 'Other')}}
+
             {{ textInput('name', 'Name', { required: true }) }}
             {{ textInput('date', 'Date', { hint: 'YYYY-MM-DD', required: true }) }}
             {{ textArea('address', 'Address and telephone number', { required: true}) }}
