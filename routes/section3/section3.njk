@@ -1,0 +1,37 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('section3.title') }}</h1>
+
+    <div>
+        <p>
+            {{ __('section3.intro') }}
+        </p>
+
+        <form method="post">
+
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+            {{ 
+                radioButtons('numYearsWasPatient', 
+                    { '1':'1 year or less',
+                    '2':'1 to 2 years',
+                    '3': '3 to 4 years',
+                    '4': '5 years or more'}, 
+                data.numYearsWasPatient, 
+                'How many years has this patient been in your care?',
+                errors,
+                { required: true }) 
+            }}
+            {{ textInput('visitNumber', 'Number of times this patient has visited your office in the past 12 months', { required: true }) }}
+
+            {{ textInput('lastVisitDate', 'Date of last office visit', { hint: 'YYYY-MM-DD', required: true }) }}
+
+            {{ textInput('firstTreatmentDate', "Date you first started treating this patient's primary medical condition", { hint: 'YYYY-MM-DD', required: true }) }}
+
+            {{ formButtons() }}
+        </form>
+    </div>
+
+{% endblock %}
