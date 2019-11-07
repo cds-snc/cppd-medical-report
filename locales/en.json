@@ -93,7 +93,6 @@
   "Last name(s)": "Last name(s)",
   "Last name at birth (if different from above)": "Last name at birth (if different from above)",
   "Date of birth": "Date of birth",
-  "YYYY-MM-DD": "YYYY-MM-DD",
   "Mailing address": "Mailing address",
   "(No., Street, Apt., PO Box, RR), City/Town, Province/Territory, Country (if not Canada), Postal code": "(No., Street, Apt., PO Box, RR), City/Town, Province/Territory, Country (if not Canada), Postal code",
   "Telephone number": "Telephone number",
@@ -150,4 +149,15 @@
   "Return to work timeframe is required if return to work is yes": "Return to work timeframe is required if return to work is yes",
   "Type of work is required if return to work is yes": "Type of work is required if return to work is yes",
   "Other type of work is required if Other selected": "Other type of work is required if Other selected"
+  "section3.title": "Section 3 - Duration of relationship with the patient",
+  "section3.intro": "This information will help Service Canada confirm that we have the patient's complete medical history.",
+  "How many years has this patient been in your care?": "How many years has this patient been in your care?",
+  "1 year or less": "1 year or less",
+  "1 to 2 years": "1 to 2 years",
+  "3 to 4 years": "3 to 4 years",
+  "5 years or more": "5 years or more",
+  "YYYY-MM-DD": "YYYY-MM-DD",
+  "Number of times this patient has visited your office in the past 12 months": "Number of times this patient has visited your office in the past 12 months",
+  "Date of last office visit": "Date of last office visit",
+  "Date you first started treating this patient's primary medical condition": "Date you first started treating this patient's primary medical condition"
 }
