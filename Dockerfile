@@ -2,6 +2,7 @@ FROM node:10-alpine
 LABEL maintainer="-"
 
 ARG GITHUB_SHA_ARG
+ENV GITHUB_SHA=$GITHUB_SHA_ARG
 
 COPY . /src
 
