@@ -2,15 +2,17 @@
 
 {% block content %}
 
-    <h1>{{ __('section7.title') }}</h1>
+    <h1>{{ __('Section 7 - Other relevant information') }}</h1>
 
     <div>
         <p>
-            {{ __('section7.intro') }}
+            {{ __('(e.g. planned investigations and/or specialist consultations, reason for unknown prognosis and/or frequency, etc.).') }}
         </p>
 
         <form method="post">
-            {{ textInput('form.firstname', null, 'form.firstname.desc', { class: "w-3-4", name: "firstname", id: "firstname", autofocus: '', value: data.firstname }) }}
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+            {{ textArea('other_info', 'To help us evaluate the applicant\'s current and future ability to work, please add any other information you feel is relevant', { hint: '(e.g. planned investigations and/or specialist consultations, reason for unknown prognosis and/or frequency, etc.)'}) }}
             {{ formButtons() }}
         </form>
     </div>

@@ -159,5 +159,9 @@
   "YYYY-MM-DD": "YYYY-MM-DD",
   "Number of times this patient has visited your office in the past 12 months": "Number of times this patient has visited your office in the past 12 months",
   "Date of last office visit": "Date of last office visit",
-  "Date you first started treating this patient's primary medical condition": "Date you first started treating this patient's primary medical condition"
+  "Date you first started treating this patient's primary medical condition": "Date you first started treating this patient's primary medical condition",
+  "Section 7 - Other relevant information": "Section 7 - Other relevant information",
+  "(e.g. planned investigations and/or specialist consultations, reason for unknown prognosis and/or frequency, etc.).": "(e.g. planned investigations and/or specialist consultations, reason for unknown prognosis and/or frequency, etc.).",
+  "To help us evaluate the applicant's current and future ability to work, please add any other information you feel is relevant": "To help us evaluate the applicant's current and future ability to work, please add any other information you feel is relevant",
+  "(e.g. planned investigations and/or specialist consultations, reason for unknown prognosis and/or frequency, etc.)": "(e.g. planned investigations and/or specialist consultations, reason for unknown prognosis and/or frequency, etc.)"
 }
