@@ -159,5 +159,20 @@
   "YYYY-MM-DD": "YYYY-MM-DD",
   "Number of times this patient has visited your office in the past 12 months": "Number of times this patient has visited your office in the past 12 months",
   "Date of last office visit": "Date of last office visit",
-  "Date you first started treating this patient's primary medical condition": "Date you first started treating this patient's primary medical condition"
+  "Date you first started treating this patient's primary medical condition": "Date you first started treating this patient's primary medical condition",
+  "Section 9 - Declaration": "Section 9 - Declaration",
+  "I confirm that, to the best of my knowledge all of the information I have provided in this report is accurate and complete.": "I confirm that, to the best of my knowledge all of the information I have provided in this report is accurate and complete.",
+  "I am a:": "I am a:",
+  "general practice physician or physician certified in family medicine (CCFP)": "general practice physician or physician certified in family medicine (CCFP)",
+  "nurse practicioner": "nurse practicioner",
+  "registered nurse in a geographically isolated community (not urban or rural)": "registered nurse in a geographically isolated community (not urban or rural)",
+  "other physician specialist (please specify below)": "other physician specialist (please specify below)",
+  "Name": "Name",
+  "Date": "Date",
+  "Address and telephone number": "Address and telephone number",
+  "Name is required": "Name is required",
+  "Date is incorrectly formatted": "Date is incorrectly formatted",
+  "Address is required": "Address is required",
+  "Date is required": "Date is required",
+  "I am a is required": "I am a is required"
 }

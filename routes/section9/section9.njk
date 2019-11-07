@@ -2,15 +2,21 @@
 
 {% block content %}
 
-    <h1>{{ __('section9.title') }}</h1>
+    <h1>{{ __('Section 9 - Declaration') }}</h1>
 
     <div>
         <p>
-            {{ __('section9.intro') }}
+            {{ __('I confirm that, to the best of my knowledge all of the information I have provided in this report is accurate and complete.') }}
         </p>
 
         <form method="post">
-            {{ textInput('form.firstname', null, 'form.firstname.desc', { class: "w-3-4", name: "firstname", id: "firstname", autofocus: '', value: data.firstname }) }}
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+            {{ radioButtons('i_am_a', { '1':'general practice physician or physician certified in family medicine (CCFP)','other':'other physician specialist (please specify below)', '3':'nurse practicioner', '4':'registered nurse in a geographically isolated community (not urban or rural)'}, data.i_am_a, 'I am a:', errors, { required: true }) }}
+
+            {{ textInput('name', 'Name', { required: true }) }}
+            {{ textInput('date', 'Date', { hint: 'YYYY-MM-DD', required: true }) }}
+            {{ textArea('address', 'Address and telephone number', { required: true}) }}
+
             {{ formButtons() }}
         </form>
     </div>
