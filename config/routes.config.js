@@ -6,6 +6,7 @@ const routes = [
   { name: 'section3', path: { en: '/section3', fr: '/frsection3' } },
   { name: 'section4', path: { en: '/section4', fr: '/section4' } },
   { name: 'section6', path: { en: '/section6', fr: '/section6' } },
+  { name: 'section7', path: { en: '/section7', fr: '/section7' } },
   { name: 'section9', path: { en: '/section9', fr: '/section9' } },
   { name: 'confirmation', path: '/confirmation' },
 ]
