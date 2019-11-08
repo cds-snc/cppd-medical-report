@@ -24,7 +24,7 @@ const Schema = {
       errorMessage: () => {
         return this.message
       },
-    }
+    },
   },
   name: {
     isLength: {
