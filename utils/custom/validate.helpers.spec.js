@@ -7,10 +7,14 @@ const daysInMonth = require('./validate.helpers.js').daysInMonth
 
 test('passes valid phone number', () => {
     expect(validateTelephoneFormat('555-555-5555')).toBe(true)
+    expect(validateTelephoneFormat('(555)-555-5555')).toBe(true)
 })
 
 test('validateTelephoneFormat validates a phone number with an international calling number', () => { 
     expect(validateTelephoneFormat('+1 555-555-5555')).toBe(true)
+    expect(validateTelephoneFormat('+01 555-555-5555')).toBe(true)
+    expect(validateTelephoneFormat('+1 (555)-555-5555')).toBe(true)
+    expect(validateTelephoneFormat('+01 (555)-555-5555')).toBe(true)
 })
 
 test('fails invalid phone number', () => {
