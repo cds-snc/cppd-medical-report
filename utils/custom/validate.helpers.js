@@ -30,7 +30,7 @@ const isValidDate = function (dateString) {
 
 const validateTelephoneFormat = string => {
     // validates format: XXX-XXX-XXXX
-    return /^(\+0?1\s)?\(?\d{3}\)?[-]\d{3}[-]\d{4}$/.test(string)
+    return /^(\+0?1\s)??\(?\d{3}\)?[-]\d{3}[-]\d{4}$/.test(string)
 }
 
 const validateSINFormat = string => {
