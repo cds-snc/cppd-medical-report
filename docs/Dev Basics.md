@@ -22,6 +22,7 @@ It's setup with some sensible defaults and tech choices, such as:
 ## How To
 
 ### Adding Routes
+
 Generate the route files
 ```
 node ./bin/route.js create --route your_route_name
