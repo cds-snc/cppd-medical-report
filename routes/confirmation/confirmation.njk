@@ -8,16 +8,32 @@
         <p>
             {{ __('confirmation.intro') }}
         </p>
-        <ul>
-            <li>{{ __('form.fullname') }}:  <strong>{{ data.fullname }}</strong></li>
-            <li>{{ __('form.email') }}: <strong>{{ data.email }}</strong></li>
-            <li>{{ __('form.send_notifications') }}: <strong>{{ data.send_notifications }}</strong></li>
 
-            {% if data.send_notifications == "Yes" %}
-                <li>{{ __('form.notify_by') }}: <strong>{{ data.notify_type }}</strong></li>
+        <dl>
+            <dt>{{ __('Social insurance number') }}</dt>
+            <dd>{{ data.social }}</dd>
+
+            <dt>{{ __('Name') }}</dt>
+            <dd>{{ data.preferred_title }} {{ data.first_name }} {{ data.middle_name }} {{ data.last_name }} {% if data.birth_last_name %} ({{ __('ne: ') }} {{ data.birth_last_name }}){% endif %}
+        
+            <dt>{{ __('Date of Birth') }}</dt>
+            <dd>{{ data.birthdate }}</dd>
+
+            <dt>{{ __('Address') }}</dt>
+            <dd>{{ data.address }}</dd>
+
+            <dt>{{ __('Telephone') }}</dt>
+            <dd>{{ data.telephone }}</dd>
+
+            {% if data.alternate_telephone %}
+                <dt>{{ __('Alternate telephone') }}</dt>
+                <dd>{{ data.alternate_telephone }}</dd>
             {% endif %}
 
-        </ul>
+            <dt>{{ __('Best time to contact') }}</dt>
+            <dd>{{ data.contact_time }}</dd>
+        </dl>
+
     </div>
 
 {% endblock %}
