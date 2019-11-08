@@ -10,6 +10,8 @@
         </p>
 
         <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
             {{ checkBoxes('supporting_documents_type', { '1':'longitudinal clinical notes','2':'medical investigation report(s)', '3':'specialist\'s report(s)', '4': 'hospital discharge report(s)', 'other': 'other'}, data.contact_time, 'Please identify the type of report(s) you are including:', errors, { required: true }) }}
             
             {{ textInput('other_specify', 'If other, please specify') }}
