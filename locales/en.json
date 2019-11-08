@@ -198,5 +198,11 @@
   "Address": "Address",
   "Telephone": "Telephone",
   "Alternate telephone": "Alternate telephone",
-  "Best time to contact": "Best time to contact"
+  "Best time to contact": "Best time to contact",
+  "First name is required": "First name is required",
+  "Last name is required": "Last name is required",
+  "Birthdate is incorrectly formatted": "Birthdate is incorrectly formatted",
+  "Mailing address is required": "Mailing address is required",
+  "Telephone is required": "Telephone is required",
+  "Best time to contact you is required": "Best time to contact you is required"
 }
