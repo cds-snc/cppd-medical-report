@@ -79,3 +79,6 @@ credentials
 
 
 public/js/dist
+
+# Visual Studio Code
+.vscode
