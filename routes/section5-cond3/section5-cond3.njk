@@ -1,0 +1,94 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('Section 5 - Condition 3 - Medical conditions, impairments, functional limitations and treatment') }}</h1>
+
+    <div>
+        <p>
+            {{ __('Please use one page per medical condition. List the medical conditions in order of greatest functional impact.') }}
+        </p>
+
+        <form method="post">
+                <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                {{ textInput('condition-1-medical-condition', 'Medical condition:', { required: false }) }}
+                {{ textInput('condition-1-icd9cm-code', 'ICD-9-CM code', { required: false, hint: 'XXX.X' }) }}
+                {{ textInput('condition-1-date-of-symptom-onset', 'Date of symptom onset', { required: false, hint : 'YYYY-MM'}) }}
+                {{ textArea('condition-1-impairment', 'Impairment(s)', { required: false }) }}
+                {{ textArea('condition-1-functional-limitation', 'Functional limitation(s)', { required: false }) }}
+                {{ radioButtons('condition-1-prognosis',
+                { 
+                    improve : "improve", 
+                    deteriorate: "deteriorate",
+                    remain_the_same : "remain the same", 
+                    unknown : "unknown*"
+                }, 
+                "data.condition-1-prognosis",
+                "Prognosis",
+                errors,
+                {
+                    required: false,
+                    hint: "Condition is likely to" 
+                }) }}
+                {{ radioButtons("condition-1-expected-duration",
+                { 
+                    lt1 : "less than 1 year", 
+                    gt1 : "more than 1 year"
+                }, 
+                "data.condition-1-expected-duration", "Expected duration",  errors, { required: false}) }}
+                {{ radioButtons("condition-1-frequency",
+                { 
+                    "recurrent-episodic": "recurrent/episodic", 
+                    "continuous": "continuous", 
+                    "unknown": "unknown*"
+                }, 
+                "data.condition-1-frequency", "Frequency",  errors, { required: false}) }}
+
+                <fieldset>
+                    <legend>{{__("Medication 1")}}</legend>
+                    {{ textInput('condition-1-medication-dosage-freq-1', 'Medication(s), dosage and frequency', {}) }}
+                    {{ textInput('condition-1-medication-start-1', 'Actual/proposed start date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-medication-end-1', 'Actual/estimated end date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-medication-response-1', 'Response (e.g. efficacy, side effects etc.) and other remarks', {}) }}
+                </fieldset>
+                <fieldset>
+                    <legend>{{__("Medication 2")}}</legend>
+                    {{ textInput('condition-1-medication-dosage-freq-2', 'Medication(s), dosage and frequency', {}) }}
+                    {{ textInput('condition-1-medication-start-2', 'Actual/proposed start date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-medication-end-2', 'Actual/estimated end date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-medication-response-2', 'Response (e.g. efficacy, side effects etc.) and other remarks', {}) }}
+                </fieldset>
+                <fieldset>
+                    <legend>{{__("Medication 3")}}</legend>
+                    {{ textInput('condition-1-medication-dosage-freq-3', 'Medication(s), dosage and frequency', {}) }}
+                    {{ textInput('condition-1-medication-start-3', 'Actual/proposed start date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-medication-end-3', 'Actual/estimated end date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-medication-response-3', 'Response (e.g. efficacy, side effects etc.) and other remarks', {}) }}
+                </fieldset>
+                <fieldset>
+                    <legend>{{ __("Treatment 1")}}</legend>
+                    {{ textInput('condition-1-treatement-dosage-freq-1', 'Type and frequency of other treatment(s)', {}) }}
+                    {{ textInput('condition-1-treatement-start-1', 'Actual/proposed start date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-treatment-end-1', 'Actual/estimated end date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-treatment-start-1', 'Response (e.g. efficacy, side effects etc.) and other remarks', {}) }}
+                </fieldset>
+                <fieldset>
+                    <legend>{{ __("Treatment 2")}}</legend>
+                    {{ textInput('condition-1-treatement-dosage-freq-2', 'Type and frequency of other treatment(s)', {}) }}
+                    {{ textInput('condition-1-treatement-start-2', 'Actual/proposed start date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-treatment-end-2', 'Actual/estimated end date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-treatment-start-2', 'Response (e.g. efficacy, side effects etc.) and other remarks', {}) }}
+                </fieldset>
+                <fieldset>
+                    <legend>{{ __("Treatment 3")}}</legend>
+                    {{ textInput('condition-1-treatement-dosage-freq-3', 'Type and frequency of other treatment(s)', {}) }}
+                    {{ textInput('condition-1-treatement-start-3', 'Actual/proposed start date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-treatment-end-3', 'Actual/estimated end date', { hint: 'YYYY-MM'}) }}
+                    {{ textInput('condition-1-treatment-start-3', 'Response (e.g. efficacy, side effects etc.) and other remarks', {}) }}
+                </fieldset>
+            {{ formButtons() }}
+        </form>
+        <p>{{__("* If prognosis and/or frequency is unknown, please explain why in <b>Section 7 - Other relevant information.</b>") | safe}}</p>
+    </div>
+
+{% endblock %}
