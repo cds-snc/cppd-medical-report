@@ -1,3 +1,5 @@
+Test LGTM security scan
+
 # Canada Pension Plan Disability (CPPD) - Medical Report (Form ISP-2519)
 
 **Demo (`master` branch):** https://cppdmedicalreport-appservice.azurewebsites.net/
