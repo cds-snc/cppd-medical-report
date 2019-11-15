@@ -17,15 +17,7 @@
     "prettier": "prettier --write '**/*.{ts,js,css,html}'",
     "test": "node node_modules/jest/bin/jest.js --coverage",
     "test:watch": "node node_modules/jest/bin/jest.js --watch",
-    "postinstall": "patch-package",
-    "postgres:run": "docker run -e POSTGRES_PASSWORD=foo -e POSTGRES_USER=admin -e POSTGRES_DB=CPPD --rm -p 5432:5432 -d --name postgres-dev postgres:latest",
-    "postgres:stop": "docker stop postgres-dev",
-    "postgres:migrate": "knex migrate:latest",
-    "postgres:seed": "knex seed:run",
-    "aws": "cd cdk && cdk synth && node deploy",
-    "aws-bootstrap": "node cdk/bootstrap.js",
-    "aws-destroy": "node cdk/destroy.js"
-
+    "postinstall": "patch-package"
   },
   "husky": {
     "hooks": {
