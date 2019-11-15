@@ -7,8 +7,7 @@ module.exports = {
     connection: {
       host: 'localhost',
       database: 'postgres',
-      user: 'admin', 
-      password: 'foo',
+      user: 'postgres', 
     },
     seeds: { 
       directory: './db/seeds',
