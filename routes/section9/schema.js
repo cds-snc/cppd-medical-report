@@ -63,7 +63,7 @@ const Schema = {
       },
     },
   },
-  address: {
+  physician_address: {
     isLength: {
       errorMessage: 'Address is required',
       options: { min: 1 },
