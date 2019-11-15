@@ -3,7 +3,7 @@ const app = require('../../app.js')
 
 const mockFn = jest
   .fn(req => {
-    return { fullname: 'My full name' }
+    return { social: '555 555 555' }
   })
   .mockImplementationOnce(req => {
     return {}
@@ -23,6 +23,6 @@ jest.mock('../../utils/session.helpers', () => {
 test('Confirmation receives 200 when data exists', async () => {
   const route = app.routes.get('confirmation')
   const response = await request(app).get(route.path.en)
-  expect(response.text).toContain('My full name')
+  expect(response.text).toContain('555 555 555')
   expect(response.statusCode).toBe(200)
 })
