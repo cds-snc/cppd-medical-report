@@ -159,43 +159,22 @@ MedicalCondition.init({
   },
 })
 
-class Medication extends Model {}
 
-Medication.init({
-  medication_info: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  start_date: {
-    type: Sequelize.DATEONLY,
-    allowNull: true,
-  },
-  endDate: {
-    type: Sequelize.DATEONLY,
-    allowNull: true,
-  },
-  response: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-})
+class MedicalConditionTreatment extends Model {}
 
-class Treatment extends Model {}
-Treatment.init({
-  treatment_info: {
-    type: Sequelize.STRING,
-    allowNull: false,
+MedicalConditionTreatment.init({
+  medical_condition_id: {
+    type: Sequelize.INTEGER.UNSIGNED,
+    references: {
+      model: MedicalCondition,
+      key: 'id',
+    },
   },
-  start_date: {
-    type: Sequelize.DATEONLY,
-    allowNull: true,
-  },
-  endDate: {
-    type: Sequelize.DATEONLY,
-    allowNull: true,
-  },
-  response: {
-    type: Sequelize.STRING,
-    allowNull: false,
+  treatment_id: {
+    type: Sequelize.INTEGER.UNSIGNED,
+    references: {
+      model: Treatment,
+      key: 'id',
+    },
   },
 })

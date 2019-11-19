@@ -1,6 +1,8 @@
+import  * as Sequelize  from 'sequelize';
+
 
 exports.up = function(knex) {
- return knex.schema.createTable('medical-report', t => { 
+ return knex.schema.createTable('medical_reports', t => { 
     t.increments();
     // Section 1
     t.string('SIN', 9).notNullable();
@@ -48,7 +50,7 @@ exports.up = function(knex) {
     t.enu('Prognosis', ['improve', 'deteriorate', 'same', 'unknown'], {useNative: false, enuName: 'Prognosis'}).notNullable();
     t.enu('ExpectedDuration',['<1', '1>'], {useNative:false, enuName: 'ExpectedDuration'} ).notNullable();
     t.enu('Frequency', ['recurrant', 'continuous', 'unknown'], {useNative:false, enuName: 'Frequency'} ).notNullable();
-    t.integer('reportId').unsigned().notNullable();
+    t.integer('medical_report_id').unsigned().notNullable();
     t.foreign('reportId').references('id').inTable('medical-report').onDelete('cascade')
 
   }).createTable('medication', t => { 
@@ -68,8 +70,8 @@ exports.up = function(knex) {
 
 exports.down = function(knex) {
     return knex.schema
-                .dropTable('treatment')
-                .dropTable('medication')
-                .dropTable('medical-condition')
-                .dropTable('medical-report');
+        .dropTable('treatment')
+        .dropTable('medication')
+        .dropTable('medical-condition')
+        .dropTable('medical-report');
 };
