@@ -18,7 +18,8 @@ files.keys().map(key =>
   ),
 )
 
-// lgtm[js/unused-local-variable]
 const app = new Vue({
   el: '#app',
 })
+
+export default app
