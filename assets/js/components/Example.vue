@@ -1,15 +1,11 @@
 <template>
-    <div class="border-gray-300">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Example Component</div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Example Component</div>
 
-                    <div class="panel-body border-2 border-gray-400">
-                        I'm an example component!
-                    </div>
-                </div>
-            </div>
+            <p class="text-gray-700 text-base">
+                I'm an example component!
+            </p>
         </div>
     </div>
 </template>
