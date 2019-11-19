@@ -112,6 +112,16 @@ module.exports = {
         type: Sequelize.DATEONLY,
         allowNull: true,
       },
+      medical_condition_id: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'MedicalConditions',
+          key: 'id',
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

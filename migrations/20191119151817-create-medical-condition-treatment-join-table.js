@@ -6,15 +6,23 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER.UNSIGNED,
+        type: Sequelize.INTEGER,
       },
-      medicalConditionId: {
-        type: Sequelize.INTEGER.UNSIGNED,
+      medical_condition_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: 'MedicalConditions',
+          key: 'id',
+        },
       },
-      treatmentId: {
-        type: Sequelize.INTEGER.UNSIGNED,
+      treatment_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
+        references: {
+          model: 'Treatments',
+          key: 'id',
+        },
       },
       createdAt: {
         allowNull: false,
