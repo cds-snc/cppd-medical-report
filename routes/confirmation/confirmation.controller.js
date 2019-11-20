@@ -7,13 +7,6 @@ const {
 
 const models = require('../../models')
 
-function mapContactTime(index) {
-  return ['am', 'pm', 'never'][index]
-}
-
-function mapConsent(index) {
-  return ['yes', 'no'][index]
-}
 
 module.exports = (app, route) => {
   route
