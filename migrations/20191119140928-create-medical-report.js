@@ -56,7 +56,7 @@ module.exports = {
       witness_last_name: {
         type: Sequelize.STRING,
       },
-      witness_phone_number: {
+      witness_telephone_number: {
         type: Sequelize.STRING,
       },
       witness_signature: {
