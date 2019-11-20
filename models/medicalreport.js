@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     telephone_Number: DataTypes.STRING,
     alt_telephone_number: DataTypes.STRING,
     contact_period: DataTypes.ENUM('am','pm','never'),
-    conset: DataTypes.ENUM('yes','no'),
+    consent: DataTypes.ENUM('yes','no'),
     signature: DataTypes.STRING,
     witness_first_name: DataTypes.STRING,
     witness_middle_name: DataTypes.STRING,
@@ -24,11 +24,12 @@ module.exports = (sequelize, DataTypes) => {
     dateof_last_visit: DataTypes.DATEONLY,
     dateof_first_treatment_for_primary_condition: DataTypes.DATEONLY,
     condition_state: DataTypes.ENUM('grave', 'terminal', 'neither'),
-    terminal_condition: DataTypes.String,
-    icd_9m_code: DataTypes.String,
+    terminal_condition: DataTypes.STRING,
+    icd_9m_code: DataTypes.STRING,
     date_of_sympton_onset: DataTypes.DATEONLY,
   }, {});
   MedicalReport.associate = function(models) {
+    MedicalReport.hasMany(models.MedicalCondition); 
     // associations can be defined here
     // MedicalReport.hasMany(models.MedicalCondition, {
     //   as: 'medical_conditions',

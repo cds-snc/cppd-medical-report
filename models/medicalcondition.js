@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     MedicalCondition.belongsToMany(models.Medication, {
       through: 'MedicalConditionMedication',
     });
-    MedicalCondition.belongsToMany(models.treatment, {
+    MedicalCondition.belongsToMany(models.Treatment, {
       through: 'MedicalConditionTreatment',
     });
     // associations can be defined here

@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     treatment_info: DataTypes.STRING,
     start_date: DataTypes.DATEONLY,
     end_date: DataTypes.DATEONLY,
-    response: DataTypes.STRING
+    response: DataTypes.STRING,
   }, {});
   Treatment.associate = function(models) {
     // associations can be defined here
