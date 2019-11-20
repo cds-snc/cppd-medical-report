@@ -5,8 +5,6 @@ const {
   getSessionData,
 } = require('../../utils/index')
 
-const models = require('../../models')
-
 
 module.exports = (app, route) => {
   route
@@ -23,19 +21,24 @@ module.exports = (app, route) => {
       res.render(route.name, getViewData(req))
     })
     .post((req, res) => {
-      const data = getSessionData(req)
-      models.MedicalReport.create({
-        sin: data.social,
-        title: data.preferred_title,
-        first_name: data.first_name,
-        middle_name: data.middle_name,
-        last_name: data.last_name,
-      })
-        .then(() => {
-          console.log('saved to db')
+      if (process.env.UseDatase) {
+        const data = getSessionData(req)
+        
+        const models = require('../../models')
+        models.MedicalReport.create({
+          sin: data.social,
+          title: data.preferred_title,
+          first_name: data.first_name,
+          middle_name: data.middle_name,
+          last_name: data.last_name,
         })
-        .catch(err => {
-          console.log(err)
-        })
+          .then(() => {
+            console.log('saved to db')
+          })
+          .catch(err => {
+            console.log(err)
+          })
+
+        }
     })
 }
