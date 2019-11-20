@@ -11,5 +11,7 @@ module.exports = {
       lines: 80,
       statements: 80,
     },
-  }
+  },
+  globalSetup: './globalSetup.js',
+  globalTeardown: './globalTeardown.js',
 }
