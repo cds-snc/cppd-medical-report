@@ -33,7 +33,13 @@
             <dt>{{ __('Best time to contact') }}</dt>
             <dd>{{ data.contact_time }}</dd>
         </dl>
+        {% if process.env.UseDatabase %}
+        <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
+            {{ formButtons() }}
+        </form>
+        {%endif%}
     </div>
 
 {% endblock %}

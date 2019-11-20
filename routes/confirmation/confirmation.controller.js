@@ -2,10 +2,13 @@ const {
   validateRouteData,
   getViewData,
   setFlashMessageContent,
+  getSessionData,
 } = require('../../utils/index')
 
+
 module.exports = (app, route) => {
-  route.draw(app)
+  route
+    .draw(app)
     .get(async (req, res) => {
       // ⚠️ experimental
       // validate data from previous step
@@ -15,7 +18,27 @@ module.exports = (app, route) => {
       if (!result.status) {
         setFlashMessageContent(req, result.errors)
       }
-
       res.render(route.name, getViewData(req))
+    })
+    .post((req, res) => {
+      if (process.env.UseDatase) {
+        const data = getSessionData(req)
+        
+        const models = require('../../models')
+        models.MedicalReport.create({
+          sin: data.social,
+          title: data.preferred_title,
+          first_name: data.first_name,
+          middle_name: data.middle_name,
+          last_name: data.last_name,
+        })
+          .then(() => {
+            console.log('saved to db')
+          })
+          .catch(err => {
+            console.log(err)
+          })
+
+        }
     })
 }

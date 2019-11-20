@@ -22,6 +22,16 @@ Requires the following things to be installed:
 1. `npm install`
 1. `npm run dev`
 
+#### Standalone with Postgres
+*The environment variable UseDatabase must be set to true*
+
+1. Clone this repo and navigate into it
+1. `npm install`
+1. `npm run db:install`
+1. `npm run db:start`
+1. `npm run db:migrate`
+1. `npm run dev`
+
 #### With Docker
 
 1. Clone this repo and navigate into it
