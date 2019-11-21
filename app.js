@@ -66,6 +66,13 @@ app.use(compression())
 app.locals.GITHUB_SHA = process.env.GITHUB_SHA || null
 app.locals.hasData = hasData
 
+// Using the getClientJs to grab the global app.js and set it in app.locals so we can render in templates
+const { getClientJs } = require('./utils')
+app.use(function(req, res, next) {
+  app.locals.appJs = getClientJs(req, 'app')
+  next()
+})
+
 // set default views path
 app.locals.basedir = path.join(__dirname, './views')
 app.set('views', [path.join(__dirname, './views')])
