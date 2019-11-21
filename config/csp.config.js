@@ -1,6 +1,13 @@
 // docs: https://helmetjs.github.io/docs/csp/
 
-const scriptSrc = ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com', '*.herokuapp.com']
+const scriptSrc = [
+  "'self'",
+  "'unsafe-inline'",
+  "'unsafe-eval'",
+  'cdnjs.cloudflare.com',
+  '*.herokuapp.com',
+  'localhost:3000',
+]
 
 if (process.env.NODE_ENV === 'development') {
   scriptSrc.push("'unsafe-eval'")
