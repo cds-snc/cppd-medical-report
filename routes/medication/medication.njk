@@ -1,0 +1,41 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('medication.title') }}<br/> <span class="text-base">{{ __('patient_name')}}</span></h1>
+
+    <div>
+        <p>
+            {{ __('medication.intro') }}
+        </p>
+
+        <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+            
+            {{ textInput('medication_name', 'form.medicationName.desc', {required: true}) }}
+            {{ textInput('medication_dosage', 'form.medicationDosage.desc', {required: true}) }}
+            {{ textInput('medication_frequency', 'form.medicationFrequency.desc', {required: true}) }}
+            {{ textInput('firstname', 'form.firstname.desc', {required: true}) }}
+
+            {{ radioDatePicker('medication_start_date', 'form.start_date.text', 'form.start_date.unknown', 'form.start_date.question')}}
+            {{ radioDatePicker('medication_end _date', 'form.end_date.text', 'form.end_date.unknown', 'form.end_date.question')}}
+            
+            {{ checkBoxes('treated_condition', 
+                {
+                    'condition_1':'condition_1' ,
+                    'condition_2':'condition_2' ,
+                    'condition_3':'condition_3' },{},
+                'form.treated_conditions.question',
+                {required: true}) 
+            }}
+
+            {{ textArea(
+                'medication_results',
+                'form.medicaiton_results.desc',
+                { required: true, hint: 'form.medication_results.hint' }
+            ) }}
+            {{ formButtons() }}
+        </form>
+    </div>
+
+{% endblock %}

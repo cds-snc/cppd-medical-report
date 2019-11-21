@@ -1,0 +1,52 @@
+
+{#
+  - `name`: field name
+  - `
+  - `label`: text for the label
+  - `attributes`: object of optional attributes: id, class, hint, divClasses, autocomplete
+#}
+
+{%- from 'input-text.njk' import textInput as textInput with context -%}
+
+{% if errors %}
+    {% set firstError = errors[errors.keys()[0]] %}
+{% endif %}
+
+
+{% macro radioDatePicker(key, dateText, noText, question, errors, attributes) %}
+    <div class="{{ 'has-error' if errors and errors[key] }}">
+        <fieldset class="fieldset">
+            <legend class="fieldset__legend">
+            {% if attributes.required %}
+                <span aria-hidden="true" class="required">*</span>
+            {% endif %}
+            {{ __(question) }}
+            {% if attributes.required %}
+                <span class="required">{{ __("required")}}</span>
+            {% endif %}
+            </legend>
+            {% if attributes.hint %}
+                <span class="form-message">{{ __(attributes.hint) }}</span>
+            {% endif %}
+            <div class="multiple-choice multiple-choice--radios" id="{{ key }}">
+                {% if errors and errors[key] %}
+                    {{ validationMessage(errors[key].msg, key) }}
+                {% endif %}
+
+                <div class="multiple-choice__item">
+                    <input id="{{ key }}0" name="{{ key }}0" type="radio" value="0"  {% if errors and errors[key] %} aria-describedby="{{ key + '-error' }}" aria-invalid="true" {% endif %}>
+                    <label for="{{ key }}0">{{ __(dateText) }}</label>
+
+
+                    {{ textInput(key, dateText ) }}
+
+                </div>
+                <div class="multiple-choice__item">
+                    <input id="{{ key }}1" name="{{ key }}" type="radio" value="1" {% if errors and errors[key] %} aria-describedby="{{ key + '-error' }}" aria-invalid="true" {% endif %}>
+                    <label for="{{ key }}1">{{ __(noText) }}</label>
+                </div>
+
+            </div>
+        </fieldset>
+    </div>
+{% endmacro %}
