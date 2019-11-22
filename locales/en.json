@@ -310,5 +310,6 @@
   "errors.treatment_treated_condition.is_checked": "errors.treatment_treated_condition.is_checked",
   "errors.treatment_results.length": "errors.treatment_results.length",
   "Next: Medications": "Next: Medications",
-  "Next: Treatments": "Next: Treatments"
+  "Next: Treatments": "Next: Treatments",
+  "add_medication.add_medication": "add_medication.add_medication"
 }
