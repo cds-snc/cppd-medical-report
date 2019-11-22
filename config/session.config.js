@@ -15,4 +15,5 @@ module.exports = session({
   secret: sessionName,
   resave: false,
   saveUninitialized: false,
+  unset: 'destroy',
 })
