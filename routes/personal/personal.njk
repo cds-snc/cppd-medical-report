@@ -3,7 +3,7 @@
 {% block content %}
 
     <h1>{{ __('Section 1 - Information about you') }}</h1>
-<example></example>
+
     <form method="post">
         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
@@ -24,8 +24,6 @@
         {{ textInput('alternate_telephone', 'Alternate telephone number', { hint: 'XXX-XXX-XXXX' }) }}
 
         {{ radioButtons('contact_time', { 'morning':'Morning','afternoon':'Afternoon', 'letters_only':'Please don\'t call, send letters only'}, data.contact_time, 'The best time for Service Canada to contact you', errors, { required: true }) }}
-
-        <file-upload files="{{ data.files }}"></file-upload>
 
         {{ formButtons() }}
     </form>
