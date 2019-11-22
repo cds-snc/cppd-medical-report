@@ -2,12 +2,15 @@
 
 {% block content %}
 
-    <h1>{{ __('Section 1 - Information about you') }}</h1>
+    <h1>{{ __('Section 1 - Get started') }}</h1>
+
+    {# <h1>{{ __('Section 1 - Information about you') }}</h1> #}
 
     <form method="post">
         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-        {{ textInput('social', 'Social Insurance Number', { hint: '443 856 299', class: "w-3-4", required: true }) }}
+        {{ textInput('name', 'Name', { class: "w-3-4", required: true }) }}
+        {# {{ textInput('social', 'Social Insurance Number', { hint: '443 856 299', class: "w-3-4", required: true }) }}
 
         {{ radioButtons('preferred_title', { '1':'Mr.','2':'Mrs.','3':'Miss','4':'Ms.'}, data.preferred_title, 'Title', errors) }}
         
@@ -23,7 +26,7 @@
         {{ textInput('telephone', 'Telephone number', { hint: 'XXX-XXX-XXXX', required: true }) }}
         {{ textInput('alternate_telephone', 'Alternate telephone number', { hint: 'XXX-XXX-XXXX' }) }}
 
-        {{ radioButtons('contact_time', { 'morning':'Morning','afternoon':'Afternoon', 'letters_only':'Please don\'t call, send letters only'}, data.contact_time, 'The best time for Service Canada to contact you', errors, { required: true }) }}
+        {{ radioButtons('contact_time', { 'morning':'Morning','afternoon':'Afternoon', 'letters_only':'Please don\'t call, send letters only'}, data.contact_time, 'The best time for Service Canada to contact you', errors, { required: true }) }} #}
 
         {{ formButtons() }}
     </form>

@@ -6,6 +6,7 @@ module.exports = (app, route) => {
     .draw(app)
     .get((req, res) => {
       const js = getClientJs(req, route.name)
+
       res.render(
         route.name,
         routeUtils.getViewData(req, { jsFiles: js ? [js] : false }),
