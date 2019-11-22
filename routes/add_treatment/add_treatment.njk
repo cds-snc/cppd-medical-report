@@ -14,11 +14,8 @@
             {{ textInput('treatment_start_date', 'treatments.form.start_date.text', { required: true, hint: 'treatments.form.start_date.hint'})}}
             {{ textInput('treatment_end_date', 'treatments.form.end_date.text', {required: true, hint: 'treatments.form.end_date.hint'})}}
             
-            {{ checkBoxes('treatment_treated_condition', 
-                {
-                    'condition_1':'condition_1' ,
-                    'condition_2':'condition_2' ,
-                    'condition_3':'condition_3' },{},
+            {{ rawCheckBoxes('treatment_treated_condition', 
+                conditionList,{},
                 'treatments.form.treated_conditions.question',{},
                 {required: true}) 
             }}
