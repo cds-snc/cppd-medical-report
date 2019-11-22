@@ -9,7 +9,11 @@
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-            {{ data.medications | dump }}
+            <ol>
+            {% for med in data.medications %}
+                <li>{{ med.medication_name }}</li>
+            {% endfor %}
+            </ol>
 
             <p><a href="/en/add_medication">Add a medication</a></p>
 

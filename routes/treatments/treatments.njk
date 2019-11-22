@@ -9,8 +9,11 @@
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-            {{ data.treatments | dump }}
-
+            <ol>
+            {% for treatment in data.treatments %}
+                <li>{{ treatment.treatment_type }}</li>
+            {% endfor %}
+            </ol>
             <p><a href="/en/add_treatment">{{ __('Add a treatment') }}</a></p>
 
             {{ formButtons('Next: Overall patient summary') }}
