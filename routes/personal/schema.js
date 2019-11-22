@@ -3,7 +3,7 @@
 const Schema = {
   name: {
     isLength: {
-      errorMessage: 'Test ID is required',
+      errorMessage: 'Name is required',
       options: { min: 1 },
     },
   },

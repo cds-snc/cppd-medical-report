@@ -5,7 +5,6 @@ const {
   getSessionData,
 } = require('../../utils/index')
 
-
 module.exports = (app, route) => {
   route
     .draw(app)
@@ -21,6 +20,16 @@ module.exports = (app, route) => {
       res.render(route.name, getViewData(req))
     })
     .post((req, res) => {
+      const fs = require('fs')
+      const data = JSON.stringify(getSessionData(req))
+
+      const filename = Date.now() + '.json'
+
+      fs.writeFileSync(filename, data)
+
+      res.redirect('/clear')
+
+      /*
       if (process.env.UseDatase) {
         const data = getSessionData(req)
         
@@ -40,5 +49,6 @@ module.exports = (app, route) => {
           })
 
         }
+        */
     })
 }
