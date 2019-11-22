@@ -15,20 +15,22 @@
 
             {{ 
                 radioButtons('numYearsWasPatient', 
-                    { '1':'1 year or less',
-                    '2':'1 to 2 years',
-                    '3': '3 to 4 years',
-                    '4': '5 years or more'}, 
+                    { 
+                        '1': 'form.num_years_was_patient.opt1',
+                        '2': 'form.num_years_was_patient.opt2',
+                        '3': 'form.num_years_was_patient.opt3',
+                        '4': 'form.num_years_was_patient.opt4'
+                    }, 
                 data.numYearsWasPatient, 
-                'How many years has this patient been in your care?',
+                'form.num_years_was_patient.desc',
                 errors,
                 { required: true }) 
             }}
-            {{ textInput('visitNumber', 'Number of times this patient has visited your office in the past 12 months', { required: true }) }}
+            {{ textInput('visitNumber', 'form.visit_number.desc', { required: true }) }}
 
-            {{ textInput('lastVisitDate', 'Date of last office visit', { hint: 'YYYY-MM-DD', required: true }) }}
+            {{ textInput('lastVisitDate', 'form.last_visit_date.desc', { hint: 'YYYY-MM-DD', required: true }) }}
 
-            {{ textInput('firstTreatmentDate', "Date you first started treating this patient's primary medical condition", { hint: 'YYYY-MM-DD', required: true }) }}
+            {{ textInput('firstTreatmentDate', 'form.first_treatment_date.desc', { hint: 'YYYY-MM-DD', required: true }) }}
 
             {{ formButtons() }}
         </form>
