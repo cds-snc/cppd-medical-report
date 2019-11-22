@@ -14,12 +14,8 @@
             {{ textInput('medication_frequency', 'form.medication_frequency.desc', {required: true, hint: 'form.medication_frequency.hint'}) }}
             {{ textInput('medication_start_date', 'form.medication_start_date.text', { required: true, hint: 'form.medication_start_date.hint'})}}
             {{ textInput('medication_end_date', 'form.medication_end_date.text', {required: true, hint: 'form.medication_end_date.hint'})}}
-            
-            {{ checkBoxes('medication_treated_condition', 
-                {
-                    'condition_1':'condition_1' ,
-                    'condition_2':'condition_2' ,
-                    'condition_3':'condition_3' },{},
+            {{ rawCheckBoxes('medication_treated_condition', 
+                conditionList,{},
                 'form.medication_treated_conditions.question',{},
                 {required: true}) 
             }}
