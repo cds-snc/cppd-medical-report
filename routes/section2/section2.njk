@@ -2,31 +2,31 @@
 
 {% block content %}
 
-    <h1>{{ __('section_2.title') }}</h1>
+    <h1>{{ __('section2title') }}</h1>
 
-    <p>{{ __('section_2.preamble') | safe }}</p>
+    <p>{{ __('section2preamble') | safe }}</p>
 
     <form method="post">
         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-        {{ medicalConsent('consent', { '1':'section_2.i_consent','2':'section_2.i_dont_consent'}, data.consent, 'section_2.consent_preamble', errors, {hint: 'section_2.consent_valid_period', required: true}) }}
-        {{ textInput('signature', 'section_2.form.signature') }}
+        {{ medicalConsent('consent', { '1':'section2i_consent','2':'section2i_dont_consent'}, data.consent, 'section2consent_preamble', errors, {hint: 'section2consent_valid_period', required: true}) }}
+        {{ textInput('signature', 'section2form.signature') }}
 
-        <p>{{ __('section_2.delay_warning_preamble') }}</p>
+        <p>{{ __('section2delay_warning_preamble') }}</p>
         <ul>
-            <li>{{ __('section_2.delay_warning_1') }}</li>
-            <li>{{ __('section_2.delay_warning_2') }}</li>
-            <li>{{ __('section_2.delay_warning_3') }}</li>
+            <li>{{ __('section2delay_warning_1') }}</li>
+            <li>{{ __('section2delay_warning_2') }}</li>
+            <li>{{ __('section2delay_warning_3') }}</li>
         </ul>
 
         <fieldset>
-            <legend>{{__('section_2.witness_legend')}}</legend>
-            <p> {{__('section_2.witness_preamble')}} </p>
-            {{ textInput('witnessFirst', 'section_2.form.witness_first') }}
-            {{ textInput('witnessMiddle', 'section_2.form.witness_middle') }}
-            {{ textInput('witnessLast', 'section_2.form.witness_last') }}
-            {{ textInput('witnessPhone', 'section_2.form.witness_phone') }}
-            {{ textInput('witnessSignature', 'section_2.form.witness_signature') }}
+            <legend>{{__('section2witness_legend')}}</legend>
+            <p> {{__('section2witness_preamble')}} </p>
+            {{ textInput('witnessFirst', 'section2form.witness_first') }}
+            {{ textInput('witnessMiddle', 'section2form.witness_middle') }}
+            {{ textInput('witnessLast', 'section2form.witness_last') }}
+            {{ textInput('witnessPhone', 'section2form.witness_phone') }}
+            {{ textInput('witnessSignature', 'section2form.witness_signature') }}
         </fieldset>
 
         {{ formButtons() }}
