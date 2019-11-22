@@ -1,6 +1,6 @@
 <template>
     <div class="file">
-        <input type="hidden" name="files" v-bind:value="uploaded_files">
+        <input type="hidden" :name="fieldName" v-bind:value="uploaded_files">
         <form enctype="multipart/form-data">
             <div class="">
                 <label class="w-64 border-2 border-black cursor-pointer bg-gray-200 px-5 py-2 inline-block text-center">
@@ -25,7 +25,8 @@
             }
         },
         props: [
-            'files'
+            'files',
+            'fieldName'
         ],
         methods: {
             onSelect() {
@@ -34,6 +35,7 @@
             }
         },
         mounted() {
+            console.log(this.fieldName);
             if(this.files) {
                 this.uploaded_files = this.files.split(",")
             }
