@@ -255,5 +255,10 @@
   "form.medication_end_date.hint": "For example, March 2011",
   "form.medication_treated_conditions.question": "Which condition(s) does this medication treat?",
   "errors.medication_name.length": "errors.medication_name.length",
-  "errors.medication_treated_condition.is_checked": "errors.medication_treated_condition.is_checked"
+  "errors.medication_treated_condition.is_checked": "errors.medication_treated_condition.is_checked",
+  "errors.medication_dosage.length": "errors.medication_dosage.length",
+  "errors.medication_frequency.length": "errors.medication_frequency.length",
+  "errors.medication_start_date.length": "errors.medication_start_date.length",
+  "errors.medication_end_date.length": "errors.medication_end_date.length",
+  "errors.medication_results.length": "errors.medication_results.length"
 }

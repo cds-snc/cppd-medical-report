@@ -1,11 +1,5 @@
 /* istanbul ignore file */
 const Schema = {
-  firstname: {
-    isLength: {
-      errorMessage: 'errors.firstname.length',
-      options: { min: 3, max: 200 },
-    },
-  },
   medication_name: { 
     isLength: { 
       errorMessage: 'errors.medication_name.length',
@@ -14,25 +8,25 @@ const Schema = {
   },
   medication_dosage: {
     isLength: { 
-      errorMessage: 'errors.medication_name.length',
+      errorMessage: 'errors.medication_dosage.length',
       options: { min: 1 },
     },
   },
   medication_frequency: {
     isLength: { 
-      errorMessage: 'errors.medication_name.length',
+      errorMessage: 'errors.medication_frequency.length',
       options: { min: 1 },
     },
   },
   medication_start_date : {
     isLength: { 
-      errorMessage: 'errors.medication_name.length',
+      errorMessage: 'errors.medication_start_date.length',
       options: { min: 1 },
     },
   },
   medication_end_date: { 
     isLength: { 
-      errorMessage: 'errors.medication_name.length',
+      errorMessage: 'errors.medication_end_date.length',
       options: { min: 1 },
     },
   },
@@ -50,7 +44,7 @@ const Schema = {
   },
   medication_results: {
     isLength: { 
-      errorMessage: 'errors.medication_name.length',
+      errorMessage: 'errors.medication_results.length',
       options: { min: 1 },
     },
   },
