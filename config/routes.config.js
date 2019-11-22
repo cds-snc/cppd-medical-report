@@ -9,6 +9,7 @@ const routes = [
 
   { name: 'add_condition', path: '/add_condition' },
   { name: 'add_medication', path: '/add_medication' },
+  { name: 'add_treatment', path: '/add_treatment' },
 ]
 
 const locales = ['en', 'fr']
