@@ -25,6 +25,8 @@
 
         {{ radioButtons('contact_time', { 'morning':'section1.contact_time_morning','afternoon':'section1.contact_time_afternoon', 'letters_only':'section1.contact_time_letters_only'}, data.contact_time, 'section1.contact_time', errors, { required: true }) }}
 
+        <file-upload files="{{ data.files }}"></file-upload>
+
         {{ formButtons() }}
     </form>
 

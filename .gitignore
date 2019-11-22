@@ -72,8 +72,3 @@ credentials
 cdk.out
 cdk.out
 cdk/local-image
-
-# Visual Studio Code
-.vscode
-
-credentials
