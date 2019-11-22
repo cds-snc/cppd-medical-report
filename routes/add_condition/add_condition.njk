@@ -28,8 +28,25 @@
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
             {{ condition() }}
-            
-            {{ formButtons('Add condition') }}
+
+            <p id="attach_files_desk" class="font-bold">{{ __('add_condition.attach_notes') }}</p>
+            <p class="text-gray-400">{{ __('add_condition.attach_notes_hint') }}</p>
+
+            <file-upload files="{{ data.condition_files }}" field-name="condition_files"></file-upload>
+
+            <div class="multiple-choice__item">
+                <input id="attach_later" name="attach_later" type="checkbox" value="attach_later">
+                <label for="attach_later">{{ __('add_condition.attach_later') }}</label>
+            </div>
+
+            <div class="buttons">
+                <div class="buttons--left">
+                    <button type="submit">{{ __('add_condition.add_condition') }}</button>
+                </div>
+                <div class="buttons--right">
+                    <a class="button-link transparent full-width" href="/en/conditions">{{ __('Cancel') }}</a>
+                </div>
+            </div>
         </form>
     </div>
 

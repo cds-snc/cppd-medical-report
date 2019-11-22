@@ -22,7 +22,16 @@ module.exports = (app, route) => {
       }
 
       // push our data onto the conditions array
-      data.conditions.push([body])
+      data.conditions.push(body)
+
+      // unset local fields so the form is clear when we come back to add a new one
+      req.body.name_of_condition = null
+      req.body.symptoms_began = null
+      req.body.clinically_impair = null
+      req.body.condition_outlook = null
+      req.body.condition_last = null
+      req.body.symptoms_occur = null
+      req.body.condition_files = []
 
       // save that session data
       saveSessionData(req)
