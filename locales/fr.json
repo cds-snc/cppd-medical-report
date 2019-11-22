@@ -269,9 +269,9 @@
   "treatments.form.frequency.hint": "Par exemple : « Mensuel, par psychiatre », etc.",
   "treatments.form.start_date.text": "Quand a-t-il commencé ou quand commencera-t-il à recevoir ce traitement?",
   "treatments.form.start_date.hint": "",
-  "treatments.form.end_date.text": "",
+  "treatments.form.end_date.text": "Quand ce traitement prendra-t-il fin?",
   "treatments.form.end_date.hint": "",
-  "treatments.form.treated_conditions.question": "",
-  "treatments.form.results.desc": "",
-  "treatments.form.results.hint": ""
+  "treatments.form.treated_conditions.question": "Quels sont les troubles visés par ce traitement?",
+  "treatments.form.results.desc": "Résultat du traitement, effets secondaires ou commentaires",
+  "treatments.form.results.hint": "Par exemple : « N’a pas amélioré le mouvement » ou « douleur toujours présente », etc."
 }
