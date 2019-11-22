@@ -242,5 +242,19 @@
   "Section 5 - Condition 1 - Medical conditions, impairments, functional limitations and treatment": "Section 5 - Condition 1 - Medical conditions, impairments, functional limitations and treatment",
   "unknown*": "unknown*",
   "* If prognosis and/or frequency is unknown, please explain why in <b>Section 7 - Other relevant information.</b>": "* If prognosis and/or frequency is unknown, please explain why in <b>Section 7 - Other relevant information.</b>",
-  "Section 5 - Condition 2 - Medical conditions, impairments, functional limitations and treatment": "Section 5 - Condition 2 - Medical conditions, impairments, functional limitations and treatment"
+  "Section 5 - Condition 2 - Medical conditions, impairments, functional limitations and treatment": "Section 5 - Condition 2 - Medical conditions, impairments, functional limitations and treatment",
+  "conditions.title": "Section 5 - Patient's medical conditions",
+  "conditions.intro": "List the condition that has the greatest functional impact first",
+  "conditions.patient": "Patient:",
+  "conditions.name_of_condition": "Name of medical condition:",
+  "conditions.name_of_condition_hint": "ICD-9-CM code: XXXX",
+  "conditions.symptoms_began": "When did your patient's symptoms begin?",
+  "conditions.symptoms_began_hint": "For example, February 2008",
+  "conditions.clinically_impair": "How does this condition clinically impair your patient?",
+  "conditions.clinically_impair_hint": "For example: 'reduced range of motion', 'severe mood disturbance' etc",
+  "conditions.condition_outlook": "Is your patient's condition likely to:",
+  "condition.condition_outlook_improve": "Improve",
+  "condition.condition_outlook_deteriorate": "Deteriorate",
+  "condition.condition_outlook_staysame": "Stay the same",
+  "condition.condition_outlook_unknown": "Unknown"
 }
