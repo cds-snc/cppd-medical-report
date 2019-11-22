@@ -1,0 +1,36 @@
+{% extends "base.njk" %}
+
+{% macro condition() %}
+    
+    {{ textInput('name_of_condition', 'add_condition.name_of_condition', { hint: 'add_condition.name_of_condition_hint' }) }}
+
+    {{ textInput('symptoms_began', 'add_condition.symptoms_began', { hint: 'add_condition.symptoms_began_hint' }) }}
+
+    {{ textArea('clinically_impair', 'add_condition.clinically_impair', { hint: 'add_condition.clinically_impair_hint' }) }}
+
+    {{ radioButtons('condition_outlook', { '1':'add_condition.condition_outlook_improve','2':'add_condition.condition_outlook_deteriorate', '3':'add_condition.condition_outlook_staysame', '4':'add_condition.condition_outlook_unknown'}, data.condition_outlook, 'add_condition.condition_outlook', errors, { required: true }) }}
+
+    {{ radioButtons('condition_last', { '1':'add_condition.condition_last_1_year', '2':'add_condition.condition_last_more' }, data.condition_last, 'add_condition.condition_last', errors, { required: true }) }}
+
+    {{ radioButtons('symptoms_occur', { '1':'add_condition.symptoms_occur_periodically', '2':'add_condition.symptoms_occur_continuously', '3':'add_condition.symptoms_occur_unknown'}, data.symptoms_occur, 'add_condition.symptoms_occur', errors, { required: true }) }}
+{% endmacro %}
+
+{% block content %}
+
+    <h1>{{ __('conditions.title') }}<br/> <span class="text-base">{{ __('conditions.patient')}} {{ data.name }}</span></h1>
+
+    <div>
+        <p>
+            {{ __('conditions.intro') }}
+        </p>
+
+        <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+            {{ condition() }}
+            
+            {{ formButtons('Add condition') }}
+        </form>
+    </div>
+
+{% endblock %}

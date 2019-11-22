@@ -1,38 +1,20 @@
 {% extends "base.njk" %}
 
-{% macro condition(id) %}
-    
-    {{ textInput('conditions[' + id + '][name_of_condition]', 'conditions.name_of_condition', { hint: 'conditions.name_of_condition_hint' }) }}
-
-    {{ textInput('conditions[' + id + '][symptoms_began]', 'conditions.symptoms_began', { hint: 'conditions.symptoms_began_hint' }) }}
-
-    {{ textArea('conditions[' + id + '][clinically_impair]', 'conditions.clinically_impair', { hint: 'conditions.clinically_impair_hint' }) }}
-
-    {{ radioButtons('conditions[' + id + '][condition_outlook]', { '1':'condition.condition_outlook_improve','2':'condition.condition_outlook_deteriorate', '3':'condition.condition_outlook_staysame', '4':'condition.condition_outlook_unknown'}, data.condition_outlook[id], 'conditions.condition_outlook', errors, { required: true }) }}
-{% endmacro %}
-
 {% block content %}
 
-    <h1>{{ __('conditions.title') }}<br/> <span class="text-base">{{ __('conditions.patient')}} {{ data.first_name }} {{ data.last_name }}</span></h1>
+    <h1>{{ __('conditions.title') }}<br/> <span class="text-base">{{ __('conditions.patient')}} {{ data.name }}</span></h1>
 
     <div>
         <p>
             {{ __('conditions.intro') }}
         </p>
 
+        {{ data.conditions | dump }}
+
+        <p><a href="/en/add_condition">Add a condition</a></p>
+
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
-
-            {% if not data.conditions %}
-                {{ condition(0) }}
-            {% else %}
-                saved
-                {% for condition, index in conditions %}
-                    {{ condition(index) }}
-                {% endfor %}
-
-            {% endif %}
-            
             {{ formButtons() }}
         </form>
     </div>
