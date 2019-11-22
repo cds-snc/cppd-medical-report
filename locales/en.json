@@ -311,5 +311,8 @@
   "errors.treatment_results.length": "errors.treatment_results.length",
   "Next: Medications": "Next: Medications",
   "Next: Treatments": "Next: Treatments",
-  "add_medication.add_medication": "add_medication.add_medication"
+  "add_medication.add_medication": "add_medication.add_medication",
+  "Add a treatment": "Add a treatment",
+  "Next: Overall patient summary": "Next: Overall patient summary",
+  "add_treatment.add_treatment": "add_treatment.add_treatment"
 }
