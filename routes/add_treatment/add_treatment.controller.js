@@ -1,7 +1,6 @@
 /* istanbul ignore file */
 const { routeUtils, getSessionData, saveSessionData } = require('./../../utils')
 const { Schema } = require('./schema.js')
-const reduce = require('lodash.reduce');
 
 module.exports = (app, route) => {
   const name = route.name
@@ -9,12 +8,7 @@ module.exports = (app, route) => {
   route
     .draw(app)
     .get((req, res) => {
-      const data = getSessionData(req); 
-      const conditionList = reduce(data.conditions, (x, y,z) => { 
-        x[z] = y.name_of_condition;
-        return x;
-      }, {});
-      res.render(name, routeUtils.getViewData(req, { conditionList }))
+      res.render(name, routeUtils.getViewData(req, {}))
     })
     .post(route.applySchema(Schema), (req, res) => {
       // first lets get the form data that was just posted and unset some things we don't need
