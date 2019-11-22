@@ -25,7 +25,7 @@ module.exports = (app, route) => {
 
       const filename = Date.now() + '.json'
 
-      fs.writeFileSync(filename, data)
+      fs.writeFileSync('sessions/' + filename, data)
 
       res.redirect('/clear')
 
