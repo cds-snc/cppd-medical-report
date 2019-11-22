@@ -260,5 +260,18 @@
   "errors.medication_frequency.length": "errors.medication_frequency.length",
   "errors.medication_start_date.length": "errors.medication_start_date.length",
   "errors.medication_end_date.length": "errors.medication_end_date.length",
-  "errors.medication_results.length": "errors.medication_results.length"
+  "errors.medication_results.length": "errors.medication_results.length",
+  "treatments.title": "Section 5 - Traitement du patient",
+  "patient_type": "",
+  "treatments.form.type.desc": "Type de traitement",
+  "treatments.form.type.hint": "Par exemple : « Chirurgie », « psychothérapie », etc.",
+  "treatments.form.frequency.desc": "À quelle fréquence le patient reçoit-il ce traitement?",
+  "treatments.form.frequency.hint": "Par exemple : « Mensuel, par psychiatre », etc.",
+  "treatments.form.start_date.text": "Quand a-t-il commencé ou quand commencera-t-il à recevoir ce traitement?",
+  "treatments.form.start_date.hint": "",
+  "treatments.form.end_date.text": "",
+  "treatments.form.end_date.hint": "",
+  "treatments.form.treated_conditions.question": "",
+  "treatments.form.results.desc": "",
+  "treatments.form.results.hint": ""
 }

@@ -260,5 +260,18 @@
   "errors.medication_frequency.length": "errors.medication_frequency.length",
   "errors.medication_start_date.length": "errors.medication_start_date.length",
   "errors.medication_end_date.length": "errors.medication_end_date.length",
-  "errors.medication_results.length": "errors.medication_results.length"
+  "errors.medication_results.length": "errors.medication_results.length",
+  "treatments.title": "Section 5 - Patient's treatments",
+  "patient_type": "Patient",
+  "treatments.form.type.desc": "Type of treatment ",
+  "treatments.form.type.hint": "For example: 'surgery', or 'psychotherapy', etc ",
+  "treatments.form.frequency.desc": "How often does the patient have this treatment?",
+  "treatments.form.frequency.hint": "For example: 'monthly by psychiatrist', etc ",
+  "treatments.form.start_date.text": "When did they, or when will they start this treatment?",
+  "treatments.form.start_date.hint": "For example, Feb 2008",
+  "treatments.form.end_date.text": "When did, or will this treatment end?",
+  "treatments.form.end_date.hint": "For example, March 2008",
+  "treatments.form.treated_conditions.question": "Which condition(s) is this treatment for?",
+  "treatments.form.results.desc": "Result of treatment, side effects or comments ",
+  "treatments.form.results.hint": "For example: 'did not improve movement' or 'pain still present', etc "
 }
