@@ -12,6 +12,13 @@
         {{ medicalConsent('consent', { '1':'section_2.i_consent','2':'section_2.i_dont_consent'}, data.consent, 'section_2.consent_preamble', errors, {hint: 'section_2.consent_valid_period', required: true}) }}
         {{ textInput('signature', 'section_2.form.signature') }}
 
+        <p>{{ __('section_2.delay_warning_preamble') }}</p>
+        <ul>
+            <li>{{ __('section_2.delay_warning_1') }}</li>
+            <li>{{ __('section_2.delay_warning_2') }}</li>
+            <li>{{ __('section_2.delay_warning_3') }}</li>
+        </ul>
+
         <fieldset>
             <legend>{{__('section_2.witness_legend')}}</legend>
             <p> {{__('section_2.witness_preamble')}} </p>
