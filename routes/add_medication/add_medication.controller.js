@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const { routeUtils, getSessionData, saveSessionData } = require('./../../utils')
 const { Schema } = require('./schema.js')
 
