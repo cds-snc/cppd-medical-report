@@ -33,7 +33,6 @@ module.exports = (env, argv) => {
         vue$: 'vue/dist/vue.esm.js', // Use the full build
       },
     },
-    stats: 'errors-only',
   })
 
   return config
