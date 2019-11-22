@@ -9,7 +9,11 @@
             {{ __('conditions.intro') }}
         </p>
 
-        {{ data.conditions | dump }}
+        <ol>
+        {% for cond in data.conditions %}
+            <li>{{ cond.name_of_condition }}</li>
+        {% endfor %}
+        </ol>
 
         <p><a href="/en/add_condition">Add a condition</a></p>
 
