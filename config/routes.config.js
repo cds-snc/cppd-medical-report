@@ -13,7 +13,7 @@ const routes = [
   { name: 'section8', path: { en: '/section8', fr: '/section8' } },
   { name: 'section9', path: { en: '/section9', fr: '/section9' } },
   { name: 'confirmation', path: '/confirmation' },
-  { name: 'conditions', path: { en: '/conditions', fr: 'conditions' } }
+  { name: 'conditions', path: { en: '/conditions', fr: 'conditions' } },
 ]
 
 const locales = ['en', 'fr']
