@@ -267,9 +267,6 @@
   "add_condition.attach_later": "I will attach supporting documents later",
   "add_condition.add_condition": "Add condition",
   "form.firstname.desc": "form.firstname.desc",
-  "condition_1": "condition_1",
-  "condition_2": "condition_2",
-  "condition_3": "condition_3",
   "medication.title": "Section 5 - Patient's Medications",
   "patient_name": "Patient:",
   "form.medication_results.hint": "For example: 'caused dizziness' or 'limited improvement', etc ",
@@ -314,5 +311,11 @@
   "add_medication.add_medication": "add_medication.add_medication",
   "Add a treatment": "Add a treatment",
   "Next: Overall patient summary": "Next: Overall patient summary",
-  "add_treatment.add_treatment": "add_treatment.add_treatment"
+  "add_treatment.add_treatment": "add_treatment.add_treatment",
+  "Must be a number": "Must be a number",
+  "Medication 1": "Medication 1",
+  "Medication(s), dosage and frequency": "Medication(s), dosage and frequency",
+  "Response (e.g. efficacy, side effects etc.) and other remarks": "Response (e.g. efficacy, side effects etc.) and other remarks",
+  "Medication 2": "Medication 2",
+  "Medication 3": "Medication 3"
 }
