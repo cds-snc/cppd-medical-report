@@ -10,28 +10,24 @@ module.exports = (app, route) => {
       res.render(name, routeUtils.getViewData(req, {}))
     })
     .post(route.applySchema(Schema), (req, res) => {
-      // console.log('====req.body====')
-      // console.log(req.body)
-
-      // console.log('====req.session.formdata====')
-      // console.log(req.session.formdata)
-
-      // console.log('====getSessionData(req)====')
-      // console.log(getSessionData(req))
-
+      // first lets get the form data that was just posted and unset some things we don't need
       const data = getSessionData(req)
       const body = Object.assign({}, req.body)
       delete body.redirect
       delete body._csrf
 
+      // make sure there's a conditions array in session data for us to use
       if (!data.conditions) {
         data.conditions = []
-        console.log('Make a conditions')
       }
 
+      // push our data onto the conditions array
       data.conditions.push([body])
 
+      // save that session data
       saveSessionData(req)
+
+      // redirect back to conditions (should use named route - how do we do that?)
       res.redirect('/en/conditions')
     })
 }
