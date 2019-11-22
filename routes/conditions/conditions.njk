@@ -9,11 +9,22 @@
             {{ __('conditions.intro') }}
         </p>
 
-        <ol>
-        {% for cond in data.conditions %}
-            <li>{{ cond.name_of_condition }}</li>
+        <h2 class="text-2xl border-b mb-4">Medical conditions</h2>
+        
+        {% for condition in data.conditions %}
+            <div class="flex">
+                <div class="flex-auto">
+                    <p>{{ condition.name_of_condition }}</p>
+                    <p class="text-base">ICD-9-CM code: XXXX</p>
+                    <p class="text-base">Symptoms began: {{ condition.symptoms_began }}</p>
+                </div>
+                <div class="flex-auto">
+                    <!-- <a href="">Edit condition</a><br> -->
+                    <a href="">Remove condition</a>
+                </div>
+            </div>
         {% endfor %}
-        </ol>
+        
 
         <p><a href="{{ routePath('add_condition') }}">Add a condition</a></p>
 
