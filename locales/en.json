@@ -267,5 +267,9 @@
   "add_condition.symptoms_occur": "How often do symptoms occur?",
   "add_condition.symptoms_occur_periodically": "Periodically",
   "add_condition.symptoms_occur_continuously": "Continuously",
-  "add_condition.symptoms_occur_unknown": "Unknown"
+  "add_condition.symptoms_occur_unknown": "Unknown",
+  "add_condition.attach_notes": "Attach any notes or documents that are relevant to this condition",
+  "add_condition.attach_notes_hint": "These could include: clinical notes, specialist reports, or hospital discharge reports, etc",
+  "add_condition.attach_later": "I will attach supporting documents later",
+  "add_condition.add_condition": "Add condition"
 }
