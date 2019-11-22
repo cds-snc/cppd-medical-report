@@ -273,5 +273,11 @@
   "treatments.form.end_date.hint": "",
   "treatments.form.treated_conditions.question": "Quels sont les troubles visés par ce traitement?",
   "treatments.form.results.desc": "Résultat du traitement, effets secondaires ou commentaires",
-  "treatments.form.results.hint": "Par exemple : « N’a pas amélioré le mouvement » ou « douleur toujours présente », etc."
+  "treatments.form.results.hint": "Par exemple : « N’a pas amélioré le mouvement » ou « douleur toujours présente », etc.",
+  "errors.treatment_type.length": "errors.treatment_type.length",
+  "errors.treatment_frequency.length": "errors.treatment_frequency.length",
+  "errors.treatment_start_date.length": "errors.treatment_start_date.length",
+  "errors.treatment_end_date.length": "errors.treatment_end_date.length",
+  "errors.treatment_treated_condition.is_checked": "errors.treatment_treated_condition.is_checked",
+  "errors.treatment_results.length": "errors.treatment_results.length"
 }

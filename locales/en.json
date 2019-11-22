@@ -273,5 +273,11 @@
   "treatments.form.end_date.hint": "For example, March 2008",
   "treatments.form.treated_conditions.question": "Which condition(s) is this treatment for?",
   "treatments.form.results.desc": "Result of treatment, side effects or comments ",
-  "treatments.form.results.hint": "For example: 'did not improve movement' or 'pain still present', etc "
+  "treatments.form.results.hint": "For example: 'did not improve movement' or 'pain still present', etc ",
+  "errors.treatment_type.length": "errors.treatment_type.length",
+  "errors.treatment_frequency.length": "errors.treatment_frequency.length",
+  "errors.treatment_start_date.length": "errors.treatment_start_date.length",
+  "errors.treatment_end_date.length": "errors.treatment_end_date.length",
+  "errors.treatment_treated_condition.is_checked": "errors.treatment_treated_condition.is_checked",
+  "errors.treatment_results.length": "errors.treatment_results.length"
 }

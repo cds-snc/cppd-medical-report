@@ -7,14 +7,14 @@
     <div>
 
         <form method="post">
-            <input type="hidden" type="_csrf" value="{{ csrfToken }}">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-            {{ textInput('type', 'treatments.form.type.desc', {required: true, hint: 'treatments.form.type.hint'}) }}
-            {{ textInput('frequency', 'treatments.form.frequency.desc', {required: true, hint: 'treatments.form.frequency.hint'}) }}
-            {{ textInput('start_date', 'treatments.form.start_date.text', { required: true, hint: 'treatments.form.start_date.hint'})}}
-            {{ textInput('end_date', 'treatments.form.end_date.text', {required: true, hint: 'treatments.form.end_date.hint'})}}
+            {{ textInput('treatment_type', 'treatments.form.type.desc', {required: true, hint: 'treatments.form.type.hint'}) }}
+            {{ textInput('treatment_frequency', 'treatments.form.frequency.desc', {required: true, hint: 'treatments.form.frequency.hint'}) }}
+            {{ textInput('treatment_start_date', 'treatments.form.start_date.text', { required: true, hint: 'treatments.form.start_date.hint'})}}
+            {{ textInput('treatment_end_date', 'treatments.form.end_date.text', {required: true, hint: 'treatments.form.end_date.hint'})}}
             
-            {{ checkBoxes('treated_condition', 
+            {{ checkBoxes('treatment_treated_condition', 
                 {
                     'condition_1':'condition_1' ,
                     'condition_2':'condition_2' ,
@@ -24,7 +24,7 @@
             }}
 
             {{ textArea(
-                'results',
+                'treatment_results',
                 'treatments.form.results.desc',
                 { required: true, hint: 'treatments.form.results.hint' }
             ) }}
