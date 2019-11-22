@@ -1,0 +1,44 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('medication.title') }}<br/> <span class="text-base">{{ __('patient_name')}} {{ data.first_name }} {{ data.last_name }}</span></h1>
+
+    <div>
+
+        <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+            {{ textInput('medication_name', 'form.medication_name.desc', {required: true}) }}
+            {{ textInput('medication_dosage', 'form.medication_dosage.desc', {required: true}) }}
+            {{ textInput('medication_frequency', 'form.medication_frequency.desc', {required: true, hint: 'form.medication_frequency.hint'}) }}
+            {{ textInput('medication_start_date', 'form.medication_start_date.text', { required: true, hint: 'form.medication_start_date.hint'})}}
+            {{ textInput('medication_end_date', 'form.medication_end_date.text', {required: true, hint: 'form.medication_end_date.hint'})}}
+            
+            {{ checkBoxes('medication_treated_condition', 
+                {
+                    'condition_1':'condition_1' ,
+                    'condition_2':'condition_2' ,
+                    'condition_3':'condition_3' },{},
+                'form.medication_treated_conditions.question',{},
+                {required: true}) 
+            }}
+
+            {{ textArea(
+                'medication_results',
+                'form.medicaiton_results.desc',
+                { required: true, hint: 'form.medication_results.hint' }
+            ) }}
+
+            <div class="buttons">
+                <div class="buttons--left">
+                    <button type="submit">{{ __('add_medication.add_medication') }}</button>
+                </div>
+                <div class="buttons--right">
+                    <a class="button-link transparent full-width" href="/en/medication">{{ __('Cancel') }}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
