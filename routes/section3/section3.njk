@@ -16,21 +16,21 @@
             {{ 
                 radioButtons('numYearsWasPatient', 
                     { 
-                        '1': 'form.num_years_was_patient.opt1',
-                        '2': 'form.num_years_was_patient.opt2',
-                        '3': 'form.num_years_was_patient.opt3',
-                        '4': 'form.num_years_was_patient.opt4'
+                        '1': 'section3.form.num_years_was_patient.opt1',
+                        '2': 'section3.form.num_years_was_patient.opt2',
+                        '3': 'section3.form.num_years_was_patient.opt3',
+                        '4': 'section3.form.num_years_was_patient.opt4'
                     }, 
                 data.numYearsWasPatient, 
-                'form.num_years_was_patient.desc',
+                'section3.form.num_years_was_patient.desc',
                 errors,
                 { required: true }) 
             }}
-            {{ textInput('visitNumber', 'form.visit_number.desc', { required: true }) }}
+            {{ textInput('visitNumber', 'section3.form.visit_number.desc', { required: true }) }}
 
-            {{ textInput('lastVisitDate', 'form.last_visit_date.desc', { hint: 'YYYY-MM-DD', required: true }) }}
+            {{ textInput('lastVisitDate', 'section3.form.last_visit_date.desc', { hint: 'YYYY-MM-DD', required: true }) }}
 
-            {{ textInput('firstTreatmentDate', 'form.first_treatment_date.desc', { hint: 'YYYY-MM-DD', required: true }) }}
+            {{ textInput('firstTreatmentDate', 'section3.form.first_treatment_date.desc', { hint: 'YYYY-MM-DD', required: true }) }}
 
             {{ formButtons() }}
         </form>
