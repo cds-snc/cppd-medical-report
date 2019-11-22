@@ -1,0 +1,43 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('treatments.title') }}<br/> <span class="text-base">{{ __('patient_type')}} {{ data.first_type }} {{ data.last_name }}</span></h1>
+
+    <div>
+
+        <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+            {{ textInput('treatment_type', 'treatments.form.type.desc', {required: true, hint: 'treatments.form.type.hint'}) }}
+            {{ textInput('treatment_frequency', 'treatments.form.frequency.desc', {required: true, hint: 'treatments.form.frequency.hint'}) }}
+            {{ textInput('treatment_start_date', 'treatments.form.start_date.text', { required: true, hint: 'treatments.form.start_date.hint'})}}
+            {{ textInput('treatment_end_date', 'treatments.form.end_date.text', {required: true, hint: 'treatments.form.end_date.hint'})}}
+            
+            {{ checkBoxes('treatment_treated_condition', 
+                {
+                    'condition_1':'condition_1' ,
+                    'condition_2':'condition_2' ,
+                    'condition_3':'condition_3' },{},
+                'treatments.form.treated_conditions.question',{},
+                {required: true}) 
+            }}
+
+            {{ textArea(
+                'treatment_results',
+                'treatments.form.results.desc',
+                { required: true, hint: 'treatments.form.results.hint' }
+            ) }}
+
+            <div class="buttons">
+                <div class="buttons--left">
+                    <button type="submit">{{ __('add_treatment.add_treatment') }}</button>
+                </div>
+                <div class="buttons--right">
+                    <a class="button-link transparent full-width" href="/en/treatments">{{ __('Cancel') }}</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

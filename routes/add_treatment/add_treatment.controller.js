@@ -18,26 +18,25 @@ module.exports = (app, route) => {
       delete body._csrf
 
       // make sure there's a conditions array in session data for us to use
-      if (!data.medications) {
-        data.medications = []
+      if (!data.treatments) {
+        data.treatments = []
       }
 
       // push our data onto the conditions array
-      data.medications.push(body)
+      data.treatments.push(body)
 
       // unset local fields so the form is clear when we come back to add a new one
-      req.body.medication_name = null
-      req.body.medication_dosage = null
-      req.body.medication_frequency = null
-      req.body.medication_start_date = null
-      req.body.medication_end_date = null
-      req.body.medication_treated_condition = null
-      req.body.medication_results = null
+      req.body.treatment_type = null
+      req.body.treatment_frequency = null
+      req.body.treatment_start_date = null
+      req.body.treatment_end_date = null
+      req.body.treatment_treated_condition = null
+      req.body.treatment_results = null
 
       // save that session data
       saveSessionData(req)
 
       // redirect back to conditions (should use named route - how do we do that?)
-      res.redirect('/en/medication')
+      res.redirect('/en/treatments')
     })
 }
