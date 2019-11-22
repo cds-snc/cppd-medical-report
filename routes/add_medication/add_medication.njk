@@ -15,7 +15,7 @@
             {{ textInput('medication_start_date', 'form.medication_start_date.text', { required: true, hint: 'form.medication_start_date.hint'})}}
             {{ textInput('medication_end_date', 'form.medication_end_date.text', {required: true, hint: 'form.medication_end_date.hint'})}}
             {{ rawCheckBoxes('medication_treated_condition', 
-                conditionList,{},
+                data.conditions,"name_of_condition",{},
                 'form.medication_treated_conditions.question',{},
                 {required: true}) 
             }}

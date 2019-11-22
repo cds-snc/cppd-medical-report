@@ -1,4 +1,4 @@
-{% macro rawCheckBoxes(key, values, selectedVals, question, errors, attributes) %}
+{% macro rawCheckBoxes(key, values, arrKey, selectedVals, question, errors, attributes) %}
     <div class="{{ 'has-error' if errors and errors[key] }}">
         <fieldset class="fieldset">
             <legend class="fieldset__legend">
@@ -17,10 +17,11 @@
                 {% if errors and errors[key] %}
                     {{ validationMessage(errors[key].msg, key) }}
                 {% endif %}
-                {% for index, val in values %}
+                {% for val in values %}
+                    {% set value = loop.index %}
                     <div class="multiple-choice__item">
-                        <input id="{{ key }}{{ val }}" name="{{ key }}" type="checkbox" value="{{ val }}" {% if selectedVals and val in selectedVals %} checked="checked" {% endif %} {% if errors and errors[key] %} aria-describedby="{{ key + '-error' }}" aria-invalid="true" {% endif %}>
-                        <label for="{{ key }}{{ val }}">{{ val }}</label>
+                        <input id="{{ key }}{{ value }}" name="{{ key }}" type="checkbox" value="{{ value }}" {% if selectedVals and val in selectedVals %} checked="checked" {% endif %} {% if errors and errors[key] %} aria-describedby="{{ key + '-error' }}" aria-invalid="true" {% endif %}>
+                        <label for="{{ key }}{{ value }}">{{ val[arrKey] }}</label>
                     </div>
                 {% endfor %}
             </div>
