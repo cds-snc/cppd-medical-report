@@ -7,6 +7,7 @@ module.exports = (env, argv) => {
     mode: argv.mode,
     entry: {
       styles: './assets/scss/app.scss',
+      app: './assets/js/app.js',
       personal: './routes/personal/js/personal.js',
     },
     output: {
@@ -32,6 +33,7 @@ module.exports = (env, argv) => {
         vue$: 'vue/dist/vue.esm.js', // Use the full build
       },
     },
+    stats: 'errors-only',
   })
 
   return config
