@@ -318,5 +318,10 @@
   "Response (e.g. efficacy, side effects etc.) and other remarks": "Response (e.g. efficacy, side effects etc.) and other remarks",
   "Medication 2": "Medication 2",
   "Medication 3": "Medication 3",
-  "Save session data": "Save session data"
+  "Save session data": "Save session data",
+  "health.title": "Section 6 - Patient's overall health",
+  "patient": "Patient",
+  "overall_health.label": "How would you describe your patient's overall health?",
+  "overall_health.hint": "Provide an overview of your patient's health, keeping all of their conditions, functional limitations, and treatments in mind.",
+  "overall_health.next_button": "Next: Supporting documents"
 }
