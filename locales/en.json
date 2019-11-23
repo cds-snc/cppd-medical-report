@@ -324,5 +324,9 @@
   "overall_health.label": "How would you describe your patient's overall health?",
   "overall_health.hint": "Provide an overview of your patient's health, keeping all of their conditions, functional limitations, and treatments in mind.",
   "overall_health.next_button": "Next: Supporting documents",
-  "errors.overall_health_required": "Overall Health is required"
+  "errors.overall_health_required": "Overall Health is required",
+  "documents.title": "Supporting documents",
+  "documents.intro": "Attach any notes or documents that are relevant to your patient's medical conditions.",
+  "documents.sub": "These could include: clinical notes, specialist reports or hospital discharge reports, etc ",
+  "documents.next_button": "Next: Declaration"
 }
