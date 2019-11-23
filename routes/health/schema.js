@@ -1,10 +1,10 @@
 /* istanbul ignore file */
 
 const Schema = {
-  firstname: {
+  overall_health: {
     isLength: {
-      errorMessage: 'errors.firstname.length',
-      options: { min: 3, max: 200 },
+      errorMessage: 'errors.overall_health_required',
+      options: { min: 1 },
     },
   },
 }
