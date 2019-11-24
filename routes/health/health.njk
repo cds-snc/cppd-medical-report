@@ -1,0 +1,21 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('health.title') }}<br/> <span class="text-base">{{ __('patient')}} {{ data.name }}</span></h1>
+
+    <div>
+        <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+            
+            {{ textArea(
+                'overall_health',
+                'overall_health.label',
+                { required: true, hint: 'overall_health.hint' }
+            ) }}
+
+            {{ formButtons('overall_health.next_button') }}
+        </form>
+    </div>
+
+{% endblock %}
