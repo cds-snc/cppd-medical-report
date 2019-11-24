@@ -35,11 +35,9 @@
             }
         },
         mounted() {
-            console.log(this.fieldName);
             if(this.files) {
                 this.uploaded_files = this.files.split(",")
             }
-            console.log('Component ready.')
         }
     }
 </script>
