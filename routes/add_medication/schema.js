@@ -34,7 +34,6 @@ const Schema = {
   medication_treated_condition: {
     custom: {
       options: (value, { req }) => {
-        console.log(JSON.stringify(value))
         if (value === undefined || value.length === 0) {
           return false
         }
