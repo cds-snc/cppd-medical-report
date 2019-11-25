@@ -328,5 +328,6 @@
   "documents.title": "Supporting documents",
   "documents.intro": "Attach any notes or documents that are relevant to your patient's medical conditions.",
   "documents.sub": "These could include: clinical notes, specialist reports or hospital discharge reports, etc ",
-  "documents.next_button": "Next: Declaration"
+  "documents.next_button": "Next: Declaration",
+  "errors.supporting_documents_required": "Supporting Documents is required"
 }
