@@ -1,5 +1,5 @@
 function userResearch20191125() {
-    if(typeof process.env.FLAG_USER_RESEARCH_20191125 !== undefined ) {
+    if(typeof process.env.FLAG_USER_RESEARCH_20191125 != undefined ) {
         if(process.env.FLAG_USER_RESEARCH_20191125 === "false") {
             return false
         }
@@ -9,7 +9,7 @@ function userResearch20191125() {
 
 
 const featureFlags = {
-    USER_RESEARCH_20191125: userResearch20191125() // Default: true
+    USER_RESEARCH_20191125: userResearch20191125(), // Default: true
 }
 
 module.exports = featureFlags
