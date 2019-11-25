@@ -2,17 +2,17 @@
 
 {% macro condition() %}
     
-    {{ textInput('name_of_condition', 'add_condition.name_of_condition') }}
+    {{ textInput('name_of_condition', 'add_condition.name_of_condition', { required: true }) }}
     <p class="text-gray-600 -mt-8">{{ __('add_condition.name_of_condition_hint') }}</p>
     
-    {{ textInput('symptoms_began', 'add_condition.symptoms_began', { hint: 'add_condition.symptoms_began_hint' }) }}
+    {{ textInput('symptoms_began', 'add_condition.symptoms_began', { hint: 'add_condition.symptoms_began_hint', required: true }) }}
 
-    {{ textArea('clinically_impair', 'add_condition.clinically_impair', { hint: 'add_condition.clinically_impair_hint' }) }}
+    {{ textArea('clinically_impair', 'add_condition.clinically_impair', { hint: 'add_condition.clinically_impair_hint', required: true }) }}
 
     {{ radioButtons('condition_outlook', { '1':'add_condition.condition_outlook_improve','2':'add_condition.condition_outlook_deteriorate', '3':'add_condition.condition_outlook_staysame', '4':'add_condition.condition_outlook_unknown'}, data.condition_outlook, 'add_condition.condition_outlook', errors, { required: true }) }}
 
     <div id="unknown_details" class="ml-4">
-        {{ textArea('condition_outlook_unknown', 'add_condition.prognosis_unknown') }}
+        {{ textArea('condition_outlook_unknown', 'add_condition.prognosis_unknown', { required: true }) }}
     </div>
 
     {{ radioButtons('condition_last', { '1':'add_condition.condition_last_1_year', '2':'add_condition.condition_last_more' }, data.condition_last, 'add_condition.condition_last', errors, { required: true }) }}

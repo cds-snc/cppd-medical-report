@@ -325,5 +325,12 @@
   "overall_health.label": "How would you describe your patient's overall health?",
   "overall_health.hint": "Provide an overview of your patient's health, keeping all of their conditions, functional limitations, and treatments in mind.",
   "overall_health.next_button": "Next: Supporting documents",
-  "errors.overall_health_required": "Overall Health is required"
+  "errors.overall_health_required": "Overall Health is required",
+  "errors.name_of_condition.length": "Name of Condition is required",
+  "errors.symptoms_began.length": "Symptoms began is required",
+  "errors.clinically_impair": "Clinically Impair is requred",
+  "errors.condition_outlook_required": "Condition Outlook is required",
+  "errors.condition_outlook_unknown": "Unknown Reason is required if Unknown",
+  "errors.condition_last_required": "Condition Last is required",
+  "errors.symptoms_occur_required": "Symptoms occur is required"
 }
