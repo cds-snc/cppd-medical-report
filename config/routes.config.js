@@ -6,6 +6,7 @@ const routes = [
   { name: 'medication', path: { en: '/medication', fr: '/medication' } },
   { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
   { name: 'health', path: { en: '/health', fr: '/health' } },
+  { name: 'documents', path: { en: '/documents', fr: '/documents' } },
   { name: 'confirmation', path: '/confirmation' },
 
   { name: 'add_condition', path: '/add_condition' },
