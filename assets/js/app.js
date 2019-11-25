@@ -18,8 +18,8 @@ files.keys().map(key =>
   ),
 )
 
-const app = new Vue({
-  el: '#app',
-})
-
-export default app
+if (document.getElementById("app")) {
+  new Vue({
+    el: '#app',
+  })
+}
