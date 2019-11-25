@@ -1,40 +1,40 @@
-const path = require("path");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const path = require('path')
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = (env, argv) => {
-  const { getConfig } = require("@cdssnc/webpack-starter");
+  const { getConfig } = require('@cdssnc/webpack-starter')
   const config = getConfig({
     mode: argv.mode,
     entry: {
-      styles: "./assets/scss/app.scss",
-      app: "./assets/js/app.js",
-      personal: "./routes/personal/js/personal.js",
-      add_condition: "./routes/add_condition/js/add_condition.js"
+      styles: './assets/scss/app.scss',
+      app: './assets/js/app.js',
+      personal: './routes/personal/js/personal.js',
+      add_condition: './routes/add_condition/js/add_condition.js',
     },
     output: {
-      filename: "js/[name].[chunkhash].js",
-      path: path.resolve(__dirname, "public/dist")
+      filename: 'js/[name].[chunkhash].js',
+      path: path.resolve(__dirname, 'public/dist'),
     },
-    stats: "errors-only",
+    stats: 'errors-only',
     module: {
       rules: [
         // ... other rules
         {
           test: /\.vue$/,
-          loader: "vue-loader"
-        }
-      ]
+          loader: 'vue-loader',
+        },
+      ],
     },
     plugins: [
       // make sure to include the plugin!
-      new VueLoaderPlugin()
+      new VueLoaderPlugin(),
     ],
     resolve: {
       alias: {
-        vue$: "vue/dist/vue.esm.js" // Use the full build
-      }
-    }
-  });
+        vue$: 'vue/dist/vue.esm.js', // Use the full build
+      },
+    },
+  })
 
-  return config;
-};
+  return config
+}
