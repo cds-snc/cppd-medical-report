@@ -3,6 +3,7 @@
 const scriptSrc = [
   "'self'",
   "'unsafe-inline'",
+  "'unsafe-eval'",
   'cdnjs.cloudflare.com',
   '*.herokuapp.com',
 ]
