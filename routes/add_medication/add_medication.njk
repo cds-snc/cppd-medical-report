@@ -9,11 +9,11 @@
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-            {{ textInput('medication_name', 'form.medication_name.desc', {required: true}) }}
-            {{ textInput('medication_dosage', 'form.medication_dosage.desc', {required: true}) }}
-            {{ textInput('medication_frequency', 'form.medication_frequency.desc', {required: true, hint: 'form.medication_frequency.hint'}) }}
-            {{ textInput('medication_start_date', 'form.medication_start_date.text', { required: true, hint: 'form.medication_start_date.hint'})}}
-            {{ textInput('medication_end_date', 'form.medication_end_date.text', {required: true, hint: 'form.medication_end_date.hint'})}}
+            {{ textInput('medication_name', 'form.medication_name.desc', {required: true, "autocomplete": "off"}) }}
+            {{ textInput('medication_dosage', 'form.medication_dosage.desc', {required: true, "autocomplete": "off"}) }}
+            {{ textInput('medication_frequency', 'form.medication_frequency.desc', {required: true, hint: 'form.medication_frequency.hint', "autocomplete": "off"}) }}
+            {{ textInput('medication_start_date', 'form.medication_start_date.text', { required: true, hint: 'form.medication_start_date.hint', "autocomplete": "off"})}}
+            {{ textInput('medication_end_date', 'form.medication_end_date.text', {required: true, hint: 'form.medication_end_date.hint', "autocomplete": "off"})}}
             {{ propCheckBoxes('medication_treated_condition', 
                 data.conditions,"name_of_condition",{},
                 'form.medication_treated_conditions.question',{},
