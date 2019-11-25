@@ -17,9 +17,11 @@
                 <file-upload files="{{ data.supporting_documents }}" field-name="supporting_documents"></file-upload>
             </div>
             
-            <div class="multiple-choice__item">
-                <input id="attach_later" name="attach_later" type="checkbox" value="attach_later">
-                <label for="attach_later">{{ __('add_condition.attach_later') }}</label>
+            <div class="multiple-choice multiple-choice--checkboxes">
+                <div class="multiple-choice__item">
+                    <input id="attach_later" name="attach_later" type="checkbox" value="attach_later">
+                    <label for="attach_later">{{ __('add_condition.attach_later') }}</label>
+                </div>
             </div>
 
             {{ formButtons('documents.next_button') }}
