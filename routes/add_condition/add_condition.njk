@@ -2,10 +2,10 @@
 
 {% macro condition() %}
     
-    {{ textInput('name_of_condition', 'add_condition.name_of_condition', { required: true, autocomplete: false }) }}
+    {{ textInput('name_of_condition', 'add_condition.name_of_condition', { required: true, "autocomplete": "off" }) }}
     <p class="text-gray-600 -mt-8">{{ __('add_condition.name_of_condition_hint') }}</p>
     
-    {{ textInput('symptoms_began', 'add_condition.symptoms_began', { hint: 'add_condition.symptoms_began_hint', required: true, autocomplete: false }) }}
+    {{ textInput('symptoms_began', 'add_condition.symptoms_began', { hint: 'add_condition.symptoms_began_hint', required: true, "autocomplete": "off" }) }}
 
     {{ textArea('clinically_impair', 'add_condition.clinically_impair', { hint: 'add_condition.clinically_impair_hint', required: true }) }}
 
