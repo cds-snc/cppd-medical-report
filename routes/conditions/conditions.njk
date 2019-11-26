@@ -15,7 +15,7 @@
         {% endfor %}
         </ol>
 
-        <p><a href="/en/add_condition">Add a condition</a></p>
+        <p><a href="{{ routePath('add_condition') }}">Add a condition</a></p>
 
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
