@@ -50,11 +50,13 @@
 
             <div class="buttons">
                 <div class="buttons--left">
-                    <button type="submit">{{ __('add_condition.add_condition') }}</button>
+                    <button type="submit" class="w-1/2">{{ __('add_condition.add_condition') }}</button>
                 </div>
+                {% if data.conditions %}
                 <div class="buttons--right">
-                    <a class="button-link transparent full-width" href="/en/conditions">{{ __('Cancel') }}</a>
+                    <a class="button-link transparent w-1/2" href="/en/conditions">{{ __('Cancel') }}</a>
                 </div>
+                {% endif %}
             </div>
         </form>
     </div>

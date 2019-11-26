@@ -337,5 +337,6 @@
   "errors.condition_outlook_required": "Condition Outlook is required",
   "errors.condition_outlook_unknown": "Unknown Reason is required if Unknown",
   "errors.condition_last_required": "Condition Last is required",
-  "errors.symptoms_occur_required": "Symptoms occur is required"
+  "errors.symptoms_occur_required": "Symptoms occur is required",
+  "Thank you!": "Thank you!"
 }

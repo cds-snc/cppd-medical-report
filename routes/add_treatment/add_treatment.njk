@@ -28,11 +28,13 @@
 
             <div class="buttons">
                 <div class="buttons--left">
-                    <button type="submit">{{ __('add_treatment.add_treatment') }}</button>
+                    <button type="submit" class="w-1/2">{{ __('add_treatment.add_treatment') }}</button>
                 </div>
+                {% if data.treatments %}
                 <div class="buttons--right">
-                    <a class="button-link transparent full-width" href="/en/treatments">{{ __('Cancel') }}</a>
+                    <a class="button-link transparent w-1/2" href="/en/treatments">{{ __('Cancel') }}</a>
                 </div>
+                {% endif %}
             </div>
         </form>
     </div>
