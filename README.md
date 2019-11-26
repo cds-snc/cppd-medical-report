@@ -6,6 +6,12 @@
 
 For more information, contact us at [cds-snc@tbs-sct.gc.ca](mailto:cds-snc@tbs-sct.gc.ca).
 
+--- 
+
+[ESDC](https://www.canada.ca/en/employment-social-development.html) et la [CDS](https://digital.canada.ca) travaillent ensemble pour améliorer le PPIRPC (programme de prestations d'invalidité du Régime de pensions du Canada). Nous travaillons à trouver des moyens de réduire le temps de traitement de bout en bout sans nuire à la qualité des décisions. Nous mettons actuellement au point un prototype du rapport médical sur le PPPC afin d’explorer certaines hypothèses et d’optimiser davantage ce processus en ligne.
+
+Pour plus d'informations, contactez-nous à l'adresse [cds-snc@tbs-sct.gc.ca](mailto:cds-snc@tbs-sct.gc.ca).
+
 ## Setup
 
 Requires the following things to be installed:
