@@ -24,7 +24,8 @@
     "db:seed": "sequelize-cli db:seed:all",
     "test": "node node_modules/jest/bin/jest.js --coverage",
     "test:watch": "node node_modules/jest/bin/jest.js --watch",
-    "postinstall": "patch-package"
+    "postinstall": "patch-package",
+    "comb": "jsoncomb --normalise \"./locales/*.json\""
   },
   "husky": {
     "hooks": {
@@ -47,6 +48,7 @@
     "express-validator": "^6.2.0",
     "helmet": "^3.21.2",
     "i18n": "^0.8.4",
+    "json-comb": "^0.2.31",
     "knex": "^0.20.1",
     "memorystore": "^1.6.1",
     "mini-css-extract-plugin": "^0.8.0",
