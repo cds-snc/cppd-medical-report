@@ -34,6 +34,10 @@
                     <div class="w-1/3 text-center">
                         <a class="button-link transparent" href="/en/medication">{{ __('Cancel') }}</a>
                     </div>
+                {% else %}
+                    <div class="w-1/3 text-center">
+                        <a class="button-link transparent" href="/en/treatments">{{ __('skip_section') }}</a>
+                    </div>
                 {% endif %}
             </div>
         </form>
