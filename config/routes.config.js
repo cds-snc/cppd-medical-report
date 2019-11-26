@@ -21,6 +21,7 @@ function getRoutes() {
     { name: 'start', path: { en: '/start', fr: '/debut' } },
     { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
     { name: 'section2', path: { en: '/section2', fr: '/frsection2' } },
+    { name: 'section3', path: { en: '/section3', fr: '/frsection3' } },
     // Section 5
     { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
     { name: 'medication', path: { en: '/medication', fr: '/medication' } },
