@@ -14,9 +14,13 @@
                 <li>{{ treatment.treatment_type }}</li>
             {% endfor %}
             </ol>
-            <p><a href="/en/add_treatment">{{ __('Add a treatment') }}</a></p>
+            <p><a href="{{ routePath('add_treatment') }}">{{ __('Add a treatment') }}</a></p>
 
-            {{ formButtons('Next: Overall patient summary') }}
+            <div class="w-full">
+                <div class="w-1/3">
+                    <button type="submit">{{ __('Next: Overall patient summary') }}</button>
+                </div>
+            </div>
         </form>
     </div>
 

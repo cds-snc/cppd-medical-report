@@ -15,9 +15,13 @@
             {% endfor %}
             </ol>
 
-            <p><a href="/en/add_medication">Add a medication</a></p>
+            <p><a href="{{ routePath('add_medication') }}">{{ __('Add a medication') }}</a></p>
 
-            {{ formButtons('Next: Treatments') }}
+            <div class="w-full">
+                <div class="w-1/3">
+                    <button type="submit">{{ __('Next: Treatments') }}</button>
+                </div>
+            </div>
         </form>
     </div>
 

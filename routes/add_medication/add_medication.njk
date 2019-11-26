@@ -26,13 +26,19 @@
                 { required: true, hint: 'form.medication_results.hint' }
             ) }}
 
-            <div class="buttons">
-                <div class="buttons--left">
+            <div class="w-full flex">
+                <div class="w-1/3">
                     <button type="submit">{{ __('add_medication.add_medication') }}</button>
                 </div>
-                <div class="buttons--right">
-                    <a class="button-link transparent full-width" href="/en/medication">{{ __('Cancel') }}</a>
-                </div>
+                {% if data.medications %}
+                    <div class="w-1/3 text-center">
+                        <a class="button-link transparent" href="{{ routePath('medication') }}">{{ __('Cancel') }}</a>
+                    </div>
+                {% else %}
+                    <div class="w-1/3 text-center">
+                        <a class="button-link transparent" href="{{ routePath('treatments') }}">{{ __('skip_section') }}</a>
+                    </div>
+                {% endif %}
             </div>
         </form>
     </div>

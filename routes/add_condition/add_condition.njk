@@ -48,13 +48,15 @@
                 </div>
             </div>
 
-            <div class="buttons">
-                <div class="buttons--left">
+            <div class="w-full flex">
+                <div class="w-1/3">
                     <button type="submit">{{ __('add_condition.add_condition') }}</button>
                 </div>
-                <div class="buttons--right">
-                    <a class="button-link transparent full-width" href="/en/conditions">{{ __('Cancel') }}</a>
-                </div>
+                {% if data.conditions %}
+                    <div class="w-1/3 text-center">
+                        <a class="button-link transparent" href="{{ routePath('conditions') }}">{{ __('Cancel') }}</a>
+                    </div>
+                {% endif %}
             </div>
         </form>
     </div>
