@@ -28,7 +28,11 @@
 
         {{ radioButtons('contact_time', { 'morning':'Morning','afternoon':'Afternoon', 'letters_only':'Please don\'t call, send letters only'}, data.contact_time, 'The best time for Service Canada to contact you', errors, { required: true }) }} #}
 
-        {{ formButtons() }}
+        <div class="w-full">
+            <div class="w-1/3">
+                <button type="submit">{{ __('Continue') }}</button>
+            </div>
+        </div>
     </form>
 
 {% endblock %}
