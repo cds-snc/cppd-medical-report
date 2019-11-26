@@ -37,6 +37,8 @@ function getRoutes() {
     { name: 'documents', path: { en: '/documents', fr: '/documents' } },
     // Section 6
     { name: 'section6', path: { en: '/section6', fr: '/frsection6' } },
+    // Section 9
+    { name: 'section9', path: { en: '/section9', fr: '/frsection9' } },
     // Last step / confirmation
     { name: 'confirmation', path: '/confirmation' },
     // Routes that get triggered from other parts of the workflow
