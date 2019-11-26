@@ -20,6 +20,8 @@ function getRoutes() {
   return [
     { name: 'start', path: { en: '/start', fr: '/debut' } },
     { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
+    { name: 'section2', path: { en: '/section2', fr: '/frsection2' } },
+    // Section 5
     { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
     { name: 'medication', path: { en: '/medication', fr: '/medication' } },
     { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
