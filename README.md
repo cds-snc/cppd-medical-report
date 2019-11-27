@@ -68,3 +68,4 @@ More documentation on working with this codebase can be found in [the docs folde
 There are some feature flags that enable/disable features depending on whether they are set. The flags are set as OS environment variables that are detected at runtime. Below, are the list along with the default value in parenthesis `()` and a description of what happens when set to `true`.
 
 - `FLAG_USER_RESEARCH_20191125` (`false`): Disables Sections 1-4, and has a shortened name-only entry form to being the workflow.
+- `FLAG_COOKIE_STORE_20191126` (`true`): Enables cookie sessions for quickly iterating on a specific page, *note: cookie session can cause issues if you are storing too much in session*
