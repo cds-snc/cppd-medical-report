@@ -1,10 +1,6 @@
 /* istanbul ignore file */
 
-const Schema = {
-  other_info: {
-    
-  },
-}
+const Schema = {}
 
 module.exports = {
   Schema,

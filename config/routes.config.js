@@ -1,18 +1,56 @@
+const featureFlags = require('../utils/featureFlags.helpers')
+
+function getRoutes() {
+  if (featureFlags.USER_RESEARCH_20191125) {
+    return [
+      { name: 'start', path: { en: '/start', fr: '/debut' } },
+      { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
+      { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
+      { name: 'medication', path: { en: '/medication', fr: '/medication' } },
+      { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
+      { name: 'health', path: { en: '/health', fr: '/health' } },
+      { name: 'documents', path: { en: '/documents', fr: '/documents' } },
+      { name: 'confirmation', path: '/confirmation' },
+      { name: 'add_condition', path: '/add_condition' },
+      { name: 'add_medication', path: '/add_medication' },
+      { name: 'add_treatment', path: '/add_treatment' },
+    ]
+  }
+
+  return [
+    { name: 'start', path: { en: '/start', fr: '/debut' } },
+    // Section1
+    { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
+    // Section 2
+    { name: 'section2', path: { en: '/section2', fr: '/frsection2' } },
+    // Section 3
+    { name: 'section3', path: { en: '/section3', fr: '/frsection3' } },
+    // Section 4
+    { name: 'section4', path: { en: '/section4', fr: '/frsection4' } },
+    // Section 5
+    { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
+    { name: 'medication', path: { en: '/medication', fr: '/medication' } },
+    { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
+    // Section 7
+    { name: 'health', path: { en: '/health', fr: '/health' } },
+    // Section 8
+    { name: 'documents', path: { en: '/documents', fr: '/documents' } },
+    // Section 6
+    { name: 'section6', path: { en: '/section6', fr: '/frsection6' } },
+    // Section 9
+    { name: 'section9', path: { en: '/section9', fr: '/frsection9' } },
+    // Last step / confirmation
+    { name: 'confirmation', path: '/confirmation' },
+    // Routes that get triggered from other parts of the workflow
+    { name: 'add_condition', path: '/add_condition' },
+    { name: 'add_medication', path: '/add_medication' },
+    { name: 'add_treatment', path: '/add_treatment' },
+  ]
+}
+
+
 // 1) add your route(s) here ⬇️
-const routes = [
-  { name: 'start', path: { en: '/start', fr: '/debut' } },
-  { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
-  { name: 'section2', path: {en:'/section2', fr: '/frsection2'}},
-  { name: 'section3', path: { en: '/section3', fr: '/frsection3' } },
-  { name: 'section4', path: { en: '/section4', fr: '/section4' } },
-  { name: 'section5-cond1', path: { en: '/section5-cond1', fr: '/section5-cond1' }},
-  { name: 'medication', path: { en: '/medication', fr: '/medication' } },
-  { name: 'section6', path: { en: '/section6', fr: '/section6' } },
-  { name: 'section7', path: { en: '/section7', fr: '/section7' } },
-  { name: 'section8', path: { en: '/section8', fr: '/section8' } },
-  { name: 'section9', path: { en: '/section9', fr: '/section9' } },
-  { name: 'confirmation', path: '/confirmation' },
-]
+const routes = getRoutes()
 
 const locales = ['en', 'fr']
 
