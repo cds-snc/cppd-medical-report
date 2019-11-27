@@ -13,17 +13,20 @@
         
         {% for condition in data.conditions %}  
             <div class="flex border-t border-b">
-                <div class="flex-auto">
+                <div class="w-1/2">
                     <p>{{ condition.name_of_condition }}</p>
                     <p class="text-base">{{ __('conditions.icd_code') }} XXXX</p>
                     <p class="text-base">{{ __('conditions.symptoms_began') }} {{ condition.symptoms_began }}</p>
                 </div>
-                <div class="flex-auto">
+                <div class="w-1/2">
                     <!-- <a href="/en/conditions/{{ loop.index }}/edit">Edit condition</a><br> -->
-                    <a href="/en/conditions/{{ loop.index }}/remove" class="text-sm">
-                        <svg class="w-4 h-4 inline fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 1.6a8.4 8.4 0 100 16.8 8.4 8.4 0 000-16.8zm5 9.4H5V9h10v2z"/></svg>
-                        {{ __('conditions.remove_condition' )}}
-                    </a>
+                    <form action="/en/conditions/{{ loop.index }}/delete" method="POST">
+                        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                        <a href="#" onclick="this.parentNode.submit();" class="text-sm">
+                            <svg class="w-4 h-4 inline fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 1.6a8.4 8.4 0 100 16.8 8.4 8.4 0 000-16.8zm5 9.4H5V9h10v2z"/></svg>
+                            {{ __('conditions.remove_condition' )}}
+                        </a>
+                    </form>
                 </div>
             </div>
         {% endfor %}
