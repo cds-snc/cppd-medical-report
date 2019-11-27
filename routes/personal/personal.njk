@@ -2,9 +2,7 @@
 
 {% block content %}
 
-    <h1>{{ __('Section 1 - Get started') }}</h1>
-
-    {# <h1>{{ __('Section 1 - Information about you') }}</h1> #}
+    <h1>{{ __('section1.title') }}</h1>
 
     <form method="post">
         <input type="hidden" name="_csrf" value="{{ csrfToken }}">
@@ -12,24 +10,24 @@
         {% if featureFlag.USER_RESEARCH_20191125 %}
             {{ textInput('name', 'Name', { class: "w-3-4", required: true, "autocomplete": "off" }) }}
         {% else %}
-            {{ textInput('social', 'Social Insurance Number', { hint: '443 856 299', class: "w-3-4", required: true }) }}
-            {{ radioButtons('preferred_title', { '1':'Mr.','2':'Mrs.','3':'Miss','4':'Ms.'}, data.preferred_title, 'Title', errors) }}
-        
-            {{ textInput('first_name', 'First name', { required: true }) }}
-            {{ textInput('middle_name', 'Middle name') }}
-            {{ textInput('last_name', 'Last name(s)', { required: true }) }}
-            {{ textInput('birth_last_name', 'Last name at birth (if different from above)') }}
+            {{ textInput('social', 'section1.sin', { hint: 'section1.sin_example', class: "w-3-4", required: true }) }}
 
-            {{ textInput('birthdate', 'Date of birth', { hint: 'YYYY-MM-DD', required: true }) }}
+            {{ radioButtons('preferred_title', { '1':'section1.preferred_title_mr','2':'section1.preferred_title_mrs','3':'section1.preferred_title_miss','4':'section1.preferred_title_ms'}, data.preferred_title, 'section1.preferred_title', errors) }}
+            
+            {{ textInput('first_name', 'section1.first_name', { required: true }) }}
+            {{ textInput('middle_name', 'section1.middle_name') }}
+            {{ textInput('last_name', 'section1.last_names', { required: true }) }}
+            {{ textInput('birth_last_name', 'section1.birth_last_name') }}
 
-            {{ textArea('address', 'Mailing address', { hint: '(No., Street, Apt., PO Box, RR), City/Town, Province/Territory, Country (if not Canada), Postal code', required: true}) }}
+            {{ textInput('birthdate', 'section1.birthdate', { hint: 'year_month_day_format', required: true }) }}
 
-            {{ textInput('telephone', 'Telephone number', { hint: 'XXX-XXX-XXXX', required: true }) }}
-            {{ textInput('alternate_telephone', 'Alternate telephone number', { hint: 'XXX-XXX-XXXX' }) }}
+            {{ textArea('address', 'section1.mailing_address', { hint: 'section1.mailing_address_hint', required: true}) }}
 
-            {{ radioButtons('contact_time', { 'morning':'Morning','afternoon':'Afternoon', 'letters_only':'Please don\'t call, send letters only'}, data.contact_time, 'The best time for Service Canada to contact you', errors, { required: true }) }}
+            {{ textInput('telephone', 'section1.telephone', { hint: 'telephone_format', required: true }) }}
+            {{ textInput('alternate_telephone', 'section1.alternate_telephone', { hint: 'telephone_hint' }) }}
+
+            {{ radioButtons('contact_time', { 'morning':'section1.contact_time_morning','afternoon':'section1.contact_time_afternoon', 'letters_only':'section1.contact_time_letters_only'}, data.contact_time, 'section1.contact_time', errors, { required: true }) }}
         {% endif %}
-
 
         <div class="w-full">
             <div class="w-1/3">
