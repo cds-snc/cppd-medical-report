@@ -2,22 +2,22 @@
 
 {% block content %}
 
-    <h1>{{ __('Section 9 - Declaration') }}</h1>
+    <h1>{{ __('section9.title') }}</h1>
 
     <div>
         <p>
-            {{ __('I confirm that, to the best of my knowledge all of the information I have provided in this report is accurate and complete.') }}
+            {{ __('section9.confirm_statement_1') }}
         </p>
 
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
-            {{ radioButtons('i_am_a', { '1':'general practice physician or physician certified in family medicine (CCFP)','other':'other physician specialist (please specify below)', '2':'nurse practicioner', '3':'registered nurse in a geographically isolated community (not urban or rural)'}, data.i_am_a, 'I am a:', errors, { required: true }) }}
+            {{ radioButtons('section9.confirm_statement_2', { '1':'section9.confirm_statement_ccfp','other':'section9.confirm_statement_other', '2':'section9.confirm_statement_np', '3':'section9.confirm_statement_rn'}, data.i_am_a, 'section9.confirm_statement_2', errors, { required: true }) }}
 
             {{ textInput('other_specify', 'Other')}}
 
             {{ textInput('name', 'Name', { required: true }) }}
-            {{ textInput('date', 'Date', { hint: 'YYYY-MM-DD', required: true }) }}
-            {{ textArea('physician_address', 'Address and telephone number', { required: true}) }}
+            {{ textInput('date', 'Date', { hint: 'year_month_day_format', required: true }) }}
+            {{ textArea('physician_address', 'section9.address_and_phone', { required: true}) }}
 
             {{ formButtons() }}
         </form>
