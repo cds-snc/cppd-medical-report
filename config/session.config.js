@@ -37,7 +37,7 @@ const sessions = {
 var appSession = sessions.memory;
 
 if (featureFlags.COOKIE_STORE_20191126){ 
-  appSession = session.cookie;
+  appSession = sessions.cookie;
 }
 
 // default setup: https://github.com/roccomuso/memorystore#setup
