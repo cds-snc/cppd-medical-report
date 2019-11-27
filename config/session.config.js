@@ -1,6 +1,7 @@
 const session = require('express-session')
 const MemoryStore = require('memorystore')(session)
 const cookieSession = require('cookie-session')
+const featureFlags = require('../utils/featureFlags.helpers')
 
 const oneHour = 1000 * 60 * 60
 const sessionName = `ctb-${process.env.SESSION_SECRET ||
@@ -31,7 +32,13 @@ const sessions = {
   memory: session(memorySessionConfig),
 }
 
-const appSession = sessions.cookie
+// We default to memory, switch to cookie if you need to do testing on a single page
+// or with a small amount of data
+var appSession = sessions.memory;
+
+if (featureFlags.COOKIE_STORE_20191126){ 
+  appSession = session.cookie;
+}
 
 // default setup: https://github.com/roccomuso/memorystore#setup
 // options: https://github.com/expressjs/session#options
