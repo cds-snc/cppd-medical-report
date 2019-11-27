@@ -1,0 +1,28 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+    <h1>{{ __('section2.title') }}</h1>
+
+    <p>{{ __('section2.preamble') | safe }}</p>
+
+    <form method="post">
+        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+        {{ medicalConsent('consent', { '1':'section2.i_consent','2':'section2.i_dont_consent'}, data.consent, 'section2.consent_preamble', errors, {hint: 'section2.consent_valid_period', required: true}) }}
+        {{ textInput('signature', 'section2.form.signature') }}
+
+        <fieldset>
+            <legend>{{__('section2.witness_legend')}}</legend>
+            <p> {{__('section2.witness_preamble')}} </p>
+            {{ textInput('witnessFirst', 'section2.form.witness_first') }}
+            {{ textInput('witnessMiddle', 'section2.form.witness_middle') }}
+            {{ textInput('witnessLast', 'section2.form.witness_last') }}
+            {{ textInput('witnessPhone', 'section2.form.witness_phone') }}
+            {{ textInput('witnessSignature', 'section2.form.witness_signature') }}
+        </fieldset>
+
+        {{ formButtons() }}
+    </form>
+
+{% endblock %}
