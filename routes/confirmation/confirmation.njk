@@ -2,44 +2,21 @@
 
 {% block content %}
 
-    <h1>{{ __('confirmation.title') }}</h1>
+    <h1>{{ __('Thank you!') }}</h1>
 
     <div>
-        <p>
-            {{ __('confirmation.intro') }}
-        </p>
+        <p>Thank you for your participation!</p>
 
-        <dl>
-            <dt>{{ __('Social insurance number') }}</dt>
-            <dd>{{ data.social }}</dd>
-
-            <dt>{{ __('Name') }}</dt>
-            <dd>{{ data.preferred_title }} {{ data.first_name }} {{ data.middle_name }} {{ data.last_name }} {% if data.birth_last_name %} ({{ __('ne: ') }} {{ data.birth_last_name }}){% endif %}
-        
-            <dt>{{ __('Date of Birth') }}</dt>
-            <dd>{{ data.birthdate }}</dd>
-
-            <dt>{{ __('Address') }}</dt>
-            <dd>{{ data.address }}</dd>
-
-            <dt>{{ __('Telephone') }}</dt>
-            <dd>{{ data.telephone }}</dd>
-
-            {% if data.alternate_telephone %}
-                <dt>{{ __('Alternate telephone') }}</dt>
-                <dd>{{ data.alternate_telephone }}</dd>
-            {% endif %}
-
-            <dt>{{ __('Best time to contact') }}</dt>
-            <dd>{{ data.contact_time }}</dd>
-        </dl>
-        {% if process.env.UseDatabase %}
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-            {{ formButtons() }}
+            <div class="buttons">
+                <div class="buttons--left">
+                    <button type="submit" class="w-1/3">{{ __('Save session data') }}</button>
+                </div>
+            </div>
         </form>
-        {%endif%}
+
     </div>
 
 {% endblock %}

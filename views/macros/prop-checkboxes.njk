@@ -1,0 +1,30 @@
+{% macro propCheckBoxes(key, values, arrKey, selectedVals, question, errors, attributes) %}
+    <div class="{{ 'has-error' if errors and errors[key] }}">
+        <fieldset class="fieldset">
+            <legend class="fieldset__legend">
+            {% if attributes.required %}
+                <span aria-hidden="true" class="required">*</span>
+            {% endif %}
+            {{ __(question) }}
+            {% if attributes.required %}
+                <span class="required">{{ __("required")}}</span>
+            {% endif %}
+            </legend>
+            {% if attributes.hint %}
+                <span class="form-message">{{ __(attributes.hint) }}</span>
+            {% endif %}
+            <div class="multiple-choice multiple-choice--checkboxes" id="{{ key }}">
+                {% if errors and errors[key] %}
+                    {{ validationMessage(errors[key].msg, key) }}
+                {% endif %}
+                {% for val in values %}
+                    {% set value = loop.index %}
+                    <div class="multiple-choice__item">
+                        <input id="{{ key }}{{ value }}" name="{{ key }}" type="checkbox" value="{{ value }}" {% if selectedVals and val in selectedVals %} checked="checked" {% endif %} {% if errors and errors[key] %} aria-describedby="{{ key + '-error' }}" aria-invalid="true" {% endif %}>
+                        <label for="{{ key }}{{ value }}">{{ val[arrKey] }}</label>
+                    </div>
+                {% endfor %}
+            </div>
+        </fieldset>
+    </div>
+{% endmacro %}

@@ -6,11 +6,13 @@ const scriptSrc = [
   "'unsafe-eval'",
   'cdnjs.cloudflare.com',
   '*.herokuapp.com',
-  'localhost:3000',
 ]
+
+let upgradeInsecureRequests = true
 
 if (process.env.NODE_ENV === 'development') {
   scriptSrc.push("'unsafe-eval'")
+  upgradeInsecureRequests = false
 }
 
 module.exports = {
@@ -20,5 +22,5 @@ module.exports = {
   fontSrc: ["'self'", 'https://fonts.gstatic.com'],
   imgSrc: ["'self'", 'data:'],
   styleSrc: ["'self'", 'https://fonts.googleapis.com'],
-  upgradeInsecureRequests: true,
+  upgradeInsecureRequests,
 }

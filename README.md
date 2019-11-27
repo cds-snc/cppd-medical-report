@@ -6,6 +6,12 @@
 
 For more information, contact us at [cds-snc@tbs-sct.gc.ca](mailto:cds-snc@tbs-sct.gc.ca).
 
+--- 
+
+[ESDC](https://www.canada.ca/en/employment-social-development.html) et la [CDS](https://digital.canada.ca) travaillent ensemble pour améliorer le PPIRPC (programme de prestations d'invalidité du Régime de pensions du Canada). Nous travaillons à trouver des moyens de réduire le temps de traitement de bout en bout sans nuire à la qualité des décisions. Nous mettons actuellement au point un prototype du rapport médical sur le PPPC afin d’explorer certaines hypothèses et d’optimiser davantage ce processus en ligne.
+
+Pour plus d'informations, contactez-nous à l'adresse [cds-snc@tbs-sct.gc.ca](mailto:cds-snc@tbs-sct.gc.ca).
+
 ## Setup
 
 Requires the following things to be installed:
@@ -55,3 +61,10 @@ Protip: If you use Visual Studio Code, you can use the [Remote Development Exten
 1. `docker run cppd-medical-report`
 
 More documentation on working with this codebase can be found in [the docs folder](docs).
+
+
+## Feature Flags
+
+There are some feature flags that enable/disable features depending on whether they are set. The flags are set as OS environment variables that are detected at runtime. Below, are the list along with the default value in parenthesis `()` and a description of what happens when set to `true`.
+
+- `FLAG_USER_RESEARCH_20191125` (`false`): Disables Sections 1-4, and has a shortened name-only entry form to being the workflow.

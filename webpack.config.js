@@ -9,6 +9,7 @@ module.exports = (env, argv) => {
       styles: './assets/scss/app.scss',
       app: './assets/js/app.js',
       personal: './routes/personal/js/personal.js',
+      add_condition: './routes/add_condition/js/add_condition.js',
     },
     output: {
       filename: 'js/[name].[chunkhash].js',
@@ -33,7 +34,6 @@ module.exports = (env, argv) => {
         vue$: 'vue/dist/vue.esm.js', // Use the full build
       },
     },
-    stats: 'errors-only',
   })
 
   return config

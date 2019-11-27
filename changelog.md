@@ -1,10 +1,23 @@
 # Changelog
 
+## [6.1.0] - 2019-11-25
+
+### Updated
+- Redirect back with errors. This *may* be a breaking change if you have written any customizations to deal with issues surrounding `renderPageWithErrors` in `validate.helpers.js`.  That method has been removed, and now on validation errors, we flash the errors to the session and redirect back to the `get` route.
+
+### Removed
+- `renderPageWithErrors` has been removed from `validate.helpers.js`
+
+## [6.0.3] - 2019-11-22
+
+- Nodemon [2.0.1](https://github.com/remy/nodemon/releases/tag/v2.0.1) 
+  `Fixes ubuntu loop waiting for sub processes`
+
 ## [6.0.2] - 2019-11-20
 
 ### Updated 
 - Fixed checkbox styling that broke when we merged Tailwind CSS
-- Nodemon [2.0.0](https://github.com/remy/nodemon/releases) 
+- Nodemon [2.0.0](https://github.com/remy/nodemon/releases/tag/v2.0.0) 
 - Minor package bumps 
 
 ## [6.0.1] - 2019-11-15
