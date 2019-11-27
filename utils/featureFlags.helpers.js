@@ -10,7 +10,7 @@ function flag(env) {
 
 const featureFlags = {
     USER_RESEARCH_20191125: flag(process.env.FLAG_USER_RESEARCH_20191125), // Default: false
-    COOKIE_STORE_20191126: flag(process.env.COOKIE_STORE_20191126), // Default: false
+    COOKIE_STORE_20191126: flag(process.env.FLAG_COOKIE_STORE_20191126), // Default: false
 }
 
 module.exports = featureFlags
