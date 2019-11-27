@@ -10,7 +10,7 @@ module.exports = (app, route) => {
     .get((req, res) => {
       const data = getSessionData(req)
 
-      if (!data.conditions) {
+      if (!data.conditions || !data.conditions.length) {
         res.redirect(res.locals.routePath('add_condition'))
       } else {
         res.render(
