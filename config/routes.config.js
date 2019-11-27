@@ -19,13 +19,29 @@ function getRoutes() {
 
   return [
     { name: 'start', path: { en: '/start', fr: '/debut' } },
+    // Section1
     { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
+    // Section 2
+    { name: 'section2', path: { en: '/section2', fr: '/frsection2' } },
+    // Section 3
+    { name: 'section3', path: { en: '/section3', fr: '/frsection3' } },
+    // Section 4
+    { name: 'section4', path: { en: '/section4', fr: '/frsection4' } },
+    // Section 5
     { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
     { name: 'medication', path: { en: '/medication', fr: '/medication' } },
     { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
+    // Section 7
     { name: 'health', path: { en: '/health', fr: '/health' } },
+    // Section 8
     { name: 'documents', path: { en: '/documents', fr: '/documents' } },
+    // Section 6
+    { name: 'section6', path: { en: '/section6', fr: '/frsection6' } },
+    // Section 9
+    { name: 'section9', path: { en: '/section9', fr: '/frsection9' } },
+    // Last step / confirmation
     { name: 'confirmation', path: '/confirmation' },
+    // Routes that get triggered from other parts of the workflow
     { name: 'add_condition', path: '/add_condition' },
     { name: 'add_medication', path: '/add_medication' },
     { name: 'add_treatment', path: '/add_treatment' },
