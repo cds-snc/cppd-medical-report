@@ -16,6 +16,10 @@ function getRoutes() {
         path: { en: '/conditions/add', fr: '/conditions/ajouter' },
       },
       {
+        name: 'edit_condition',
+        path: { en: '/conditions/:id/edit', fr: '/conditions/:id/modifier' },
+      },
+      {
         name: 'delete_condition',
         path: { en: '/conditions/:id/delete', fr: '/conditions/:id/delete' },
       },

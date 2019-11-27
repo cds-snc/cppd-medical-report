@@ -1,0 +1,64 @@
+{% extends "base.njk" %}
+
+{% macro condition() %}
+    
+    {{ textInput('name_of_condition', 'add_condition.name_of_condition', { required: true, "autocomplete": "off" }) }}
+    <p class="text-gray-600 -mt-8">{{ __('add_condition.name_of_condition_hint') }}</p>
+    
+    {{ textInput('symptoms_began', 'add_condition.symptoms_began', { hint: 'add_condition.symptoms_began_hint', required: true, "autocomplete": "off" }) }}
+
+    {{ textArea('clinically_impair', 'add_condition.clinically_impair', { hint: 'add_condition.clinically_impair_hint', required: true }) }}
+
+    {{ radioButtons('condition_outlook', { '1':'add_condition.condition_outlook_improve','2':'add_condition.condition_outlook_deteriorate', '3':'add_condition.condition_outlook_staysame', '4':'add_condition.condition_outlook_unknown'}, data.condition_outlook, 'add_condition.condition_outlook', errors, { required: true }) }}
+
+    <div id="unknown_details" class="ml-4">
+        {{ textArea('condition_outlook_unknown', 'add_condition.prognosis_unknown', { required: true }) }}
+    </div>
+
+    {{ radioButtons('condition_last', { '1':'add_condition.condition_last_1_year', '2':'add_condition.condition_last_more' }, data.condition_last, 'add_condition.condition_last', errors, { required: true }) }}
+
+    {{ radioButtons('symptoms_occur', { '1':'add_condition.symptoms_occur_periodically', '2':'add_condition.symptoms_occur_continuously', '3':'add_condition.symptoms_occur_unknown'}, data.symptoms_occur, 'add_condition.symptoms_occur', errors, { required: true }) }}
+{% endmacro %}
+
+{% block content %}
+
+    <h1>{{ __('conditions.title') }}<br/> <span class="text-base">{{ __('conditions.patient')}} {{ patientName(data) }}</span></h1>
+
+    <div>
+        <p>
+            {{ __('conditions.intro') }}
+        </p>
+
+        <form method="post">
+            <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+
+            {{ condition() }}
+
+            <p id="attach_files_desk" class="font-bold">{{ __('add_condition.attach_notes') }}</p>
+            <p class="text-gray-600">{{ __('add_condition.attach_notes_hint') }}</p>
+
+            <div id="app">
+                <file-upload files="{{ data.condition_files }}" field-name="condition_files"></file-upload>
+            </div>
+
+            <div class="multiple-choice multiple-choice--checkboxes">
+                <div class="multiple-choice__item">
+                    <input id="attach_later" name="attach_later" type="checkbox" value="attach_later">
+                    <label for="attach_later">{{ __('add_condition.attach_later') }}</label>
+                </div>
+            </div>
+
+            <div class="w-full flex">
+                <div class="w-1/3">
+                    <button type="submit">{{ __('add_condition.add_condition') }}</button>
+                </div>
+                {% if data.conditions %}
+                    <div class="w-1/3 text-center">
+                        <a class="button-link transparent" href="{{ routePath('conditions') }}">{{ __('Cancel') }}</a>
+                    </div>
+                {% endif %}
+            </div>
+        </form>
+    </div>
+    
+{% endblock %}
