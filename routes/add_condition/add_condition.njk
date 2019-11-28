@@ -11,13 +11,17 @@
 
     {{ radioButtons('condition_outlook', { '1':'add_condition.condition_outlook_improve','2':'add_condition.condition_outlook_deteriorate', '3':'add_condition.condition_outlook_staysame', '4':'add_condition.condition_outlook_unknown'}, data.condition_outlook, 'add_condition.condition_outlook', errors, { required: true }) }}
 
-    <div id="unknown_details" class="ml-4">
+    <div id="unknown_outlook_details" class="ml-4">
         {{ textArea('condition_outlook_unknown', 'add_condition.prognosis_unknown', { required: true }) }}
     </div>
 
     {{ radioButtons('condition_last', { '1':'add_condition.condition_last_1_year', '2':'add_condition.condition_last_more' }, data.condition_last, 'add_condition.condition_last', errors, { required: true }) }}
 
     {{ radioButtons('symptoms_occur', { '1':'add_condition.symptoms_occur_periodically', '2':'add_condition.symptoms_occur_continuously', '3':'add_condition.symptoms_occur_unknown'}, data.symptoms_occur, 'add_condition.symptoms_occur', errors, { required: true }) }}
+
+    <div id="unknown_symptoms_occur_details" class="ml-4">
+        {{ textArea('symptoms_occur_uknown', 'add_condition.symptoms_occur_unknown', { required: true }) }}
+    </div>
 {% endmacro %}
 
 {% block content %}

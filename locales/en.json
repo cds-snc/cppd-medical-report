@@ -378,5 +378,6 @@
   "confirmation.thank_you_participating": "Thank you for participating!",
   "skip_section": "Skip this section",
   "year_month_date_format": "YYYY-MM-DD",
-  "telephone_hint": "telephone_hint"
+  "telephone_hint": "telephone_hint",
+  "errors.symptoms_occur_uknown_required": "Unknown Reason is required if Unknown "
 }

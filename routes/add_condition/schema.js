@@ -51,6 +51,20 @@ const Schema = {
       options: [['1', '2', '3']],
     },
   },
+  symptoms_occur_uknown: {
+    custom: {
+      options: (value, { req }) => {
+        const symptomsOccur = req.body.symptoms_occur
+        if (symptomsOccur === '3') {
+          if (value === '') {
+            return false
+          }
+        }
+        return true
+      },
+      errorMessage: 'errors.symptoms_occur_uknown_required',
+    },
+  },
 }
 
 module.exports = {
