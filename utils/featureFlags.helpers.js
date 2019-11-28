@@ -1,6 +1,6 @@
-function userResearch20191125() {
-    if(typeof process.env.FLAG_USER_RESEARCH_20191125 !== "undefined" ) {
-        if(process.env.FLAG_USER_RESEARCH_20191125 !== "false") {
+function flag(env) { 
+    if(typeof env !== "undefined" ) {
+        if(env !== "false") {
             return true
         }
     }
@@ -9,7 +9,8 @@ function userResearch20191125() {
 
 
 const featureFlags = {
-    USER_RESEARCH_20191125: userResearch20191125(), // Default: false
+    USER_RESEARCH_20191125: flag(process.env.FLAG_USER_RESEARCH_20191125), // Default: false
+    COOKIE_STORE_20191126: flag(process.env.FLAG_COOKIE_STORE_20191126), // Default: false
 }
 
 module.exports = featureFlags
