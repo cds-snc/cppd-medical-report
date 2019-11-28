@@ -21,7 +21,7 @@
                 {% set selectedValues = data.treatment_treated_condition %}
             {% endif %}
 
-            {{ rawCheckboxes('treatment_treated_condition', 
+            {{ rawCheckBoxes('treatment_treated_condition',
                 conditionList,
                 selectedValues, 
                 'treatments.form.treated_conditions.question',{},
