@@ -20,6 +20,14 @@ function getRoutes() {
         path: { en: '/conditions/:id/delete', fr: '/conditions/:id/delete' },
       },
       {
+        name: 'add_treatment',
+        path: { en: '/treatments/add', fr: '/treatments/add' },
+      },
+      {
+        name: 'delete_treatment',
+        path: { en: '/treatments/:id/delete', fr: '/treatments/:id/delete' },
+      },
+      {
         name: 'add_medication',
         path: { en: '/medication/add', fr: '/medication/add' },
       },
@@ -27,7 +35,6 @@ function getRoutes() {
         name: 'delete_medication',
         path: { en: '/medication/:id/delete', fr: '/medication/:id/delete' },
       },
-      { name: 'add_treatment', path: '/add_treatment' },
     ]
   }
 

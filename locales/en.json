@@ -387,5 +387,9 @@
   "medications.remove_medication": "Remove medication",
   "medications.add_a_medication": "Add a medication",
   "year_month_date_format": "YYYY-MM-DD",
-  "telephone_hint": "telephone_hint"
+  "telephone_hint": "telephone_hint",
+  "treatments.treatments": "Treatments",
+  "treatments.remove_treatment": "Remove treatment",
+  "treatments.add_a_treatment": "Add a treatment",
+  "treatments.next_overall_patient_summary": "Next: Overall patient summary"
 }
