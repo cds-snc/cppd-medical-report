@@ -11,9 +11,30 @@ function getRoutes() {
       { name: 'health', path: { en: '/health', fr: '/health' } },
       { name: 'documents', path: { en: '/documents', fr: '/documents' } },
       { name: 'confirmation', path: '/confirmation' },
-      { name: 'add_condition', path: '/add_condition' },
-      { name: 'add_medication', path: '/add_medication' },
-      { name: 'add_treatment', path: '/add_treatment' },
+      {
+        name: 'add_condition',
+        path: { en: '/conditions/add', fr: '/conditions/ajouter' },
+      },
+      {
+        name: 'delete_condition',
+        path: { en: '/conditions/:id/delete', fr: '/conditions/:id/delete' },
+      },
+      {
+        name: 'add_treatment',
+        path: { en: '/treatments/add', fr: '/treatments/add' },
+      },
+      {
+        name: 'delete_treatment',
+        path: { en: '/treatments/:id/delete', fr: '/treatments/:id/delete' },
+      },
+      {
+        name: 'add_medication',
+        path: { en: '/medication/add', fr: '/medication/add' },
+      },
+      {
+        name: 'delete_medication',
+        path: { en: '/medication/:id/delete', fr: '/medication/:id/delete' },
+      },
     ]
   }
 
@@ -42,12 +63,18 @@ function getRoutes() {
     // Last step / confirmation
     { name: 'confirmation', path: '/confirmation' },
     // Routes that get triggered from other parts of the workflow
-    { name: 'add_condition', path: '/add_condition' },
+    {
+      name: 'add_condition',
+      path: { en: '/conditions/add', fr: '/conditions/ajouter' },
+    },
+    {
+      name: 'delete_condition',
+      path: { en: '/conditions/:id/delete', fr: '/conditions/:id/delete' },
+    },
     { name: 'add_medication', path: '/add_medication' },
     { name: 'add_treatment', path: '/add_treatment' },
   ]
 }
-
 
 // 1) add your route(s) here ⬇️
 const routes = getRoutes()
