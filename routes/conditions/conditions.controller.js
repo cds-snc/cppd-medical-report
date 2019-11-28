@@ -10,10 +10,13 @@ module.exports = (app, route) => {
     .get((req, res) => {
       const data = getSessionData(req)
 
-      if (!data.conditions) {
-        res.redirect('/en/add_condition')
+      if (!data.conditions || data.conditions.length === 0) {
+        res.redirect(res.locals.routePath('add_condition'))
       } else {
-        res.render(name, routeUtils.getViewData(req, { featureFlag: featureFlag }))
+        res.render(
+          name,
+          routeUtils.getViewData(req, { featureFlag: featureFlag }),
+        )
       }
     })
     .post(route.applySchema(Schema), route.doRedirect())

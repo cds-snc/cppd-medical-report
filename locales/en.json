@@ -377,6 +377,12 @@
   "confirmation.thank_you": "Thank you!",
   "confirmation.thank_you_participating": "Thank you for participating!",
   "skip_section": "Skip this section",
+  "conditions.medical_conditions": "Medical conditions",
+  "conditions.icd_code": "ICD-9-CM code: ",
+  "conditions.symptoms_began": "Symptoms began: ",
+  "conditions.remove_condition": "Remove condition",
+  "conditions.add_a_condition": "Add another condition",
+  "conditions.next_medications": "Next: Medications",
   "year_month_date_format": "YYYY-MM-DD",
   "telephone_hint": "telephone_hint"
 }
