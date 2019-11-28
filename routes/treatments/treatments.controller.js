@@ -9,8 +9,8 @@ module.exports = (app, route) => {
     .get((req, res) => {
       const data = getSessionData(req)
 
-      if (!data.treatments) {
-        res.redirect('/en/add_treatment')
+      if (!data.treatments || !data.treatments.length) {
+        res.redirect(res.locals.routePath('add_treatment'))
       } else {
         res.render(name, routeUtils.getViewData(req, {}))
       }

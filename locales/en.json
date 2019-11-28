@@ -383,5 +383,9 @@
   "conditions.add_a_condition": "Add another condition",
   "conditions.next_medications": "Next: Medications",
   "year_month_date_format": "YYYY-MM-DD",
-  "telephone_hint": "telephone_hint"
+  "telephone_hint": "telephone_hint",
+  "treatments.treatments": "Treatments",
+  "treatments.remove_treatment": "Remove treatment",
+  "treatments.add_a_treatment": "Add a treatment",
+  "treatments.next_overall_patient_summary": "Next: Overall patient summary"
 }
