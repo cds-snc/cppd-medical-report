@@ -2,11 +2,11 @@
 
 {% block content %}
 
-    <h1>{{ __('Section 4 - Expedited processing for terminal and grave conditions') }}</h1>
+    <h1>{{ __('section4.title') }}</h1>
 
-    <p>{{ __('This section should be completed <strong>ONLY</strong> if your patient has been diagnosed with a terminal illness or one of the 32 grave conditions listed in <strong>Annex A</strong>. If your patient does not have a terminal illness or a grave condition, skip to <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>.') | safe }}</p>
+    <p>{{ __('section4.instructions_1') | safe }}</p>
 
-    <p>{{ __('Applications from patients with a terminal illness or a grave condition receive priority handling. In these cases, once we receive a complete application, including the <strong>Medical Report</strong>, our goal is to determine the applicant\'s eligibility for CPP disability benefits within 5 business days for applicants with a terminal illness and 30 calendar days for those with a grave condition.') | safe }}
+    <p>{{ __('section4.instructions_2') | safe }}
 
     <form method="post">
         <div class="{{ 'has-error' if errors and errors['condition_type'] }}">
@@ -14,7 +14,7 @@
                 <legend class="fieldset__legend">
                     <span aria-hidden="true" class="required">*</span>
 
-                    {{ __('Does your patient have a medical condition that is:') }}
+                    {{ __('section4.question') }}
 
                     <span class="required">{{ __("required")}}</span>
                 </legend>
@@ -26,29 +26,29 @@
                             {{ validationMessage(errors['condition_type'].msg, key) }}
                         {% endif %}
                     <div class="multiple-choice__item">
-                        <input id="condition_type_terminal" type="radio" name="condition_type" value="terminal" {% if data.condition_type == 'terminal' %} checked="checked" {% endif %} {% if errors and errors['condition_type'] %} aria-describedby="condition_type-error" aria-invalid="true" {% endif %}> <label for="condition_type_terminal">{{ __('<strong>Terminal</strong> - for the purpose of CPP, terminal is defined as a disease state that cannot be cured or adequately treated and is reasonably expected to result in death within 6 months. If yes, provide details below:') | safe }}</label>
+                        <input id="condition_type_terminal" type="radio" name="condition_type" value="terminal" {% if data.condition_type == 'terminal' %} checked="checked" {% endif %} {% if errors and errors['condition_type'] %} aria-describedby="condition_type-error" aria-invalid="true" {% endif %}> <label for="condition_type_terminal">{{ __('section4.yes_terminal') | safe }}</label>
                     </div>
                 </div>
 
                 <div class="indent-block">
-                    {{ textArea('diagnosis', 'Diagnosis') }}
+                    {{ textArea('diagnosis', 'section4.diagnosis') }}
 
-                    {{ textInput('icd_code', 'ICD-9-CM code', { hint: 'XXX.X' }) }}
+                    {{ textInput('icd_code', 'ICD-9-CM_code', { hint: 'ICD-9-CM_format' }) }}
 
-                    {{ textInput('onset_date', 'Date of symptom onset', { hint: 'YYYY-MM' }) }}
+                    {{ textInput('onset_date', 'section4.onset_date', { hint: 'year_month' }) }}
 
-                    <p>{{ __('If the patient has other non-terminal medical conditions that prevent them from regularly working at any job, please provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>. Otherwise, please skip to Section 6 - Patient\'s employment situation.') | safe }}
+                    <p>{{ __('section4.terminal_instructions') | safe }}
                 </div>
 
                 <div class="multiple-choice multiple-choice--radios">
                     <div class="multiple-choice__item">
-                        <input id="condition_type_grave" type="radio" name="condition_type" value="grave" {% if data.condition_type == 'grave' %} checked="checked" {% endif %} {% if errors and errors['condition_type'] %} aria-describedby="condition_type-error" aria-invalid="true" {% endif %}> <label for="condition_type_grave">{{ __('<strong>Grave</strong> - for the purpose of CPP, grave is defined as a condition that is included in the list of 32 severe and rapidly progressive medical conditions in Annex A. If yes, provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment.</strong>') | safe }}</label>
+                        <input id="condition_type_grave" type="radio" name="condition_type" value="grave" {% if data.condition_type == 'grave' %} checked="checked" {% endif %} {% if errors and errors['condition_type'] %} aria-describedby="condition_type-error" aria-invalid="true" {% endif %}> <label for="condition_type_grave">{{ __('section4.yes_grave') | safe }}</label>
                     </div>
                 </div>
 
                 <div class="multiple-choice multiple-choice--radios">
                     <div class="multiple-choice__item">
-                        <input id="condition_type_none" type="radio" name="condition_type" value="none" {% if data.condition_type == 'none' %} checked="checked" {% endif %} {% if errors and errors['condition_type'] %} aria-describedby="condition_type-error" aria-invalid="true" {% endif %}> <label for="condition_type_none">{{ __('Neither') }}</label>
+                        <input id="condition_type_none" type="radio" name="condition_type" value="none" {% if data.condition_type == 'none' %} checked="checked" {% endif %} {% if errors and errors['condition_type'] %} aria-describedby="condition_type-error" aria-invalid="true" {% endif %}> <label for="condition_type_none">{{ __('section4.neither_terminal_or_grave') }}</label>
                     </div>
                 </div>
             </fieldset>
