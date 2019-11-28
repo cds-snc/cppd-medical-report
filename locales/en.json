@@ -61,7 +61,7 @@
   "section2.delay_warning_2": "may stop paying me the benefits if I am already receiving them; and",
   "section2.delay_warning_3": "can require that I provide the necessary information.",  
   "section2.form.signature": "Signature of applicant / authorized representative",
-  "section2.consent_valid_period": "This signed consent is valid for up to 3 years unless you cancel it in writing. Service Canada requires your original signature, but we will use a photocopy and consider it as valid as the original when requesting personal information from the persons and organizations listed above.",
+  "section2.consent_valid_period": "This signed consent is valid for up to <strong>3 years</strong> unless you cancel it in writing. Service Canada requires your original signature, but we will use a photocopy and consider it as valid as the original when requesting personal information from the persons and organizations listed above.",
   "section2.form.witness_first": "First name of witness",
   "section2.form.witness_middle": "Middle name",
   "section2.form.witness_last": "Last name(s)",

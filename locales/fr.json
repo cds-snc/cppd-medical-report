@@ -61,7 +61,7 @@
   "section2.delay_warning_2": "peut cesser de me verser des prestations si j'en reçois déjà;",
   "section2.delay_warning_3": "peut exiger que je fournisse les renseignements nécessaires.",
   "section2.form.signature": "Signature du demandeur ou du représentant autorisé",
-  "section2.consent_valid_period": "La présente autorisation signée est valide pendant trois ans maximum, sauf si vous l'annulez par écrit. Service Canada a besoin de votre signature originale, mais nous utiliserons une photocopie et la considérerons aussi valide que l'original lorsque nous demanderons des renseignements personnels des personnes et des organisations énumérées ci-dessus.",
+  "section2.consent_valid_period": "La présente autorisation signée est valide pendant <strong>trois ans</strong> maximum, sauf si vous l'annulez par écrit. Service Canada a besoin de votre signature originale, mais nous utiliserons une photocopie et la considérerons aussi valide que l'original lorsque nous demanderons des renseignements personnels des personnes et des organisations énumérées ci-dessus.",
   "section2.form.witness_first": "Prénom du témoin",
   "section2.form.witness_middle": "Second prénom",
   "section2.form.witness_last": "Nom de famille",
