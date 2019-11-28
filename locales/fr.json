@@ -323,6 +323,9 @@
   "health.hint": "Par exemple: investigations prévues et/ou consultations de spécialistes, raison pour pronostic et/ou fréquence inconnu, etc.",
   "health.next_button": "Prochain: Documents à l'appui",
   "patient": "Patient : ",
+  "confirmation.save_data": "Sauvegarder les données",
+  "confirmation.thank_you": "Merci!",
+  "confirmation.thank_you_participating": "Merci d'avoir participé!",
   "I am a:": "I am a:",
   "year_month_day_format": "AAAA-MM-JJ"
 }
