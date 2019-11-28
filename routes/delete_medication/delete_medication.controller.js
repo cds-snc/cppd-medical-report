@@ -6,8 +6,8 @@ module.exports = (app, route) => {
     const data = getSessionData(req)
     const index = req.params.id - 1 // array is zero-indexed
 
-    data.conditions.splice(index, 1)
+    data.medications.splice(index, 1)
 
-    res.redirect(res.locals.routePath('conditions'))
+    res.redirect(res.locals.routePath('medication'))
   })
 }
