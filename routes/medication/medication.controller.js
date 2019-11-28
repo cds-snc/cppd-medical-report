@@ -9,7 +9,7 @@ module.exports = (app, route) => {
     .get((req, res) => {
       const data = getSessionData(req)
 
-      if (!data.medications || !data.medications.length) {
+      if (!data.medications || data.medications.length === 0) {
         res.redirect(res.locals.routePath('add_medication'))
       } else {
         res.render(name, routeUtils.getViewData(req, {}))
