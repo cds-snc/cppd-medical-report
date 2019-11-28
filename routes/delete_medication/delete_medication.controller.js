@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const { getSessionData } = require('./../../utils')
 
 module.exports = (app, route) => {

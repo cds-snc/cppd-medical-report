@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const { routeUtils, getSessionData } = require('./../../utils')
 const { Schema } = require('./schema.js')
 const featureFlag = require('./../../utils/featureFlags.helpers')

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const { routeUtils } = require('../../utils/index')
 
 module.exports = (app, route) => {
