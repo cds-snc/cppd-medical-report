@@ -114,6 +114,19 @@
   "If the patient has other non-terminal medical conditions that prevent them from regularly working at any job, please provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>. Otherwise, please skip to Section 6 - Patient's employment situation.": "If the patient has other non-terminal medical conditions that prevent them from regularly working at any job, please provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>. Otherwise, please skip to Section 6 - Patient's employment situation.",
   "<strong>Grave</strong> - for the purpose of CPP, grave is defined as a condition that is included in the list of 32 severe and rapidly progressive medical conditions in Annex A. If yes, provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment.</strong>": "<strong>Grave</strong> - for the purpose of CPP, grave is defined as a condition that is included in the list of 32 severe and rapidly progressive medical conditions in Annex A. If yes, provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment.</strong>",
   "Neither": "Neither",
+  "section4.title": "Section 4 - Expedited processing for terminal and grave conditions",
+  "section4.instructions_1": "This section should be completed <strong>ONLY</strong> if your patient has been diagnosed with a terminal illness or one of the 32 grave conditions listed in <strong>Annex A</strong>. If your patient does not have a terminal illness or a grave condition, skip to <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>.",
+  "section4.instructions_2": "Applications from patients with a terminal illness or a grave condition receive priority handling. In these cases, once we receive a complete application, including the <strong>Medical Report</strong>, our goal is to determine the applicant's eligibility for CPP disability benefits within 5 business days for applicants with a terminal illness and 30 calendar days for those with a grave condition.",
+  "section4.question": "Does your patient have a medical condition that is:",
+  "section4.yes_terminal": "<strong>Terminal</strong> - for the purpose of CPP, terminal is defined as a disease state that cannot be cured or adequately treated and is reasonably expected to result in death within 6 months. If yes, provide details below:",
+  "section4.diagnosis": "Diagnosis",
+  "ICD-9-CM_code": "ICD-9-CM code",
+  "ICD-9-CM_format": "XXX.X",
+  "section4.onset_date": "Date of symptom onset",
+  "year_month": "YYYY-MM",
+  "section4.terminal_instructions": "If the patient has other non-terminal medical conditions that prevent them from regularly working at any job, please provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment</strong>. Otherwise, please skip to Section 6 - Patient's employment situation.",
+  "section4.yes_grave": "<strong>Grave</strong> - for the purpose of CPP, grave is defined as a condition that is included in the list of 32 severe and rapidly progressive medical conditions in Annex A. If yes, provide details in <strong>Section 5 - Medical conditions, impairments, functional limitations and treatment.</strong>",
+  "section4.neither_terminal_or_grave": "Neither",
   "Section 6 - Patient's employment situation": "Section 6 - Patient's employment situation",
   "section6.intro": "section6.intro",
   "This section gathers information to assess current and future restrictions on the patient's ability to work.": "This section gathers information to assess current and future restrictions on the patient's ability to work.",
@@ -355,4 +368,5 @@
   "conditions.remove_condition": "Remove condition",
   "conditions.add_a_condition": "Add another condition",
   "conditions.next_medications": "Next: Medications"
+  "telephone_hint": "telephone_hint"
 }
