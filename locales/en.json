@@ -358,7 +358,7 @@
   "Response (e.g. efficacy, side effects etc.) and other remarks": "Response (e.g. efficacy, side effects etc.) and other remarks",
   "Medication 2": "Medication 2",
   "Medication 3": "Medication 3",
-  "Save session data": "Save session data",
+  "confirmation.save_data": "Save data",
   "add_condition.prognosis_unknown": "Why is the prognosis unknown?",
   "health.title": "Section 7 - Patient's overall health",
   "patient": "Patient:",
@@ -378,7 +378,8 @@
   "errors.condition_outlook_unknown": "Unknown Reason is required if Unknown",
   "errors.condition_last_required": "Condition Last is required",
   "errors.symptoms_occur_required": "Symptoms occur is required",
-  "Thank you!": "Thank you!",
+  "confirmation.thank_you": "Thank you!",
+  "confirmation.thank_you_participating": "Thank you for participating!",
   "skip_section": "Skip this section",
   "year_month_date_format": "YYYY-MM-DD",
   "telephone_hint": "telephone_hint"
