@@ -318,6 +318,9 @@
   "errors.treatment_end_date.length": "errors.treatment_end_date.length",
   "errors.treatment_treated_condition.is_checked": "errors.treatment_treated_condition.is_checked",
   "errors.treatment_results.length": "errors.treatment_results.length",
+  "confirmation.save_data": "Sauvegarder les données",
+  "confirmation.thank_you": "Merci!",
+  "confirmation.thank_you_participating": "Merci d'avoir participé!",
   "I am a:": "I am a:",
   "year_month_day_format": "AAAA-MM-JJ"
 }
