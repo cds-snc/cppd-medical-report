@@ -2,27 +2,27 @@
 
 {% block content %}
 
-    <h1>{{ __('Section 6 - Patient\'s employment situation') }}</h1>
+    <h1>{{ __('section6.title') }}</h1>
 
     <div>
         <p>
-            {{ __('This section gathers information to assess current and future restrictions on the patient\'s ability to work.') }}
+            {{ __('section6.instructions') }}
         </p>
 
         <form method="post">
             <input type="hidden" name="_csrf" value="{{ csrfToken }}">
 
-            {{ radioButtons('stop_work', { '1':'Yes','2':'No','3':'Not discussed'}, data.stop_work, 'Did you recommend to your patient that they stop working?', errors) }}
+            {{ radioButtons('stop_work', { '1':'Yes','2':'No','3':'section6.stop_work_not_discussed'}, data.stop_work, 'section6.stop_work_question', errors) }}
 
-            {{ textInput('date_stopped_work', 'I recommended that the patient stop working as of (date)', { hint: 'YYYY-MM-DD', required: true }) }}
+            {{ textInput('date_stopped_work', 'section6.stop_work_recommended', { hint: 'year_month_date_format', required: true }) }}
 
-            {{ radioButtons('return_to_work', { '1':'Yes (please complete questions 3 and 4, below)','2':'No (skip to Section 7)','3':'Unknown (skip to Section 7)'}, data.return_to_work, 'From a strictly medical standpoint, do you expect your patient to return to any type of work in the future?', errors) }}
+            {{ radioButtons('return_to_work', { '1':'section6.return_work_yes','2':'section6.return_work_no','3':'section6.return_work_unknown'}, data.return_to_work, 'section6.return_work_question', errors) }}
 
-            {{ radioButtons('return_to_work_timeframe', { '1':'In 6 to 12 months','2':'In 12 to 24 months','3':'In more than 24 months','4':'Unknown'}, data.return_to_work_timeframe, 'If yes, please indicate when you expect your patient to return to work', errors) }}
+            {{ radioButtons('return_to_work_timeframe', { '1':'section6.return_work_6_to_12_months','2':'section6.return_work_12_to_24_months','3':'section6.return_work_more_than_24_months','4':'Unknown'}, data.return_to_work_timeframe, 'section6.return_work_timeframe_question', errors) }}
 
-            {{ radioButtons('type_of_work', { '1':'Usual work','2':'Modified work','3':'Another type of work that will require training','4':'Other (specify below)'}, data.type_of_work, 'If yes, please indicate what type of work you expect your patient will be able to do', errors) }}
+            {{ radioButtons('type_of_work', { '1':'section6.type_work_usual','2':'section6.type_work_modified','3':'section6.type_work_training','4':'section6.type_work_other'}, data.type_of_work, 'section6.type_work_question', errors) }}
 
-            {{ textInput('type_of_work_other', 'Other type of work') }}
+            {{ textInput('type_of_work_other', 'section6.type_work_question') }}
 
             {{ formButtons() }}
         </form>
