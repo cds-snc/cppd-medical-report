@@ -1,7 +1,6 @@
 const { routeUtils, getSessionData } = require('./../../utils')
 const { Schema } = require('./schema.js')
 
-
 module.exports = (app, route) => {
   const name = route.name
 
@@ -10,8 +9,8 @@ module.exports = (app, route) => {
     .get((req, res) => {
       const data = getSessionData(req)
 
-      if (!data.medications) {
-        res.redirect('/en/add_medication')
+      if (!data.medications || data.medications.length === 0) {
+        res.redirect(res.locals.routePath('add_medication'))
       } else {
         res.render(name, routeUtils.getViewData(req, {}))
       }
