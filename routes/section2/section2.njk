@@ -32,7 +32,7 @@
             {{ textInput('witnessSignature', 'section2.form.witness_signature') }}
         </fieldset>
 
-        <div><p>{{ __('section2.consent_valid_period') }}</p></div>
+        <p>{{ __('section2.consent_valid_period') | safe }}</p>
 
         {{ formButtons() }}
     </form>
