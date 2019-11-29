@@ -36,6 +36,10 @@ function getRoutes() {
         path: { en: '/medication/add', fr: '/medication/add' },
       },
       {
+        name: 'edit_medication',
+        path: { en: '/medication/:id/edit', fr: '/medication/:id/edit' },
+      },
+      {
         name: 'delete_medication',
         path: { en: '/medication/:id/delete', fr: '/medication/:id/delete' },
       },
