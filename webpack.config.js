@@ -1,5 +1,6 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const WebpackNotifierPlugin = require('webpack-notifier')
 
 module.exports = (env, argv) => {
   const { getConfig } = require('@cdssnc/webpack-starter')
@@ -10,6 +11,7 @@ module.exports = (env, argv) => {
       app: './assets/js/app.js',
       personal: './routes/personal/js/personal.js',
       add_condition: './routes/add_condition/js/add_condition.js',
+      edit_condition: './routes/edit_condition/js/edit_condition.js',
     },
     output: {
       filename: 'js/[name].[chunkhash].js',
@@ -28,6 +30,11 @@ module.exports = (env, argv) => {
     plugins: [
       // make sure to include the plugin!
       new VueLoaderPlugin(),
+      new WebpackNotifierPlugin({
+        title: 'Node Starter Build',
+        contentImage:
+          'https://github.com/cds-snc/common-assets/raw/master/EN/cds-snc.png',
+      }),
     ],
     resolve: {
       alias: {

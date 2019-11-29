@@ -392,10 +392,12 @@
   "medications.add_a_medication": "Add a medication",
   "year_month_date_format": "YYYY-MM-DD",
   "telephone_hint": "telephone_hint",
+  "Thank you!": "Thank you!",
   "errors.symptoms_occur_uknown_required": "Tell us why the frequency of symptoms is unknown",
   "add_condition.symptoms_occur_unknown_label": "Why is the symptom frequency unknown?",
   "treatments.treatments": "Treatments",
   "treatments.remove_treatment": "Remove treatment",
   "treatments.add_a_treatment": "Add a treatment",
-  "treatments.next_overall_patient_summary": "Next: Overall patient summary"
+  "treatments.next_overall_patient_summary": "Next: Overall patient summary",
+  "conditions.save_condition": "Save condition"
 }
