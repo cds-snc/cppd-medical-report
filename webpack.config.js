@@ -1,5 +1,6 @@
 const path = require('path')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const WebpackNotifierPlugin = require('webpack-notifier')
 
 module.exports = (env, argv) => {
   const { getConfig } = require('@cdssnc/webpack-starter')
@@ -28,6 +29,11 @@ module.exports = (env, argv) => {
     plugins: [
       // make sure to include the plugin!
       new VueLoaderPlugin(),
+      new WebpackNotifierPlugin({
+        title: 'Node Starter Build',
+        contentImage:
+          'https://github.com/cds-snc/common-assets/raw/master/EN/cds-snc.png',
+      }),
     ],
     resolve: {
       alias: {
