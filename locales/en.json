@@ -59,7 +59,7 @@
   "section2.delay_warning_preamble": "I understand that if I do not give my consent, Service Canada:",
   "section2.delay_warning_1": "will make a decision based on the available information on my file;",
   "section2.delay_warning_2": "may stop paying me the benefits if I am already receiving them; and",
-  "section2.delay_warning_3": "can require that I provide the necessary information.",  
+  "section2.delay_warning_3": "can require that I provide the necessary information.",
   "section2.form.signature": "Signature of applicant / authorized representative",
   "section2.consent_valid_period": "This signed consent is valid for up to <strong>3 years</strong> unless you cancel it in writing. Service Canada requires your original signature, but we will use a photocopy and consider it as valid as the original when requesting personal information from the persons and organizations listed above.",
   "section2.form.witness_first": "First name of witness",
@@ -297,6 +297,7 @@
   "add_condition.attach_notes": "Attach any notes or documents that are relevant to this condition",
   "add_condition.attach_notes_hint": "These could include: clinical notes, specialist reports, or hospital discharge reports, etc",
   "add_condition.attach_later": "I will attach supporting documents later",
+  "documents.which_condition": "Which conditions does this refer to?",
   "add_condition.add_condition": "Add condition",
   "form.firstname.desc": "form.firstname.desc",
   "medication.title": "Section 5 - Patient's Medications",
@@ -391,5 +392,6 @@
   "treatments.remove_treatment": "Remove treatment",
   "treatments.add_a_treatment": "Add a treatment",
   "treatments.next_overall_patient_summary": "Next: Overall patient summary",
-  "conditions.save_condition": "Save condition"
+  "conditions.save_condition": "Save condition",
+  "Supprimer le document": "Supprimer le document"
 }

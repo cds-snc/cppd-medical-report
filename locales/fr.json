@@ -185,7 +185,7 @@
   "section3.form.last_visit_date.desc": "Date de la dernière visite",
   "section3.form.first_treatment_date.desc": "Date à laquelle vous avez commencé à traiter le patient pour son état pathologique principal",
   "File": "File",
-  "Upload": "Upload",
+  "Upload": "Télécharger",
   "If other, please specify": "If other, please specify",
   "section9.title": "Section 9 - Déclaration",
   "section9.confirm_statement_1": "Je confirme, au meilleur de ma connaissance, que tous les renseignements que j'ai fournis dans ce rapport sont exacts et complets.",
@@ -318,5 +318,14 @@
   "confirmation.thank_you": "Merci!",
   "confirmation.thank_you_participating": "Merci d'avoir participé!",
   "I am a:": "I am a:",
-  "year_month_day_format": "AAAA-MM-JJ"
+  "year_month_day_format": "AAAA-MM-JJ",
+  "documents.title": "Documents à l'appui",
+  "documents.intro": "Joindre les notes ou les documents pertinents à l'état de santé de votre patient.",
+  "documents.sub": "Cela pourrait inclure des notes cliniques, des rapports de spécialistes, ou des rapports de sortie d'hôpital, etc.",
+  "documents.next_button": "Suivant : Déclaration",
+  "documents.which_condition": "À quelle condition cela se réfère-t-il?",
+  "add_condition.attach_later": "Je joindreai des documents à l'appui plus tard",
+  "Patient": "Patient :",
+  "patient": "Patient :",
+  "Supprimer le document": "Supprimer le document"
 }

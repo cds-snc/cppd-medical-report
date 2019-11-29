@@ -6,7 +6,7 @@
         <label
           class="w-64 border-2 border-black cursor-pointer bg-gray-200 px-5 py-2 inline-block text-center"
         >
-          <span>Upload</span>
+          <span>{{ this.uploadLabel }}</span>
           <input type="file" ref="file" @change="onSelect" class="hidden" />
         </label>
       </div>
@@ -17,7 +17,7 @@
         <div
           class="flex-auto remove-file underline text-base align-middle text-right pr-4 cursor-pointer"
           @click="removeFile(file)"
-        >Remove</div>
+        >{{ this.removeLabel }}</div>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@ export default {
       uploaded_files: [],
     }
   },
-  props: ['files', 'fieldName'],
+  props: ['files', 'fieldName', 'uploadLabel', 'removeLabel'],
   methods: {
     onSelect() {
       const file = this.$refs.file.files[0]
