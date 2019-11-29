@@ -4,7 +4,7 @@
 {{ textInput('medication_dosage', 'form.medication_dosage.desc', {required: true, "autocomplete": "off", value: medication.medication_dosage }) }}
 {{ textInput('medication_frequency', 'form.medication_frequency.desc', {required: true, hint: 'form.medication_frequency.hint', "autocomplete": "off", value: medication.medication_frequency }) }}
 {{ textInput('medication_start_date', 'form.medication_start_date.text', { required: true, hint: 'form.medication_start_date.hint', "autocomplete": "off", value: medication.medication_start_date })}}
-{{ textInput('medication_end_date', 'form.medication_end_date.text', {required: true, hint: 'form.medication_end_date.hint', "autocomplete": "off", value: medicatino.medication_end_date })}}
+{{ textInput('medication_end_date', 'form.medication_end_date.text', {required: true, hint: 'form.medication_end_date.hint', "autocomplete": "off", value: medication.medication_end_date })}}
 
 {% if oneValue %}
     {% set selectedValues = ["0"] %}

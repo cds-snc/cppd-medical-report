@@ -395,5 +395,6 @@
   "treatments.remove_treatment": "Remove treatment",
   "treatments.add_a_treatment": "Add a treatment",
   "treatments.next_overall_patient_summary": "Next: Overall patient summary",
-  "conditions.save_condition": "Save condition"
+  "conditions.save_condition": "Save condition",
+  "medications.save_medication": "Save medication"
 }
