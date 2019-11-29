@@ -12,23 +12,27 @@ module.exports = (app, route) => {
     .draw(app)
     .get((req, res) => {
       const data = getSessionData(req)
-      const condition = data.conditions[req.params.id - 1]
-      const js = getClientJs(req, route.name)
 
-      data.name_of_condition = condition.name_of_condition
-      data.symptoms_began = condition.symptoms_began
-      data.clinically_impair = condition.clinically_impair
-      data.condition_outlook = condition.condition_outlook
-      data.condition_outlook_unknown = condition.condition_outlook_unknown
-      data.condition_last = condition.condition_last
-      data.symptoms_occur = condition.symptoms_occur
-      data.condition_files = condition.condition_files
+      // redirect back if there are no conditions (session probably got cleared) - should flash a message
+      if (!data.conditions) {
+        return res.redirect('/en/conditions')
+      }
+
+      const condition = data.conditions[req.params.id - 1]
+
+      // redirect back if the condition doesn't exist - maybe a stale url id - should flash a message
+      if (!condition) {
+        return res.redirect('/en/conditions')
+      }
+
+      const js = getClientJs(req, route.name)
 
       res.render(
         route.name,
         routeUtils.getViewData(req, {
           jsFiles: js ? [js] : false,
           featureFlag: featureFlag,
+          condition: condition,
         }),
       )
     })
@@ -39,13 +43,10 @@ module.exports = (app, route) => {
       delete body.redirect
       delete body._csrf
 
-      // make sure there's a conditions array in session data for us to use
-      if (!data.conditions) {
-        data.conditions = []
-      }
+      // the conditions array is 0 indexed
+      const conditionId = req.params.id - 1
 
-      // push our data onto the conditions array
-      data.conditions.push(body)
+      data.conditions[conditionId] = body
 
       // unset local fields so the form is clear when we come back to add a new one
       req.body.name_of_condition = null
