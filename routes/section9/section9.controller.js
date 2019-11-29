@@ -1,14 +1,16 @@
+/* istanbul ignore file */
 const { routeUtils } = require('./../../utils')
 const { Schema } = require('./schema.js')
 
 module.exports = (app, route) => {
   const name = route.name
 
-  route.draw(app)
+  route
+    .draw(app)
     .get((req, res) => {
       res.render(name, routeUtils.getViewData(req, {}))
     })
-    .post(route.applySchema(Schema), route.doRedirect(),(req, res) => {
-      console.log(req.session.formdata);
-    });
+    .post(route.applySchema(Schema), route.doRedirect(), (req, res) => {
+      console.log(req.session.formdata)
+    })
 }
