@@ -11,6 +11,7 @@ module.exports = (env, argv) => {
       app: './assets/js/app.js',
       personal: './routes/personal/js/personal.js',
       add_condition: './routes/add_condition/js/add_condition.js',
+      edit_condition: './routes/edit_condition/js/edit_condition.js',
     },
     output: {
       filename: 'js/[name].[chunkhash].js',
