@@ -329,7 +329,7 @@
   "documents.sub": "Cela pourrait inclure des notes cliniques, des rapports de spécialistes, ou des rapports de sortie d'hôpital, etc.",
   "documents.next_button": "Suivant : Déclaration",
   "documents.which_condition": "À quelle condition cela se réfère-t-il?",
-  "add_condition.attach_later": "Je joindreai des documents à l'appui plus tard",
+  "add_condition.attach_later": "Je joindrai des documents à l'appui plus tard",
   "Patient": "Patient :",
   "patient": "Patient :",
   "Supprimer le document": "Supprimer le document"
