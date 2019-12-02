@@ -17,7 +17,7 @@
         <div
           class="flex-auto remove-file underline text-base align-middle text-right pr-4 cursor-pointer"
           @click="removeFile(file)"
-        >{{ this.removeLabel }}</div>
+        >{{ removeLabel }}</div>
       </div>
     </div>
   </div>
