@@ -37,11 +37,18 @@ function getRoutes() {
       },
       {
         name: 'add_medication',
-        path: { en: '/medication/add', fr: '/medication/add' },
+        path: { en: '/medications/add', fr: '/medicaments/ajouter' },
+      },
+      {
+        name: 'edit_medication',
+        path: { en: '/medications/:id/edit', fr: '/medicaments/:id/modifier' },
       },
       {
         name: 'delete_medication',
-        path: { en: '/medication/:id/delete', fr: '/medication/:id/delete' },
+        path: {
+          en: '/medications/:id/delete',
+          fr: '/medicaments/:id/supprimer',
+        },
       },
     ]
   }
@@ -58,7 +65,7 @@ function getRoutes() {
     { name: 'section4', path: { en: '/section4', fr: '/frsection4' } },
     // Section 5
     { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
-    { name: 'medication', path: { en: '/medication', fr: '/medication' } },
+    { name: 'medications', path: { en: '/medications', fr: '/medications' } },
     { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
     // Section 7
     { name: 'health', path: { en: '/health', fr: '/health' } },

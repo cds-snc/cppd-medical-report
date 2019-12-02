@@ -29,7 +29,7 @@ module.exports = (app, table) => {
     res.status(500)
 
     console.error(`☠️ Error => ${err.message}`)
-
+    console.error(err)
     let message = false
 
     /* istanbul ignore next */
