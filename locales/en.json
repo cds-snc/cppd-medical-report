@@ -197,6 +197,7 @@
   "confirmation.title": "Confirmation Title",
   "continuous": "continuous",
   "deteriorate": "deteriorate",
+  "documents.delete": "Delete",
   "documents.intro": "Attach any notes or documents that are relevant to your patient's medical conditions.",
   "documents.next_button": "Next: Declaration",
   "documents.sub": "These could include: clinical notes, specialist reports or hospital discharge reports, etc ",
@@ -420,6 +421,5 @@
   "write your Social Insurance Number at the top of each page of this Medical Report.": false,
   "year_month": "YYYY-MM",
   "year_month_date_format": "YYYY-MM-DD",
-  "year_month_day_format": "YYYY-MM-DD",
-  "documents.delete": "Delete"
+  "year_month_day_format": "YYYY-MM-DD"
 }

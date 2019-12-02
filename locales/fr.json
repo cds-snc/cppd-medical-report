@@ -197,6 +197,7 @@
   "confirmation.title": "Confirmation Title",
   "continuous": "continuous",
   "deteriorate": "deteriorate",
+  "documents.delete": "Supprimer le document",
   "documents.intro": "Joindre les notes ou les documents pertinents à l'état de santé de votre patient.",
   "documents.next_button": "Suivant : Déclaration",
   "documents.sub": "Cela pourrait inclure des notes cliniques, des rapports de spécialistes, ou des rapports de sortie d'hôpital, etc.",
@@ -420,6 +421,5 @@
   "write your Social Insurance Number at the top of each page of this Medical Report.": "write your Social Insurance Number at the top of each page of this Medical Report.",
   "year_month": "AAAA-MM",
   "year_month_date_format": false,
-  "year_month_day_format": "AAAA-MM-JJ",
-  "documents.delete": "Supprimer le document"
+  "year_month_day_format": "AAAA-MM-JJ"
 }
