@@ -1,5 +1,5 @@
 const path = require('path')
-const url = require('url');
+const url = require('url')
 
 const { checkSchema } = require('express-validator')
 const { checkErrors } = require('./validate.helpers')
@@ -23,7 +23,9 @@ class RoutingTable {
   /**
    * Returns a route given a route name
    */
-  get(name) { return this.routes.find(r => r.name === name) }
+  get(name) {
+    return this.routes.find(r => r.name === name)
+  }
 
   /**
    * Attach the route controllers to an app.
@@ -54,38 +56,59 @@ class Route {
     if (typeof this.path === 'string') {
       const globalPath = this.path
       this.path = {}
-      this.table.locales.forEach(l => { this.path[l] = globalPath })
+      this.table.locales.forEach(l => {
+        this.path[l] = globalPath
+      })
     }
 
     // prepend the locale (/en, /fr) to each path
-    this.table.locales.forEach(l => { this.path[l] = `/${l}${this.path[l]}` })
+    this.table.locales.forEach(l => {
+      this.path[l] = `/${l}${this.path[l]}`
+    })
   }
 
   // an alias for RoutingTable::get
-  get(routeName) { return this.table.get(routeName) }
+  get(routeName) {
+    return this.table.get(routeName)
+  }
 
   draw(app) {
     return new DrawRoutes(this, app)
   }
 
   // paths to load files during setup
-  get directory() { return `${this.table.directory}/${this.name}` }
-  get controllerPath() { return `${this.directory}/${this.name}.controller` }
+  get directory() {
+    return `${this.table.directory}/${this.name}`
+  }
+
+  get controllerPath() {
+    return `${this.directory}/${this.name}.controller`
+  }
 
   // the adjacent routes from the same table
-  get next() { return this.table.routes[this.index + 1] }
-  get prev() { return this.table.routes[this.index - 1] }
+  get next() {
+    return this.table.routes[this.index + 1]
+  }
+
+  get prev() {
+    return this.table.routes[this.index - 1]
+  }
 
   // helpers for the path of the next / previous route
-  get nextPath() { return this.next && this.next.path }
-  get prevPath() { return this.prev && this.prev.path }
+  get nextPath() {
+    return this.next && this.next.path
+  }
+
+  get prevPath() {
+    return this.prev && this.prev.path
+  }
 
   eachLocale(fn) {
     return this.table.locales.forEach(locale => fn(this.path[locale], locale))
   }
 
   // a URL for this route, given a query
-  url(locale, query={}) {
+  url(locale, query = {}) {
     return url.format({
       pathname: this.path[locale],
       query: query,
@@ -104,10 +127,7 @@ class Route {
    * for the POST method.
    */
   defaultMiddleware(opts) {
-    return [
-      ...this.applySchema(opts.schema),
-      this.doRedirect(opts.computeNext),
-    ]
+    return [...this.applySchema(opts.schema), this.doRedirect(opts.computeNext)]
   }
 
   applySchema(schema) {
@@ -118,7 +138,8 @@ class Route {
     return (req, res, next) => {
       if (req.body.json) return next()
 
-      if (typeof redirectTo === 'function') redirectTo = redirectTo(req, res, this)
+      if (typeof redirectTo === 'function')
+        redirectTo = redirectTo(req, res, this)
       if (!redirectTo) redirectTo = this.next
       if (typeof redirectTo === 'string') redirectTo = this.get(redirectTo)
       res.redirect(redirectTo.url(req.locale))
@@ -140,10 +161,21 @@ class DrawRoutes {
     return this
   }
 
-  get(...args) { return this.request('get', ...args) }
-  post(...args) { return this.request('post', ...args) }
-  put(...args) { return this.request('put', ...args) }
-  delete(...args) { return this.request('delete', ...args) }
+  get(...args) {
+    return this.request('get', ...args)
+  }
+
+  post(...args) {
+    return this.request('post', ...args)
+  }
+
+  put(...args) {
+    return this.request('put', ...args)
+  }
+
+  delete(...args) {
+    return this.request('delete', ...args)
+  }
 }
 
 const oneHour = 1000 * 60 * 60 * 1
@@ -157,9 +189,18 @@ const routeMiddleware = (route, locale) => (req, res, next) => {
   res.setLocale(locale)
 
   res.locals.route = route
-  res.locals.routePath = (nameOrObj) => {
+  res.locals.routePath = (nameOrObj, params = null) => {
     if (typeof nameOrObj === 'string') nameOrObj = route.get(nameOrObj)
-    return nameOrObj.path[locale]
+
+    let routePath = nameOrObj.path[locale]
+
+    if (params) {
+      Object.keys(params).forEach((key, index) => {
+        routePath = routePath.replace(':' + key, params[key])
+      })
+    }
+
+    return routePath
   }
 
   return next()
@@ -168,12 +209,13 @@ const routeMiddleware = (route, locale) => (req, res, next) => {
 /**
  * @returns a new routing table
  */
-const makeRoutingTable = (routes, locales, opts={}) => new RoutingTable(routes, locales, opts)
+const makeRoutingTable = (routes, locales, opts = {}) =>
+  new RoutingTable(routes, locales, opts)
 
 /**
  * The default `configRoutes` function
  */
-const configRoutes = (app, routes, locales, opts={}) => {
+const configRoutes = (app, routes, locales, opts = {}) => {
   // require the controllers defined in the routes
   // dir and file name based on the route name
   return makeRoutingTable(routes, locales, opts).config(app)
