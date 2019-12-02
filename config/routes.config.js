@@ -28,6 +28,10 @@ function getRoutes() {
         path: { en: '/treatments/add', fr: '/treatments/add' },
       },
       {
+        name: 'edit_treatment',
+        path: { en: '/treatments/:id/edit', fr: '/treatments/:id/edit' },
+      },
+      {
         name: 'delete_treatment',
         path: { en: '/treatments/:id/delete', fr: '/treatments/:id/delete' },
       },
