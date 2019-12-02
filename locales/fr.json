@@ -405,6 +405,7 @@
   "treatments.form.type.hint": "Par exemple : « Chirurgie », « psychothérapie », etc.",
   "treatments.next_overall_patient_summary": "Suivant : Santé générale",
   "treatments.remove_treatment": "Supprimer le traitement",
+  "treatments.save_treatment": "Save treatment",
   "treatments.title": "Section 5 - Ajouter un traitement",
   "treatments.treatments": "Traitements",
   "unknown": "inconnu",
