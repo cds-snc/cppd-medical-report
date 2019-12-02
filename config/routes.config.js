@@ -7,7 +7,7 @@ function getRoutes() {
       { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
       { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
       { name: 'medication', path: { en: '/medication', fr: '/medication' } },
-      { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
+      { name: 'treatments', path: { en: '/treatments', fr: '/traitements' } },
       { name: 'health', path: { en: '/health', fr: '/health' } },
       { name: 'documents', path: { en: '/documents', fr: '/documents' } },
       { name: 'confirmation', path: '/confirmation' },
@@ -25,15 +25,15 @@ function getRoutes() {
       },
       {
         name: 'add_treatment',
-        path: { en: '/treatments/add', fr: '/treatments/add' },
+        path: { en: '/treatments/add', fr: '/traitments/ajouter' },
       },
       {
         name: 'edit_treatment',
-        path: { en: '/treatments/:id/edit', fr: '/treatments/:id/edit' },
+        path: { en: '/treatments/:id/edit', fr: '/traitments/:id/modifier' },
       },
       {
         name: 'delete_treatment',
-        path: { en: '/treatments/:id/delete', fr: '/treatments/:id/delete' },
+        path: { en: '/treatments/:id/delete', fr: '/traitments/:id/supprimer' },
       },
       {
         name: 'add_medication',
