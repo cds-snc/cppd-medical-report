@@ -411,5 +411,8 @@
   "write your Social Insurance Number at the top of each page of this Medical Report.": false,
   "year_month": "YYYY-MM",
   "year_month_date_format": "YYYY-MM-DD",
-  "year_month_day_format": "YYYY-MM-DD"
+  "year_month_day_format": "YYYY-MM-DD",
+  "health.label": "How would you describe your patient's overall health?",
+  "health.hint": "Provide an overview of your patient's health, keeping all of their conditions, functional limitations, and treatments in mind.",
+  "health.next_button": "Next: Supporting documents"
 }
