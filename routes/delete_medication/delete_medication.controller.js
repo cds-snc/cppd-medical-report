@@ -8,6 +8,6 @@ module.exports = (app, route) => {
 
     data.medications.splice(index, 1)
 
-    res.redirect(res.locals.routePath('medication'))
+    res.redirect(res.locals.routePath('medications'))
   })
 }

@@ -19,14 +19,14 @@ module.exports = (app, route) => {
 
       // redirect back if there are no conditions (session probably got cleared) - should flash a message
       if (!data.medications) {
-        return res.redirect(res.locals.routePath('medication'))
+        return res.redirect(res.locals.routePath('medications'))
       }
 
       const medication = data.medications[req.params.id - 1]
 
       // redirect back if the condition doesn't exist - maybe a stale url id - should flash a message
       if (!medication) {
-        return res.redirect(res.locals.routePath('medication'))
+        return res.redirect(res.locals.routePath('medications'))
       }
 
       const js = getClientJs(req, route.name)
@@ -66,6 +66,6 @@ module.exports = (app, route) => {
       saveSessionData(req)
 
       // redirect back to conditions (should use named route - how do we do that?)
-      res.redirect(res.locals.routePath('medication'))
+      res.redirect(res.locals.routePath('medications'))
     })
 }

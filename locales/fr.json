@@ -322,5 +322,7 @@
   "confirmation.thank_you": "Merci!",
   "confirmation.thank_you_participating": "Merci d'avoir participé!",
   "I am a:": "I am a:",
-  "year_month_day_format": "AAAA-MM-JJ"
+  "year_month_day_format": "AAAA-MM-JJ",
+  "medications.save_medication": "medications.save_medication",
+  "skip_section": "skip_section"
 }

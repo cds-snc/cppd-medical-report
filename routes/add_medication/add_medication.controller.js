@@ -1,7 +1,10 @@
 /* istanbul ignore file */
 const { routeUtils, getSessionData, saveSessionData } = require('./../../utils')
 const { Schema } = require('./schema.js')
-const { conditionReducer, oneAttribute } = require('../../utils/custom/condition.mapper')
+const {
+  conditionReducer,
+  oneAttribute,
+} = require('../../utils/custom/condition.mapper')
 
 module.exports = (app, route) => {
   const name = route.name
@@ -9,7 +12,6 @@ module.exports = (app, route) => {
   route
     .draw(app)
     .get((req, res) => {
-      
       const data = getSessionData(req)
       const conditionList = conditionReducer(data.conditions)
 
@@ -48,7 +50,7 @@ module.exports = (app, route) => {
       // save that session data
       saveSessionData(req)
 
-      // redirect back to conditions (should use named route - how do we do that?)
-      res.redirect('/en/medication')
+      // redirect back to medications
+      res.redirect(res.locals.routePath('medications'))
     })
 }
