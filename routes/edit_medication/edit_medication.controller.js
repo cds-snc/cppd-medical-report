@@ -1,5 +1,9 @@
-/* istanbul ignore file */
-const { routeUtils, getSessionData, saveSessionData } = require('./../../utils')
+const {
+  routeUtils,
+  getSessionData,
+  getClientJs,
+  saveSessionData,
+} = require('./../../utils')
 const { Schema } = require('./schema.js')
 const {
   conditionReducer,
@@ -7,17 +11,31 @@ const {
 } = require('../../utils/custom/condition.mapper')
 
 module.exports = (app, route) => {
-  const name = route.name
-
   route
     .draw(app)
     .get((req, res) => {
       const data = getSessionData(req)
       const conditionList = conditionReducer(data.conditions)
 
+      // redirect back if there are no conditions (session probably got cleared) - should flash a message
+      if (!data.medications) {
+        return res.redirect(res.locals.routePath('medications'))
+      }
+
+      const medication = data.medications[req.params.id - 1]
+
+      // redirect back if the condition doesn't exist - maybe a stale url id - should flash a message
+      if (!medication) {
+        return res.redirect(res.locals.routePath('medications'))
+      }
+
+      const js = getClientJs(req, route.name)
+
       res.render(
-        name,
+        route.name,
         routeUtils.getViewData(req, {
+          jsFiles: js ? [js] : false,
+          medication: medication,
           conditionList,
           oneValue: oneAttribute(conditionList),
         }),
@@ -30,13 +48,10 @@ module.exports = (app, route) => {
       delete body.redirect
       delete body._csrf
 
-      // make sure there's a conditions array in session data for us to use
-      if (!data.medications) {
-        data.medications = []
-      }
+      // the conditions array is 0 indexed
+      const id = req.params.id - 1
 
-      // push our data onto the conditions array
-      data.medications.push(body)
+      data.medications[id] = body
 
       // unset local fields so the form is clear when we come back to add a new one
       req.body.medication_name = null
@@ -50,7 +65,7 @@ module.exports = (app, route) => {
       // save that session data
       saveSessionData(req)
 
-      // redirect back to medications
+      // redirect back to conditions (should use named route - how do we do that?)
       res.redirect(res.locals.routePath('medications'))
     })
 }
