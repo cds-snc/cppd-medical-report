@@ -420,5 +420,6 @@
   "write your Social Insurance Number at the top of each page of this Medical Report.": false,
   "year_month": "YYYY-MM",
   "year_month_date_format": "YYYY-MM-DD",
-  "year_month_day_format": "YYYY-MM-DD"
+  "year_month_day_format": "YYYY-MM-DD",
+  "documents.delete": "Delete"
 }
