@@ -61,7 +61,7 @@ function getRoutes() {
     { name: 'section4', path: { en: '/section4', fr: '/frsection4' } },
     // Section 5
     { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
-    { name: 'medication', path: { en: '/medication', fr: '/medication' } },
+    { name: 'medications', path: { en: '/medications', fr: '/medications' } },
     { name: 'treatments', path: { en: '/treatments', fr: '/traitement' } },
     // Section 7
     { name: 'health', path: { en: '/health', fr: '/health' } },
