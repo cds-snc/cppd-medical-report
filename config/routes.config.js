@@ -6,7 +6,7 @@ function getRoutes() {
       { name: 'start', path: { en: '/start', fr: '/debut' } },
       { name: 'personal', path: { en: '/personal', fr: '/personnel' } },
       { name: 'conditions', path: { en: '/conditions', fr: '/conditions' } },
-      { name: 'medication', path: { en: '/medication', fr: '/medication' } },
+      { name: 'medications', path: { en: '/medications', fr: '/medications' } },
       { name: 'treatments', path: { en: '/treatments', fr: '/traitements' } },
       { name: 'health', path: { en: '/health', fr: '/health' } },
       { name: 'documents', path: { en: '/documents', fr: '/documents' } },
