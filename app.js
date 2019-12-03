@@ -68,7 +68,13 @@ app.locals.hasData = hasData
 // Using the getClientJs to grab the global app.js and set it in app.locals so we can render in templates
 const { getClientJs } = require('./utils')
 app.use(function(req, res, next) {
-  app.locals.appJs = getClientJs(req, 'app')
+  res.locals.appJs = getClientJs(req, 'app')
+  next()
+})
+
+const featureFlag = require('./utils/featureFlags.helpers')
+app.use(function(req, res, next) {
+  res.locals.featureFlag = featureFlag
   next()
 })
 
