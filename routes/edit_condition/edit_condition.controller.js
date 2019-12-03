@@ -5,7 +5,6 @@ const {
   getClientJs,
 } = require('./../../utils')
 const { Schema } = require('./schema.js')
-const featureFlag = require('./../../utils/featureFlags.helpers')
 
 module.exports = (app, route) => {
   route
@@ -31,7 +30,6 @@ module.exports = (app, route) => {
         route.name,
         routeUtils.getViewData(req, {
           jsFiles: js ? [js] : false,
-          featureFlag: featureFlag,
           condition: condition,
         }),
       )
