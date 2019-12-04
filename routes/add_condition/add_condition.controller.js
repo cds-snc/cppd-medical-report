@@ -1,8 +1,11 @@
 /* istanbul ignore file */
-const { routeUtils, getSessionData, saveSessionData, getClientJs } = require('./../../utils')
+const {
+  routeUtils,
+  getSessionData,
+  saveSessionData,
+  getClientJs,
+} = require('./../../utils')
 const { Schema } = require('./schema.js')
-const featureFlag = require('./../../utils/featureFlags.helpers')
-
 
 module.exports = (app, route) => {
   route
@@ -10,7 +13,10 @@ module.exports = (app, route) => {
     .get((req, res) => {
       const js = getClientJs(req, route.name)
 
-      res.render(route.name, routeUtils.getViewData(req, { jsFiles: js ? [js] : false, featureFlag: featureFlag }))
+      res.render(
+        route.name,
+        routeUtils.getViewData(req, { jsFiles: js ? [js] : false }),
+      )
     })
     .post(route.applySchema(Schema), (req, res) => {
       // first lets get the form data that was just posted and unset some things we don't need

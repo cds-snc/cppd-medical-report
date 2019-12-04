@@ -1,6 +1,5 @@
 /* istanbul ignore file */
 const { routeUtils, getClientJs } = require('./../../utils')
-const featureFlag = require('./../../utils/featureFlags.helpers')
 const { Schema } = require('./schema.js')
 
 module.exports = (app, route) => {
@@ -13,7 +12,6 @@ module.exports = (app, route) => {
         route.name,
         routeUtils.getViewData(req, {
           jsFiles: js ? [js] : false,
-          featureFlag: featureFlag,
         }),
       )
     })
