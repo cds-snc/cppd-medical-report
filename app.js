@@ -72,6 +72,12 @@ app.use(function(req, res, next) {
   next()
 })
 
+const featureFlag = require('./utils/featureFlags.helpers')
+app.use(function(req, res, next) {
+  app.locals.featureFlag = featureFlag
+  next()
+})
+
 // set default views path
 app.locals.basedir = path.join(__dirname, './views')
 app.set('views', [path.join(__dirname, './views')])
