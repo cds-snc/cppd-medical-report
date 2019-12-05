@@ -46,6 +46,6 @@ module.exports = (app, route) => {
       saveSessionData(req)
 
       // redirect back to conditions (should use named route - how do we do that?)
-      res.redirect('/en/conditions')
+      res.redirect(res.locals.routePath('conditions'))
     })
 }
