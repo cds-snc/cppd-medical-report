@@ -6,6 +6,7 @@
 
 # For CPPD-specific user-facing changes to application, require review from policy, design/product, and engineering
 routes/*.njk    @cds-snc/esdc-cppd-policy @cds-snc/esdc-cppd-design @cds-snc/esdc-cppd-devs
+locales/*       @cds-snc/esdc-cppd-policy @cds-snc/esdc-cppd-design @cds-snc/esdc-cppd-devs
 
 # For changes to UI widgets, etc., require review from design/product and engineering
 views/*     @cds-snc/esdc-cppd-design @cds-snc/esdc-cppd-devs
